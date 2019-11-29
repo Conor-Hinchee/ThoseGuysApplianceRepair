@@ -1,0 +1,38 @@
+.contactBarText {
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	margin-top: 0.5vh;
+	text-decoration: none;
+}
+
+@media screen and (min-width: 2560px) {
+	.contactBarText {
+    	font-size: 2em;
+  	}
+	
+}
+@media (max-width: 714px) {
+	.contactBarText {
+		font-size: 1em;
+	}	
+}
+@media (max-width: 494px) {
+	.contactBarText {
+		font-size: 0.8em;
+		margin-top: 3vh;
+	}	
+}
+
+.spaceAround{
+	display: flex;
+	justify-content: space-around;
+}
+
+.linkWhite{
+	color:white;
+}
+.linkWhite:hover {
+	color: #fff;
+	text-decoration: underline;
+}
