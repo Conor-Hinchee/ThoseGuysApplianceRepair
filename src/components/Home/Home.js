@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import classes from './Home.module.css';
-import Header from './Header/Header'
+import Header from './Header/Header';
+import Navigation from './Navigation/Navigation';
+import Body  from './Body/Body';
 
 class Home extends Component {
 
     render() {
         return (
             <>
-                <Header /> 
+                <Header />
+                <Navigation />
+                <main>
+                    <Body />
+                </main>
             </>
         );
     }
