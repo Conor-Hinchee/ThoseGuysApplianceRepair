@@ -1,22 +1,25 @@
 import React from 'react';
 import {Row , Col} from 'reactstrap';
-import classes from './Pricing.module.css';
+import HeaderText from '../../../Typography/HeaderText/HeaderText';
 
 const Pricing = () => (
     <Row>
     	<Col>
-	    	<h2 className={classes.Header}>
-	    		Clovis, NM Service Calls Start at Just
-	    	</h2>
-	    	<h1 className={classes.Header}>
-	    		$59.95*
-	    	</h1>
+    		<HeaderText 
+    			tag = {2}
+    			text = {"Clovis, NM Service Calls Start at Just"}
+    		/>
+    		<HeaderText 
+    			tag = {1}
+    			text = {"$59.95*"}
+    		/>
 	    	<h6 style={{textAlign: 'center'}}>
 	    		*Price varies depending on area
 	    	</h6>
-	    	<h5 className={classes.Header}>
-	    		Active or retired military? Services are tax free!
-	    	</h5>
+	    	<HeaderText 
+    			tag = {5}
+    			text = {"Active or retired military? Services are tax free!"}
+    		/>
     	</Col>
     </Row>
 );
