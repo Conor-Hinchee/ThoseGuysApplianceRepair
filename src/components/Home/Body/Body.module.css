@@ -16,4 +16,9 @@
 	.Space{
 		padding-top: 14%;
 	}
-}	
+}
+
+#carousel{
+	overflow:hidden;
+	height:300px;
+}
