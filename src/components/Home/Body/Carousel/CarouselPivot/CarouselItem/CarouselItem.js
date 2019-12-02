@@ -5,7 +5,10 @@ import classes from './CarouselItem.module.css';
 const CarouselItem = (props) => (
 	<li className={classes.Item}>
 		{props.img ? 
-			<img className={classes.RotatingImg}
+			<img className={props.alt === "General Electric Company Logo" ?
+				classes.GeImg :
+				classes.RotatingImg
+			}
 	    		src= {props.src}
 	    		alt = {props.alt}
 	    	/>
