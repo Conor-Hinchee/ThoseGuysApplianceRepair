@@ -28,6 +28,9 @@ const Body = () => (
     	<section className={classes.Space} id="located">
     	    <Located />
     	</section>
+    	<section className={classes.Space} id="reviews">
+    	    
+    	</section>
     </Container>
 );
 

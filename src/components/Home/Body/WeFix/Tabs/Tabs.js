@@ -3,7 +3,7 @@ import React from 'react';
 import { NavItem, NavLink} from 'reactstrap';
 
 const Tabs = (props) => (
-	<NavItem>
+	<NavItem style={{cursor: "pointer"}}>
 		{props.isActive ?
 			<NavLink onClick={props.onClick} id={props.text}  active>
 				{props.text}

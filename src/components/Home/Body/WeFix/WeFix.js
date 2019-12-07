@@ -105,17 +105,23 @@ class WeFix extends Component {
 	
 	onTabClick = (e) =>{
 		
+		
 		let newText;
+		let brands = this.state.brands;
 		
 		for(let i = 0 ; i < this.state.brands.length; i++){
 			if(this.state.brands[i].title === e.target.id){
 				newText = this.state.brands[i].text;
-				break;
+				brands[i].isActive = true; 
+			}else if(this.state.fadeText === this.state.brands[i].text){
+				brands[i].isActive = false;
 			}
 		}
+	
 		
 		this.setState({
 			shouldFade : false,
+			brands
 		}, ()=>{
 			setTimeout(() => {
 				this.setState({
@@ -138,7 +144,7 @@ class WeFix extends Component {
 		
 		
 		return (
-				<Row className={classes.JustifyContentCenter}>
+				<Row className={classes.JustifyContentCenter} style={{marginTop: "15%"}}>
 			    	<Col md="12" sm="10" className={classes.JustifyContentCenter}>
 			    		<Nav tabs>
 					    	{navItems}   

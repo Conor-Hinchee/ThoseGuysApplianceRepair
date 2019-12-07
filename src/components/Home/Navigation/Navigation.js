@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWrench } from '@fortawesome/free-solid-svg-icons';
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,13 +9,13 @@ const Navigation = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <nav>
-      <Navbar color="dark" dark expand="md">
+      <Navbar color="dark" dark expand="md" sticky="top">
         <NavbarBrand href="/">
           <img src="https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/ThoseGuysLogo.jpg"  
             alt="Those Guys Appliance Repair Logo" 
           />
-          Those Guys Appliance Repair
+            Those Guys Appliance Repair 
+          <FontAwesomeIcon icon={faWrench} />
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -28,12 +30,11 @@ const Navigation = (props) => {
               <NavLink href="#located">Visit Us</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Used Appliance Repair</NavLink>
+              <NavLink href="/">Used Appliance</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
-    </nav>
   );
 };
 
