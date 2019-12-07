@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header/Header';
 import Navigation from './Navigation/Navigation';
 import Body  from './Body/Body';
+import Footer from './Footer/Footer';
 
 class Home extends Component {
 
@@ -13,6 +14,7 @@ class Home extends Component {
                 <main>
                     <Body />
                 </main>
+                <Footer />
             </>
         );
     }

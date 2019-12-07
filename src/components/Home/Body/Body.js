@@ -6,6 +6,7 @@ import Contact from './Contact/Contact';
 import About from './About/About';
 import Carousel from './Carousel/Carousel';
 import WeFix from './WeFix/WeFix';
+import Located from './Located/Located'
 
 const Body = () => (
     <Container>
@@ -22,7 +23,10 @@ const Body = () => (
     	    <Carousel />
     	</section>
     	<section className={classes.Space} id="we_fix">
-    	    < WeFix />
+    	    <WeFix />
+    	</section>
+    	<section className={classes.Space} id="located">
+    	    <Located />
     	</section>
     </Container>
 );
