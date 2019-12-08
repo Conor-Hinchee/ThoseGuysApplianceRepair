@@ -2,6 +2,7 @@ import React from 'react';
 import {Row, Col} from 'reactstrap';
 import classes from './Located.module.css';
 import HeaderText from '../../../Typography/HeaderText/HeaderText';
+import Map from './Map/Map';
 
 const Located = () => (
 	    <Row className={classes.JustifyContentCenter}>
@@ -15,7 +16,14 @@ const Located = () => (
 				</h5>
 	        </Col>
 	        <Col md="10" className={classes.JustifyContentCenter}>
-	        	<div id="map" className={classes.Map}></div>
+	        	<div id="map" className={classes.Map}>
+					<Map 
+						googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyBz4nCWXXtqblPMVqiKkuWC-3Dz4igFqdY&callback=initMap&libraries=places"
+						loadingElement={<div style={{ height: `100%` }} />}
+						containerElement={<div style={{ height: `100%` }} />}
+						mapElement={<div style={{ height: `100%` }} />}
+					/>
+	        	</div>
 	        </Col>
 	    </Row>
 );

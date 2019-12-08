@@ -6,7 +6,8 @@ import Contact from './Contact/Contact';
 import About from './About/About';
 import Carousel from './Carousel/Carousel';
 import WeFix from './WeFix/WeFix';
-import Located from './Located/Located'
+import Located from './Located/Located';
+import Reviews from './Reviews/Reviews';
 
 const Body = () => (
     <Container>
@@ -29,7 +30,7 @@ const Body = () => (
     	    <Located />
     	</section>
     	<section className={classes.Space} id="reviews">
-    	    
+    	    <Reviews />
     	</section>
     </Container>
 );
