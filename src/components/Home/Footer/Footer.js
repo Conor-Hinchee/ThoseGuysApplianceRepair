@@ -52,7 +52,7 @@ const Footer = () => (
 						<a className={classes.AuthorLink} 
 							target="_blank"
 							rel="noopener noreferrer"
-							href="http://www.conorhinchee.com"
+							href="https://www.conorhinchee.com"
 						>
 							Conor Hinchee
 						</a>
