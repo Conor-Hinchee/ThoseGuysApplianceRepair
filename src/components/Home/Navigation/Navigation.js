@@ -12,7 +12,7 @@ const Navigation = (props) => {
       <Navbar color="dark" dark expand="md" sticky="top">
         <NavbarBrand href="/">
           <img src="https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/ThoseGuysLogo.jpg"  
-            alt="Those Guys Appliance Repair Logo" 
+            alt="Those Guys Appliance Repair Logo" style={{marginRight: "10px"}}
           />
             Those Guys Appliance Repair 
           <FontAwesomeIcon icon={faWrench} />
