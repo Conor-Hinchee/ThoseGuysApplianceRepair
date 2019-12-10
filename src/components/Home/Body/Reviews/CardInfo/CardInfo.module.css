@@ -1,0 +1,13 @@
+.cardInactive{
+	opacity: .5;
+	transition: opacity box-shadow 1.5s;
+	transition-timing-function: ease;
+}
+.cardActive{
+	box-shadow: 10px 10px 5px #aaaaaa;
+	border: .5px solid #aaaaaa;
+	opacity: 1;
+	transition: opacity box-shadow 1.5s;
+	transition-timing-function: ease;
+	width: 350px;
+}
