@@ -2,6 +2,11 @@
 	margin-top: 5%;
 }
 
+#carousel{
+	overflow:hidden;
+	height:300px;
+}
+
 @media screen and (min-width: 2560px) {
 	.Space{
 		padding-top: 3%;
@@ -18,7 +23,3 @@
 	}
 }
 
-#carousel{
-	overflow:hidden;
-	height:300px;
-}
