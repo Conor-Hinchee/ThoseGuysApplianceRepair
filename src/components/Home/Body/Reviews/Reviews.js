@@ -10,23 +10,26 @@ class Reviews extends Component {
 	  state= {
 	    review: [
 	        {
+	          id : "first_card",
 	          starz : 5,
-	          title: "Mary Ann Castillo",
-	          text: "Awsome staff.Family Oriented. They are hard workers who care about their customers. They also want to do things for the youth and the community.",
+	          title: "Mary Ann Castillo on Google says:",
+	          text: "Awsome staff. Family Oriented. They are hard workers who care about their customers. They also want to do things for the youth and the community.",
 	          active: false,
-	          date: "11/19"
+	          date: "One Month Ago"
 	        },{
+	          id : "second_card",
 	          starz : 5,
-	          title: "Brandon Alonzo",
+	          title: "Brandon Alonzo on Google says:",
 	          text: "Really nice guys.  They showed up and were friendly and fast. They even took the time to explain what the issue was with my dishwasher in detail and their service was extremely affordable.  I highly recommend them.",
 	          active: false,
-	          date: "2/19"
+	          date: "11 Month Ago"
 	        },{
+	          id : "third_card",
 	          starz : 5,
-	          title: "John Birkey",
+	          title: "John Birkey on Google says:",
 	          text: "You can't go wrong hiring these guys. Professional, hardworking, and genuinly good people",
 	          active: false,
-	          date: "12/18"
+	          date: "1 Year Ago"
 	        }
 	        
 	    ],
@@ -35,10 +38,17 @@ class Reviews extends Component {
 	  };
 	  
     componentDidMount = () => {
-      const intervalId = setInterval(this.cardViews, 3500);
-      this.setState({intervalId: intervalId});
+      this.setCardInterval();
     }
 	  
+	  setCardInterval = () =>{
+	    const intervalId = setInterval(this.cardViews, 3500);
+      this.setState({intervalId: intervalId});
+	  }
+	  
+	  clearCardInterval = () =>{
+	    window.clearInterval(this.state.intervalId);
+	  }
 	  
     cardViews = () => {
 
@@ -80,23 +90,101 @@ class Reviews extends Component {
   								break;
   			  }
       }
+      
+    onMouseEnterCard = (value) =>{
+     
+      this.clearCardInterval();
+      let arr = this.state.review
+      
+      switch(value){
+        case "first_card":
+                arr[0].active = true;
+                arr[1].active = false;
+                arr[2].active = false;
+                this.setState({
+                  index : 0,
+                  review: arr
+                })
+                break;
+        case "second_card":
+                arr[1].active = true;
+                arr[0].active = false;
+                arr[2].active = false;
+                this.setState({
+                  index : 1,
+                  review: arr
+                })
+                break;
+        case "third_card":
+                arr[2].active = true;
+                arr[0].active = false;
+                arr[1].active = false;
+                this.setState({
+                  index : 2,
+                  review: arr
+                })
+                break;
+        default: 
+                break;
+      }
+    }  
     
-	  
+    onMouseLeaveCard = () =>{
+      this.setCardInterval();
+    }
+	 
+	  onCardClick = (value) => {
+	    this.clearCardInterval();
+      let arr = this.state.review
+      
+      switch(value){
+        case "first_card":
+                arr[0].active = true;
+                arr[1].active = false;
+                arr[2].active = false;
+                this.setState({
+                  index : 0,
+                  review: arr
+                })
+                break;
+        case "second_card":
+                arr[1].active = true;
+                arr[0].active = false;
+                arr[2].active = false;
+                this.setState({
+                  index : 1,
+                  review: arr
+                })
+                break;
+        case "third_card":
+                arr[2].active = true;
+                arr[0].active = false;
+                arr[1].active = false;
+                this.setState({
+                  index : 2,
+                  review: arr
+                })
+                break;
+        default: 
+                break;
+      }
+	  }
 	  
 		render(){
-		  
-		  
 		  const cardItems = this.state.review.map((item, i) =>
                 <CardInfo
-                    key= {i}
-                    starz ={item.starz}
+                    key = {i}
+                    id = {item.id}
+                    starz = {item.starz}
                     title = {item.title}
                     text = {item.text}
                     active = {item.active}
                     date = {item.date}
+                    mouseEnterCard = {this.onMouseEnterCard.bind(this)}
+                    mouseLeaveCard = {this.onMouseLeaveCard}
+                    onCardClick = {this.onCardClick.bind(this)}
                   />
                 );
-		  
 		  
 		  return(
   		     <>
@@ -109,7 +197,7 @@ class Reviews extends Component {
               </Col>
             </Row>
             <Row className={classes.JustifyContentCenter}>
-              <Col md="10">
+              <Col md="12">
                 <CardDeck>
                   {cardItems}
                 </CardDeck>
