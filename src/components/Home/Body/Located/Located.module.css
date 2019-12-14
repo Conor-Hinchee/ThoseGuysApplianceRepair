@@ -8,7 +8,7 @@
 	border: 5px solid black;
 }
 @media screen and (min-width: 2560px) {
-		.Map{
+	.Map{
 		height: 600px;
 	}
 }	

@@ -1,6 +1,5 @@
 import React from 'react';
 import {withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
-// import {mapStyle} from './mapStyles.json';
 const mapStyle = require("./mapStyles.json");
 
 const Map = withScriptjs(withGoogleMap((props) =>

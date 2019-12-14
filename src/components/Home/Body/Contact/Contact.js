@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col} from 'reactstrap';
 import HeaderText from '../../../Typography/HeaderText/HeaderText';
 import HiddenMdDown from './HiddenMdDown/HiddenMdDown';
-import HiddenMdUp from './HiddenMdUp'/HiddenMdUp;
+import HiddenMdUp from './HiddenMdUp/HiddenMdUp';
 
 const Contact = () => (
     <>

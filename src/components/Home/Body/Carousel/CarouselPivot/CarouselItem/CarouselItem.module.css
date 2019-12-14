@@ -3,53 +3,47 @@
 	top: 50%;
 	left: 50%;
 }
+
 .RotatingImg {
 	width: 100px;
-}
-@media screen and (min-width: 2560px) {
-	.RotatingImg {
-		width: 150px;
-	}
-}	
-@media screen and (max-width: 768px) {
-	.RotatingImg {
-		width: 75px;
-	}
-}	
-@media (max-width: 553px) {
-	.RotatingImg {
-		width: 75px;
-	}
-}	
-@media screen and (max-width: 375px) {
-	.RotatingImg {		
-		width: 50px;
-	}
 }
 
 .GeImg{
 	width: 75px;
 }
 @media screen and (min-width: 2560px) {
-		.GeImg{
+	.RotatingImg {
+		width: 150px;
+	}
+	.GeImg{
 			width: 125px;
 		}
-}
+}	
 @media screen and (max-width: 768px) {
-		.GeImg{
+	.RotatingImg {
+		width: 75px;
+	}
+	.GeImg{
 			width: 50px;
-		}
-}		
+	}
+}	
 @media (max-width: 553px) {
+	.RotatingImg {
+		width: 75px;
+	}
 	.GeImg{
 		width: 25px;
 	}
 }	
 @media screen and (max-width: 375px) {
+	.RotatingImg {		
+		width: 50px;
+	}
 	.GeImg{
 		width: 25px;
 	}
-}	
+}
+
 
 
 .CarouselText {

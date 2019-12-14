@@ -104,8 +104,6 @@ class WeFix extends Component {
 	};
 	
 	onTabClick = (e) =>{
-		
-		
 		let newText;
 		let brands = this.state.brands;
 		

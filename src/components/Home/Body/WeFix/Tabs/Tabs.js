@@ -1,5 +1,4 @@
 import React from 'react';
-// import classes from './Tabs.module.css';
 import { NavItem, NavLink} from 'reactstrap';
 
 const Tabs = (props) => (

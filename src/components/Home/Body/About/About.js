@@ -8,9 +8,8 @@ const About = () => (
 	    	<HeaderText 
 	        		tag={1}
 	    	        text={'Those Guys Appliance Repair'}
-	        	/>
+	        />
 	        <Col md='8' sm='10'>
-	        	
 	        	<p className={classes.BodyText} style={{marginTop: '5%'}}>
 	        		David Pearson has been in the appliance repair business for over 15 years, and in the spring of 2018, 
 	        		David and his sons started Those Guys Appliance Repair! 
