@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Helmet from 'react-helmet';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
+import NotFound from './components/PageNotFound/PageNotFound';
 
-class App extends Component {
-  render() {
-    return (
+const App = () => (
       <BrowserRouter>
         <Helmet title="🧰 Those Guys Appliance Repair 🧺" />
-        <Route exact path="/" component={Home} />
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route component={NotFound} />
+        </Switch>
       </BrowserRouter>
-    );
-  }
-}
+);
 
 export default App;

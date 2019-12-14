@@ -1,22 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Header from './Header/Header';
 import Navigation from './Navigation/Navigation';
 import Body  from './Body/Body';
 import Footer from './Footer/Footer';
 
-class Home extends Component {
+const Home = () => (
+    <>
+        <Header />
+        <Navigation />
+        <main>
+            <Body />
+        </main>
+        <Footer />
+    </>
+);
 
-    render() {
-        return (
-            <>
-                <Header />
-                <Navigation />
-                <main>
-                    <Body />
-                </main>
-                <Footer />
-            </>
-        );
-    }
-}
 export default Home;
