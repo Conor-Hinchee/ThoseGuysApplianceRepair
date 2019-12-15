@@ -5,7 +5,7 @@ import { faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
 import { faPhoneSquare, faSms  } from '@fortawesome/free-solid-svg-icons';
 import classes from './HiddenMdDown.module.css';
 
-const HiddenMdDown = () => (
+const HiddenMdDown = (props) => (
         <Row className={classes.HiddenMdDown}>
             <Col md="4" className={classes.JustifyContentCenter}>
                 <Button  href="tel:+15757428441" outline color="secondary" size="lg">
@@ -14,7 +14,9 @@ const HiddenMdDown = () => (
                 </Button>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
-                <Button outline color="success" size="lg">
+                <Button outline color="success" size="lg"
+                    onClick={props.toggle}
+                >
                     <FontAwesomeIcon icon={faSms} style={{paddingRight: "3px"}}/>
                     Message Us
                 </Button>
