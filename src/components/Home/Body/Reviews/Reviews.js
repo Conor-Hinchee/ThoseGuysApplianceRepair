@@ -33,8 +33,8 @@ class Reviews extends Component {
 	        }
 	        
 	    ],
-	    index : 0
-	   
+	    index : 0,
+	    intervalSet: false
 	  };
 	  
     componentDidMount = () => {
@@ -42,12 +42,26 @@ class Reviews extends Component {
     }
 	  
 	  setCardInterval = () =>{
-	    const intervalId = setInterval(this.cardViews, 3500);
-      this.setState({intervalId: intervalId});
+
+	    if(!this.state.intervalSet){
+	      
+	      this.setState({
+	        intervalSet: true
+	      }, () => {
+	          const intervalId = setInterval(this.cardViews, 3500);
+            this.setState({
+              intervalId: intervalId
+            });
+	      })
+	  }
 	  }
 	  
 	  clearCardInterval = () =>{
 	    window.clearInterval(this.state.intervalId);
+	    this.setState({
+	      intervalId: "",
+        intervalSet: false
+	    })
 	  }
 	  
     cardViews = () => {

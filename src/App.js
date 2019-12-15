@@ -2,6 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './components/Home/Home';
+import UsedAppliances from './components/UsedAppliances/UsedAppliances';
 import NotFound from './components/PageNotFound/PageNotFound';
 
 const App = () => (
@@ -9,6 +10,7 @@ const App = () => (
         <Helmet title="🧰 Those Guys Appliance Repair 🧺" />
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route exact path="/usedappliances" component={UsedAppliances} />
           <Route component={NotFound} />
         </Switch>
       </BrowserRouter>

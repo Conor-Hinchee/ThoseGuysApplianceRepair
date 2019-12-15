@@ -8,7 +8,7 @@ import classes from './HiddenMdUp.module.css';
 const HiddenMdUp = () => (
         <Row className={classes.HiddenMdUp}>
             <Col xs="8" className={classes.SmSpace}>
-                <Button color="secondary" size="lg" block>
+                <Button href="tel:+15757428441" color="secondary" size="lg" block>
                     <FontAwesomeIcon icon={faPhoneSquare} style={{paddingRight: "3px"}}/>
                     Give Us A Call
                 </Button>
@@ -20,7 +20,9 @@ const HiddenMdUp = () => (
                 </Button>
             </Col>
             <Col xs="8" className={classes.SmSpace}>
-                <Button color="primary" size="lg" block>
+                <Button href="https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240"
+                    rel="noopener noreferrer" color="primary" size="lg" block
+                >
                     <FontAwesomeIcon icon={faFacebookSquare} style={{paddingRight: "3px"}}/>
                     Facebook
                 </Button>

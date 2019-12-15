@@ -8,7 +8,7 @@ import classes from './HiddenMdDown.module.css';
 const HiddenMdDown = () => (
         <Row className={classes.HiddenMdDown}>
             <Col md="4" className={classes.JustifyContentCenter}>
-                <Button outline color="secondary" size="lg">
+                <Button  href="tel:+15757428441" outline color="secondary" size="lg">
                     <FontAwesomeIcon icon={faPhoneSquare} style={{paddingRight: "3px"}}/>
                     Give Us A Call
                 </Button>
@@ -20,7 +20,10 @@ const HiddenMdDown = () => (
                 </Button>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
-                <Button outline color="primary" size="lg">
+                <Button href="https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240"
+                    rel="noopener noreferrer"
+                    target="_blank" outline color="primary" size="lg"
+                >
                     <FontAwesomeIcon icon={faFacebookSquare} style={{paddingRight: "3px"}}/>
                     Facebook
                 </Button>
