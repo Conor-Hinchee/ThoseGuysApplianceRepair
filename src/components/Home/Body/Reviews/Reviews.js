@@ -15,14 +15,14 @@ class Reviews extends Component {
 	          title: "Mary Ann Castillo on Google says:",
 	          text: "Awsome staff. Family Oriented. They are hard workers who care about their customers. They also want to do things for the youth and the community.",
 	          active: false,
-	          date: "One Month Ago"
+	          date: "1 Month Ago"
 	        },{
 	          id : "second_card",
 	          starz : 5,
 	          title: "Brandon Alonzo on Google says:",
 	          text: "Really nice guys.  They showed up and were friendly and fast. They even took the time to explain what the issue was with my dishwasher in detail and their service was extremely affordable.  I highly recommend them.",
 	          active: false,
-	          date: "11 Month Ago"
+	          date: "11 Months Ago"
 	        },{
 	          id : "third_card",
 	          starz : 5,
