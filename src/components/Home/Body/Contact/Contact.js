@@ -3,7 +3,7 @@ import {Row, Col} from 'reactstrap';
 import HeaderText from '../../../Typography/HeaderText/HeaderText';
 import HiddenMdDown from './HiddenMdDown/HiddenMdDown';
 import HiddenMdUp from './HiddenMdUp/HiddenMdUp';
-import Modal from './Modal/Modal';
+import MessageModal from './MessageModal/MessageModal';
 
 class Contact extends Component { 
     constructor(props) {
@@ -14,6 +14,7 @@ class Contact extends Component {
 
     state = {
       modalOpen : false,
+      display : "appliance picker",
     };
     
     
@@ -39,9 +40,10 @@ class Contact extends Component {
                     toggle = {this.toggleModal}
                 />
                 <HiddenMdUp />
-                <Modal 
+                <MessageModal 
                     toggle = {this.toggleModal}
                     modal = {this.state.modalOpen}
+                    display = {this.state.display}
                 />
             </>
         )

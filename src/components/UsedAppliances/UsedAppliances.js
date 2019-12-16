@@ -23,7 +23,6 @@ const UsedAppliances = () => (
 		    	</section>
 	       </main>
        </Container>
-       
        <Footer />
     </>
 );
