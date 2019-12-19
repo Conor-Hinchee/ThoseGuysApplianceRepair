@@ -12,22 +12,22 @@ class Reviews extends Component {
 	        {
 	          id : "first_card",
 	          starz : 5,
-	          title: "Mary Ann Castillo on Google says:",
+	          title: "Mary Ann on Google says:",
 	          text: "Awsome staff. Family Oriented. They are hard workers who care about their customers. They also want to do things for the youth and the community.",
 	          active: false,
 	          date: "1 Month Ago"
 	        },{
 	          id : "second_card",
 	          starz : 5,
-	          title: "Brandon Alonzo on Google says:",
-	          text: "Really nice guys.  They showed up and were friendly and fast. They even took the time to explain what the issue was with my dishwasher in detail and their service was extremely affordable.  I highly recommend them.",
+	          title: "Cindy H on Yelp says:",
+	          text: "David Pearson is very capable and good to deal with. I am very impressed with how smart he is and how well he explains and figures out things. I would recommended Those Guys Appliance Repair to any of my friends.",
 	          active: false,
-	          date: "11 Months Ago"
+	          date: "1 Year Ago"
 	        },{
 	          id : "third_card",
 	          starz : 5,
-	          title: "John Birkey on Google says:",
-	          text: "You can't go wrong hiring these guys. Professional, hardworking, and genuinly good people",
+	          title: "Jessica CR on Facebook says:",
+	          text: "Those Guys live to serve, and serve our country several did in the US military. The workers are the most unselfish, efficient people ready to get the job done and done right! They are very reasonably priced and can do most things. Just ask!",
 	          active: false,
 	          date: "1 Year Ago"
 	        }
