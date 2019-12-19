@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
 import classes from './CarouselPivot.module.css';
 import CarouselItem from './CarouselItem/CarouselItem';
+import WhirlpoolBrand from '../../../../../assets/images/brands/whirlpool.svg';
+import FrigidaireBrand from '../../../../../assets/images/brands/Current_frigidaire_logo.png';
+import MaytagBrand from '../../../../../assets/images/brands/Maytag_logo_2015.png';
+import GE_Brand from '../../../../../assets/images/brands/GE.svg';
+import AmanaBrand from '../../../../../assets/images/brands/Amana_2016.png';
+import SamsungBrand from '../../../../../assets/images/brands/samsung.svg';
+import InsigniaBrand from '../../../../../assets/images/brands/insignia.gif';
+import LG_Brand from '../../../../../assets/images/brands/LG.svg';
+import ElectroluxBrand from '../../../../../assets/images/brands/Electrolux.svg';
+import BoschBrand from '../../../../../assets/images/brands/Bosch_brand.png';
+import KitchenAidBrand from '../../../../../assets/images/brands/Kitchenaid-Logo.png';
+
 
 class CarouselPivot extends Component {
 	
@@ -8,47 +20,47 @@ class CarouselPivot extends Component {
 		images: [
 			{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/whirlpool.svg",
+				src : WhirlpoolBrand,
 				alt : "Whirlpool Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/Current_frigidaire_logo.png",
+				src : FrigidaireBrand,
 				alt : "Frigidaire Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/Maytag_logo_2015.png",
+				src : MaytagBrand,
 				alt : "Maytag Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/General_Electric_(2005)_(Print).svg",
+				src : GE_Brand,
 				alt : "General Electric Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/Amana_2016.png",
+				src : AmanaBrand,
 				alt : "Amana Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/Samsung_Wordmark_(Black).svg",
+				src : SamsungBrand,
 				alt : "Samsung Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/Logo-1469672344.gif",
+				src : InsigniaBrand,
 				alt : "Insignia Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/LG_(2014)_(Print).svg",
+				src : LG_Brand,
 				alt : "LG Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/Electrolux_2015.svg",
+				src : ElectroluxBrand,
 				alt : "Electrolux Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/Bosch_brand.png",
+				src : BoschBrand,
 				alt : "Bosch Company Logo"
 			},{
 				img : true,
-				src : "https://thoseguysappliancerepair.herokuapp.com/images/optimized/image/Kitchenaid-Logo.png",
+				src : KitchenAidBrand,
 				alt : "KitchenAid Company Logo" 
 			},{
 				img : false,
