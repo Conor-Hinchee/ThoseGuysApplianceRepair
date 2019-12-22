@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {Row, Col, Button} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
@@ -14,12 +15,15 @@ const HiddenMdDown = (props) => (
                 </Button>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
-                <Button outline color="success" size="lg"
-                    onClick={props.toggle}
-                >
-                    <FontAwesomeIcon icon={faSms} style={{paddingRight: "3px"}}/>
-                    Message Us
-                </Button>
+                <Link to={"/appliancepicker"} > 
+                    <Button outline color="success" size="lg"
+                        onClick={props.toggle}
+                     >
+                        <FontAwesomeIcon icon={faSms} style={{paddingRight: "3px"}}/>
+                        Message Us
+                    </Button>
+                </Link>
+                
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
                 <Button href="https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240"

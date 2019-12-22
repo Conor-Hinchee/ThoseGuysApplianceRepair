@@ -30,7 +30,7 @@ const Navigation = (props) => {
               <NavLink href="#located">Visit Us</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/">Used Appliance</NavLink>
+              <NavLink href="/usedappliances">Used Appliance</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

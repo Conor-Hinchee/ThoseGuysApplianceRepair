@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router';
 import {Row, Col} from 'reactstrap';
 import HeaderText from '../../../Typography/HeaderText/HeaderText';
 import HiddenMdDown from './HiddenMdDown/HiddenMdDown';
@@ -14,7 +15,7 @@ class Contact extends Component {
 
     state = {
       modalOpen : false,
-      display : "appliance picker",
+      display : "Appliance Picker",
     };
     
     
@@ -24,10 +25,14 @@ class Contact extends Component {
         }));
     }
     
+    onApplianceSelected = (id) =>{
+        alert(id);
+    }
+    
     
     render(){
         return(
-             <>
+            <>
                 <Row>
                 	<Col>
             	        <HeaderText 
@@ -40,11 +45,9 @@ class Contact extends Component {
                     toggle = {this.toggleModal}
                 />
                 <HiddenMdUp />
-                <MessageModal 
-                    toggle = {this.toggleModal}
-                    modal = {this.state.modalOpen}
-                    display = {this.state.display}
-                />
+                
+                <MessageModal />
+                
             </>
         )
     }

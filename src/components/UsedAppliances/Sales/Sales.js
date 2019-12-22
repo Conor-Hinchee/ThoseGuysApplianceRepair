@@ -2,15 +2,15 @@ import React from 'react';
 import {Row, Col} from 'reactstrap';
 // import classes from './Sales.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
-import { ReactComponent as Icon_Cooktop } from '../../../assets/icons/icon_cooktop.svg';
-import { ReactComponent as Icon_Dishwasher } from '../../../assets/icons/icon_dishwasher.svg';
-import { ReactComponent as Icon_Dryer } from '../../../assets/icons/icon_dryer.svg';
-import { ReactComponent as Icon_Freezer } from '../../../assets/icons/icon_freezer.svg';
-import { ReactComponent as Icon_Fridge } from '../../../assets/icons/icon_fridge.svg';
-import { ReactComponent as Icon_Oven } from '../../../assets/icons/icon_oven.svg';
-import { ReactComponent as Icon_Range } from '../../../assets/icons/icon_range.svg';
-import { ReactComponent as Icon_Washer } from '../../../assets/icons/icon_washer.svg';
-import { ReactComponent as Icon_Water_Heater } from '../../../assets/icons/icon_water_heater.svg';
+import { ReactComponent as IconCooktop } from '../../../assets/icons/icon_cooktop.svg';
+import { ReactComponent as IconDishwasher } from '../../../assets/icons/icon_dishwasher.svg';
+import { ReactComponent as IconDryer } from '../../../assets/icons/icon_dryer.svg';
+import { ReactComponent as IconFreezer } from '../../../assets/icons/icon_freezer.svg';
+import { ReactComponent as IconFridge } from '../../../assets/icons/icon_fridge.svg';
+import { ReactComponent as IconOven } from '../../../assets/icons/icon_oven.svg';
+import { ReactComponent as IconRange } from '../../../assets/icons/icon_range.svg';
+import { ReactComponent as IconWasher } from '../../../assets/icons/icon_washer.svg';
+import { ReactComponent as IconWaterHeater } from '../../../assets/icons/icon_water_heater.svg';
 
 const Sales = () => (
 		<>
@@ -33,15 +33,15 @@ const Sales = () => (
 	    	</Row>
 	    	<Row className="d-flex justify-content-around">
 	    		<Col md="6" className="d-flex justify-content-around">
-	    			<Icon_Cooktop /> 
-	    			<Icon_Dishwasher />
-	    			<Icon_Dryer />
-	    			<Icon_Freezer />
-	    			<Icon_Fridge />
-	    			<Icon_Oven />
-	    			<Icon_Range />
-	    			<Icon_Washer />
-	    			<Icon_Water_Heater />
+	    			<IconCooktop /> 
+	    			<IconDishwasher />
+	    			<IconDryer />
+	    			<IconFreezer />
+	    			<IconFridge />
+	    			<IconOven />
+	    			<IconRange />
+	    			<IconWasher />
+	    			<IconWaterHeater />
 	    		</Col>
 	    	</Row>
 	    </>

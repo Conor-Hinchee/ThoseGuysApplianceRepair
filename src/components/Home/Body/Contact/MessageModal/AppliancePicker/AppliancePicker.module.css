@@ -1,0 +1,28 @@
+.ApplianceIcon{
+	width: 70px;
+ 	height: 70px;
+}
+.Space{
+	margin-top: 5%;
+}
+.FlexCol{
+	display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+@media screen and (min-width: 2560px) {
+	.Space{
+		padding-top: 3%;
+	}		
+}
+@media (max-width: 1050px) {
+	.Space{
+		padding-top: 7%;
+	}
+}	
+@media (max-width: 425px) {
+	.Space{
+		padding-top: 14%;
+	}
+}
