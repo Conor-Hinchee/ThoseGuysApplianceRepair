@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
+// import 'react-router-modal/css/react-router-modal.css';
+import { ModalContainer, ModalRoute } from 'react-router-modal';
+import { Redirect } from 'react-router';
 import {Row, Col} from 'reactstrap';
 import HeaderText from '../../../Typography/HeaderText/HeaderText';
 import HiddenMdDown from './HiddenMdDown/HiddenMdDown';
@@ -33,6 +35,9 @@ class Contact extends Component {
     render(){
         return(
             <>
+                {!this.state.modalOpen && (
+                    <Redirect push to="/" />    
+                )}
                 <Row>
                 	<Col>
             	        <HeaderText 
@@ -46,7 +51,16 @@ class Contact extends Component {
                 />
                 <HiddenMdUp />
                 
-                <MessageModal />
+                <ModalRoute path='/messageus/:display' parentPath='/'>
+                    <MessageModal 
+                        toggle = {this.toggleModal}
+                        display = {this.state.display}
+                    />
+                </ModalRoute>
+                
+                <ModalContainer />
+                
+
                 
             </>
         )

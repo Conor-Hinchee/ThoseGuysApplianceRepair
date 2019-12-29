@@ -10,7 +10,7 @@ const App = () => (
         <Helmet title="🧰 Those Guys Appliance Repair 🧺" />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/appliancepicker" component={Home} />
+          <Route exact path="/messageus/:display" component={Home} />
           <Route exact path="/usedappliances" component={UsedAppliances} />
           <Route component={NotFound} />
         </Switch>

@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Switch, Route } from 'react-router';
 import {Modal, ModalHeader} from 'reactstrap';
+import Helmet from 'react-helmet';
 import AppliancePicker from './AppliancePicker/AppliancePicker';
+import 'react-router-modal/css/react-router-modal.css';
 
 class MessageModal extends Component {
   constructor(props) {
@@ -17,19 +18,11 @@ class MessageModal extends Component {
 
   render(){
     return(
-         <Modal isOpen={this.props.modal} toggle={this.props.toggle} >
+         <Modal isOpen={this.props.toggle} toggle={this.props.toggle} >
+          <Helmet title=" 💬 Message Us 😃" />
           <ModalHeader toggle={this.props.toggle}>{this.props.display}</ModalHeader>
-          
-          <Switch>
-                  <Route 
-                    path={"/appliancepicker"}
-                    render={() => AppliancePicker} 
-                    toggle = {this.toggleModal}
-                    applianceOptionClick = {this.handleApplianceOptionClick}
-                  />
-              
-          </Switch>
-          
+        
+           <AppliancePicker />
           
         </Modal>
     );
