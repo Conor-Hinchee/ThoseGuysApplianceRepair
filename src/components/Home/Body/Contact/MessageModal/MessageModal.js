@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import {Modal, ModalHeader} from 'reactstrap';
 import Helmet from 'react-helmet';
 import AppliancePicker from './AppliancePicker/AppliancePicker';
-import 'react-router-modal/css/react-router-modal.css';
+import IssueDropDown from './IssueDropDown/IssueDropDown';
 
 class MessageModal extends Component {
   constructor(props) {
         super(props);
-        
         this.handleApplianceOptionClick = this.handleApplianceOptionClick.bind(this);
   }
   
 
   handleApplianceOptionClick = (e) =>{
-    alert(e.currentTarget.id);
+    this.props.propogateApplianceClick(e.currentTarget.id);
   }
 
   render(){
@@ -22,7 +21,14 @@ class MessageModal extends Component {
           <Helmet title=" 💬 Message Us 😃" />
           <ModalHeader toggle={this.props.toggle}>{this.props.display}</ModalHeader>
         
-           <AppliancePicker />
+            {this.props.display === "Appliance Picker" &&
+              <AppliancePicker 
+                applianceOptionClick = {this.handleApplianceOptionClick}
+              />
+            }
+           {this.props.display === "Select Issue" &&
+             <IssueDropDown />
+           }
           
         </Modal>
     );

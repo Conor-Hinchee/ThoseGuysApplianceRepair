@@ -15,7 +15,7 @@ const HiddenMdDown = (props) => (
                 </Button>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
-                <Link to={"/messageus/test"} > 
+                <Link to={"/messageus/" + props.display} > 
                     <Button outline color="success" size="lg"
                         onClick={props.toggle}
                      >

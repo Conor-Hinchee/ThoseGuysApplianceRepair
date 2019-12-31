@@ -13,6 +13,7 @@ class Contact extends Component {
         super(props);
         
         this.toggleModal = this.toggleModal.bind(this);
+        this.onApplianceSelected = this.onApplianceSelected.bind(this);
     }
 
     state = {
@@ -28,7 +29,10 @@ class Contact extends Component {
     }
     
     onApplianceSelected = (id) =>{
-        alert(id);
+        this.setState({
+            applianceType: id,
+            display: "Select Issue"
+        });
     }
     
     
@@ -38,6 +42,13 @@ class Contact extends Component {
                 {!this.state.modalOpen && (
                     <Redirect push to="/" />    
                 )}
+                {this.state.display === "Appliance Picker" && this.state.modalOpen &&(
+                    <Redirect push to="/messageus/Appliance%20Picker" />    
+                )}
+                {this.state.display === "Select Issue" && this.state.modalOpen &&(
+                    <Redirect push to="/messageus/Select%20Issue" />    
+                )}
+                
                 <Row>
                 	<Col>
             	        <HeaderText 
@@ -48,6 +59,7 @@ class Contact extends Component {
                 </Row>
                 <HiddenMdDown 
                     toggle = {this.toggleModal}
+                    display = {this.state.display}
                 />
                 <HiddenMdUp />
                 
@@ -55,6 +67,7 @@ class Contact extends Component {
                     <MessageModal 
                         toggle = {this.toggleModal}
                         display = {this.state.display}
+                        propogateApplianceClick = {this.onApplianceSelected}
                     />
                 </ModalRoute>
                 
