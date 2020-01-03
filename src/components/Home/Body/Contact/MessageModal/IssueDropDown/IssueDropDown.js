@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { ModalBody,Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
-
+import { ModalBody,Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
+import IssueItem from './IssueItem/IssueItem';
 
 class IssueDropDown extends Component {
   constructor(props) {
         super(props);
+        
         this.toggleDropDown = this.toggleDropDown.bind(this);
+        this.issueItemClick = this.issueItemClick.bind(this);
   }
   
   
@@ -18,7 +20,7 @@ class IssueDropDown extends Component {
     dryerIssues : ["Displaying Error", "Not Drying/Long Dry Times", "Display/Buttons Not Working",
       "Noise Vibration", "Not Heating", "Not Running", "Not Starting", "Stopped During Cycle",
       "Damaged Physically", "Not Sure"],
-    dishwasherIssues: ["Displaying Error", "Leaking", "Noise/Vibrations", "Not Cleaning Dishes",
+    dishwasherIssues : ["Displaying Error", "Leaking", "Noise/Vibrations", "Not Cleaning Dishes",
       "Not Draining", "Not Drying Dishes", "Not Starting", "Stopped During Cycle", 
       "Damaged Physically", "Not Sure"],
     rangeIssues : ["Displaying Error", "Cooktop/Burners Not Working(Oven OK)", "Display Not Working", 
@@ -33,8 +35,8 @@ class IssueDropDown extends Component {
     cookTopIssues : ["Displaying Error", "Scratched/Cracked", "Slow/Uneven Cooking", "Not Heating", 
       "Damaged Physically", "Not Sure"],
     disposalIssues : ["Not Working", "Jammed/Jamming", "Won't Shut Off", "Noise", "Damaged Physically", "Not Sure"],
-    unknownIssues : ["Displaying Error", "Noise/Vibration", "Not Starting", "Will Not Shut Off", 
-    "Damaged Physically", "Not Sure"]
+    notlistedIssues : ["Displaying Error", "Noise/Vibration", "Not Starting", "Will Not Shut Off", 
+      "Damaged Physically", "Not Sure"],
   };
   
   
@@ -44,7 +46,52 @@ class IssueDropDown extends Component {
     }));
   }
   
+  issueItemClick = (e) =>{
+    this.props.handleIssueOptionClick(e.currentTarget.id);
+  }
+  
   render(){
+    let issueList = [];
+    let titleCase = "";
+    
+    if(this.props.applianceSelected === "water_heater"){
+      titleCase = "Water Heater ";
+      for(let i = 0; i < this.state.waterHeaterIssues.length; i++){
+        issueList.push(
+          <IssueItem 
+            issue = {this.state.waterHeaterIssues[i]}
+            itemOnClick = {this.issueItemClick}
+          />
+        );
+      }
+    }else if(this.props.applianceSelected === "not_listed"){
+      
+      titleCase = "Appliance ";
+      for(let i =0; i < this.state.notlistedIssues.length; i++){
+        issueList.push(
+          <IssueItem 
+            issue = {this.state.notlistedIssues[i]}
+            itemOnClick = {this.issueItemClick}
+          />
+        );  
+      }
+    }else{
+      let type = this.props.applianceSelected + "Issues";
+      
+      titleCase = ((this.props.applianceSelected).charAt(0)).toUpperCase() + 
+        this.props.applianceSelected.slice(1) + " ";
+      
+      for(let i =0; i < this.state[type].length; i++){
+        issueList.push(
+          <IssueItem 
+            issue = {this.state[type][i]}
+            itemOnClick = {this.issueItemClick}
+          />
+        );  
+      }
+    }
+    
+  
     return(
       <ModalBody>
         <Container>
@@ -52,14 +99,11 @@ class IssueDropDown extends Component {
             <Col md="6" className="justify-content-center">
               <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown} size="block" >
                 <DropdownToggle caret>
-                  Button Dropdown
+                  {titleCase}
+                   Issues
                 </DropdownToggle>
                 <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem disabled>Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Another Action</DropdownItem>
+                  {issueList}
                 </DropdownMenu>
               </ButtonDropdown>
             </Col>

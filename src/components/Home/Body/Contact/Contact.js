@@ -14,6 +14,7 @@ class Contact extends Component {
         
         this.toggleModal = this.toggleModal.bind(this);
         this.onApplianceSelected = this.onApplianceSelected.bind(this);
+        this.onIssueSelected = this.onIssueSelected.bind(this);
     }
 
     state = {
@@ -23,7 +24,7 @@ class Contact extends Component {
     
     
     toggleModal = () =>{
-         this.setState(prevState => ({
+        this.setState(prevState => ({
             modalOpen: !prevState.modalOpen
         }));
     }
@@ -35,6 +36,9 @@ class Contact extends Component {
         });
     }
     
+    onIssueSelected = id =>{
+        alert(id + " ewsasds")
+    }
     
     render(){
         return(
@@ -68,6 +72,8 @@ class Contact extends Component {
                         toggle = {this.toggleModal}
                         display = {this.state.display}
                         propogateApplianceClick = {this.onApplianceSelected}
+                        appliance = {this.state.applianceType}
+                        propogateIssueClick = {this.onIssueSelected}
                     />
                 </ModalRoute>
                 

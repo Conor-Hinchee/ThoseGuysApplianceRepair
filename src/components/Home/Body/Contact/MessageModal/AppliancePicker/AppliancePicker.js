@@ -107,7 +107,7 @@ const AppliancePicker = (props) => (
 	        	</Col>
 	        	<Col md="4" className={classes.Space}>
 	        		<Button onClick={props.applianceOptionClick}   
-	        			color="dark" block className={classes.FlexCol} id="notlisted"
+	        			color="dark" block className={classes.FlexCol} id="not_listed"
 	        		>
 	        			Some Other Appliance 
 	        		</Button>

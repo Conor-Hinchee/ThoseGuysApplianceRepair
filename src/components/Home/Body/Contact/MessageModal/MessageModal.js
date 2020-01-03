@@ -8,12 +8,18 @@ class MessageModal extends Component {
   constructor(props) {
         super(props);
         this.handleApplianceOptionClick = this.handleApplianceOptionClick.bind(this);
+        this.handleIssueOptionClick = this.handleIssueOptionClick.bind(this);
   }
   
 
   handleApplianceOptionClick = (e) =>{
     this.props.propogateApplianceClick(e.currentTarget.id);
   }
+  
+  handleIssueOptionClick = (id) =>{
+    this.props.propogateIssueClick(id);
+  }
+  
 
   render(){
     return(
@@ -27,7 +33,10 @@ class MessageModal extends Component {
               />
             }
            {this.props.display === "Select Issue" &&
-             <IssueDropDown />
+              <IssueDropDown 
+                applianceSelected = {this.props.appliance}
+                handleIssueOptionClick = {this.handleIssueOptionClick}
+              />
            }
           
         </Modal>
