@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './ContactInfoForm.module.css';
 import {Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
@@ -8,11 +9,23 @@ class ContactInfoForm extends Component {
         
   }
   
+  state = {
+  	fName : "",
+	lName : "",
+	phoneNumber : "",
+	address : "",
+	address2 : "",
+	city : "",
+	zipCode : "",
+	shouldBtnMount: true
+  };
+  
+  
   
   render(){
     return(
     	<Container>
-    		<Form>
+    		<Form autocomplete="on">
 		      <Row form>
 		        <Col md={6}>
 		          <FormGroup>
@@ -55,7 +68,16 @@ class ContactInfoForm extends Component {
 		        </Col>
 		      </Row>
 		      
-		      <Button type="submit">Send Message</Button>
+		      
+		      <div className={classes.FlexEnd}>
+	    		{this.state.shouldBtnMount ? 
+	      			<Button >Send Message</Button>
+	      			:
+	      			<></>
+	    		}
+		      </div>
+		      
+		      
 		    </Form>
     	</Container>
     );
