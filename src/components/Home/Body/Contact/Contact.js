@@ -37,7 +37,10 @@ class Contact extends Component {
     }
     
     onIssueSelected = id =>{
-        alert(id + " ewsasds")
+        this.setState({
+            issue: id,
+            display:"Contact Information"
+        });
     }
     
     render(){
@@ -51,6 +54,9 @@ class Contact extends Component {
                 )}
                 {this.state.display === "Select Issue" && this.state.modalOpen &&(
                     <Redirect push to="/messageus/Select%20Issue" />    
+                )}
+                {this.state.display === "Contact Information" && this.state.modalOpen &&(
+                    <Redirect push to="/messageus/Contact%20Information" />    
                 )}
                 
                 <Row>

@@ -3,6 +3,7 @@ import {Modal, ModalHeader} from 'reactstrap';
 import Helmet from 'react-helmet';
 import AppliancePicker from './AppliancePicker/AppliancePicker';
 import IssueDropDown from './IssueDropDown/IssueDropDown';
+import ContactInfoForm from './ContactInfoForm/ContactInfoForm';
 
 class MessageModal extends Component {
   constructor(props) {
@@ -11,7 +12,6 @@ class MessageModal extends Component {
         this.handleIssueOptionClick = this.handleIssueOptionClick.bind(this);
   }
   
-
   handleApplianceOptionClick = (e) =>{
     this.props.propogateApplianceClick(e.currentTarget.id);
   }
@@ -20,26 +20,32 @@ class MessageModal extends Component {
     this.props.propogateIssueClick(id);
   }
   
-
   render(){
     return(
-         <Modal isOpen={this.props.toggle} toggle={this.props.toggle} >
-          <Helmet title=" 💬 Message Us 😃" />
-          <ModalHeader toggle={this.props.toggle}>{this.props.display}</ModalHeader>
-        
-            {this.props.display === "Appliance Picker" &&
-              <AppliancePicker 
-                applianceOptionClick = {this.handleApplianceOptionClick}
-              />
-            }
-           {this.props.display === "Select Issue" &&
-              <IssueDropDown 
-                applianceSelected = {this.props.appliance}
-                handleIssueOptionClick = {this.handleIssueOptionClick}
-              />
-           }
+          <Modal isOpen={this.props.toggle} 
+              toggle={this.props.toggle} 
+              size= {this.props.display === "Contact Information" ? "lg" : ""}
+          >
+            <Helmet title=" 💬 Message Us 😃" />
+            <ModalHeader toggle={this.props.toggle}>{this.props.display}</ModalHeader>
           
-        </Modal>
+              {this.props.display === "Appliance Picker" &&
+                <AppliancePicker 
+                  applianceOptionClick = {this.handleApplianceOptionClick}
+                />
+              }
+             {this.props.display === "Select Issue" &&
+                <IssueDropDown 
+                  applianceSelected = {this.props.appliance}
+                  handleIssueOptionClick = {this.handleIssueOptionClick}
+                />
+             }
+             {this.props.display === "Contact Information" && 
+                <ContactInfoForm 
+                  
+                />
+             }
+          </Modal>
     );
   }
   
