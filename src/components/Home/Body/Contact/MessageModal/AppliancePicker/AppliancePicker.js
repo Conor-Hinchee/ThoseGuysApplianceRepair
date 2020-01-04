@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './AppliancePicker.module.css';
-import { ModalBody,Container, Row, Button, Col} from 'reactstrap';
+import { ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import { ReactComponent as IconCooktop } from '../../../../../../assets/icons/icon_cooktop.svg';
 import { ReactComponent as IconDishwasher } from '../../../../../../assets/icons/icon_dishwasher.svg';
 import { ReactComponent as IconDryer } from '../../../../../../assets/icons/icon_dryer.svg';

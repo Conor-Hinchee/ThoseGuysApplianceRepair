@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classes from './IssueDropDown.module.css';
 import { ModalBody,Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
 import IssueItem from './IssueItem/IssueItem';
 
@@ -32,13 +33,12 @@ class IssueDropDown extends Component {
       "Too Hot", "Low Pressure", "Noise", "Water Odor/Color", "Pilot Won't Light", "Pilot Won't Stay Lit",
       "Burner Won't Stay Lit", "Damaged Physically", "Not Sure"],
     freezerIssues : ["Noise", "Frost Build Up", "Not Running", "Not Cold", "Damaged Physically", "Not Sure"],
-    cookTopIssues : ["Displaying Error", "Scratched/Cracked", "Slow/Uneven Cooking", "Not Heating", 
+    cooktopIssues : ["Displaying Error", "Scratched/Cracked", "Slow/Uneven Cooking", "Not Heating", 
       "Damaged Physically", "Not Sure"],
     disposalIssues : ["Not Working", "Jammed/Jamming", "Won't Shut Off", "Noise", "Damaged Physically", "Not Sure"],
     notlistedIssues : ["Displaying Error", "Noise/Vibration", "Not Starting", "Will Not Shut Off", 
       "Damaged Physically", "Not Sure"],
   };
-  
   
   toggleDropDown = ()=>{
     this.setState(prevState => ({
@@ -94,21 +94,17 @@ class IssueDropDown extends Component {
   
     return(
       <ModalBody>
-        <Container>
-          <Row className="justify-content-center">
-            <Col md="6" className="justify-content-center">
-              <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown} size="block" >
-                <DropdownToggle caret>
-                  {titleCase}
-                   Issues
-                </DropdownToggle>
-                <DropdownMenu>
-                  {issueList}
-                </DropdownMenu>
-              </ButtonDropdown>
-            </Col>
-          </Row>
-        </Container>
+        <div className={classes.FlexCenter}>
+          <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggleDropDown} size="block" >
+            <DropdownToggle caret>
+              {titleCase}
+               Issues
+            </DropdownToggle>
+            <DropdownMenu>
+              {issueList}
+            </DropdownMenu>
+          </ButtonDropdown>
+        </div>
       </ModalBody>   
     );
   }
