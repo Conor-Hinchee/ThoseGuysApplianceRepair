@@ -77,16 +77,14 @@ class Contact extends Component {
                     <MessageModal 
                         toggle = {this.toggleModal}
                         display = {this.state.display}
-                        propogateApplianceClick = {this.onApplianceSelected}
+                        propagateApplianceClick = {this.onApplianceSelected}
                         appliance = {this.state.applianceType}
-                        propogateIssueClick = {this.onIssueSelected}
+                        propagateIssueClick = {this.onIssueSelected}
                     />
                 </ModalRoute>
                 
                 <ModalContainer />
-                
 
-                
             </>
         )
     }

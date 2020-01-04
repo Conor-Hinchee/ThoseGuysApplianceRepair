@@ -13,11 +13,11 @@ class MessageModal extends Component {
   }
   
   handleApplianceOptionClick = (e) =>{
-    this.props.propogateApplianceClick(e.currentTarget.id);
+    this.props.propagateApplianceClick(e.currentTarget.id);
   }
   
   handleIssueOptionClick = (id) =>{
-    this.props.propogateIssueClick(id);
+    this.props.propagateIssueClick(id);
   }
   
   render(){
