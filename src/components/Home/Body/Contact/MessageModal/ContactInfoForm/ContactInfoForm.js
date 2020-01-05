@@ -15,10 +15,10 @@ class ContactInfoForm extends Component {
   	fName : "",
 	lName : "",
 	phoneNumber : "",
-	address : "",
-	address2 : "",
-	city : "",
-	zipCode : "",
+	inputAddress : "",
+	inputAddress2 : "",
+	inputCity : "",
+	inputZip : "",
 	shouldBtnMount: false
   };
   
@@ -33,37 +33,49 @@ class ContactInfoForm extends Component {
   			if(alphaOnly.test(e.target.value) || e.target.value === ""){
   				this.setState({
   					fName: e.target.value
-  				});
+  				}, function() {
+					this.checkFormValues();
+				});
   			}
   			break;
 		case "lName":
 			if(alphaOnly.test(e.target.value) || e.target.value === ""){
   				this.setState({
   					lName: e.target.value
-  				});
+  				}, function() {
+					this.checkFormValues();
+				});
   			}
 			break;
 		case "phoneNumber":
 			if(numbersOnly.test(e.target.value) || e.target.value === ""){
 				this.setState({
 					phoneNumber: e.target.value
+				}, function() {
+					this.checkFormValues();
 				});
 			}
 			break;
 		case "inputAddress":
 			this.setState({
 				inputAddress: e.target.value
+			}, function() {
+					this.checkFormValues();
 			});
 			break;
 		case "inputAddress2":
 			this.setState({
 				inputAddress2: e.target.value
+			}, function() {
+					this.checkFormValues();
 			});
 			break;
 		case "inputCity":
 			if(alphaOnly.test(e.target.value) || e.target.value === ""){
 				this.setState({
 					inputCity: e.target.value
+				}, function() {
+					this.checkFormValues();
 				});
 			}
 			break;
@@ -71,24 +83,27 @@ class ContactInfoForm extends Component {
 			if(numbersOnly.test(e.target.value) || e.target.value === ""){
 				this.setState({
 					inputZip: e.target.value
+				}, function() {
+					this.checkFormValues();
 				});
 			}
 			break;
   		default:	
   			break;
   	}
-  	
-  	this.checkFormValues();
   }
   
   checkFormValues = () =>{
+  
+  	
   	if(this.state.fName !== "" && this.state.lName !== "" && this.state.phoneNumber !== ""
-  		&& this.state.address !== "" && this.state.address2 !== "" && this.state.city !== ""
-  		&& this.state.zipCode !== ""
+  		&& this.state.inputAddress !== ""  && this.state.inputCity !== "" && this.state.inputZip !== ""
   	){
   		this.setState({shouldBtnMount: true});
+  		
   	}else{
   		this.setState({shouldBtnMount: false});
+  		
   	}
   }
   
@@ -100,26 +115,26 @@ class ContactInfoForm extends Component {
 		        <Col md={6}>
 		          <FormGroup>
 		            <Label for="fName">First Name</Label>
-		            <Input onChange={this.handleFormChange} value={this.state.fName}
+		            <Input required onChange={this.handleFormChange} value={this.state.fName}
 		            	type="text" name="firstName" id="fName" placeholder="John" />
 		          </FormGroup>
 		        </Col>
 		        <Col md={6}>
 		          <FormGroup>
 		            <Label for="lName">Last Name</Label>
-		            <Input onChange={this.handleFormChange} value={this.state.lName}
+		            <Input required onChange={this.handleFormChange} value={this.state.lName}
 		            	type="text" name="LastName" id="lName" placeholder="Smith" />
 		          </FormGroup>
 		        </Col>
 		      </Row>
 		      <FormGroup>
 		        <Label for="phoneNumber">Phone Number</Label>
-		        <Input onChange={this.handleFormChange} value={this.state.phoneNumber}
+		        <Input required onChange={this.handleFormChange} value={this.state.phoneNumber}
 		        	type="text" name="phoneNumber" id="phoneNumber" placeholder="(575) 555-5555"/>
 		      </FormGroup>
 		      <FormGroup>
 		        <Label for="inputAddress">Address</Label>
-		        <Input onChange={this.handleFormChange} value={this.state.inputAddress}
+		        <Input required onChange={this.handleFormChange} value={this.state.inputAddress}
 		        	type="text" name="address" id="inputAddress" placeholder="1234 Main St"/>
 		      </FormGroup>
 		      <FormGroup>
@@ -131,7 +146,7 @@ class ContactInfoForm extends Component {
 		        <Col md={6}>
 		          <FormGroup>
 		            <Label for="inputCity">City</Label>
-		            <Input onChange={this.handleFormChange} value={this.state.inputCity} 
+		            <Input required onChange={this.handleFormChange} value={this.state.inputCity} 
 		            	type="text" name="city" id="inputCity" placeholder="Clovis" />
 		          </FormGroup>
 		        </Col>
@@ -139,7 +154,7 @@ class ContactInfoForm extends Component {
 		        <Col md={{ size: '2', offset: 4 }}>
 		          <FormGroup>
 		            <Label for="inputZip">Zip</Label>
-		            <Input onChange={this.handleFormChange} value={this.state.inputZip} 
+		            <Input required onChange={this.handleFormChange} value={this.state.inputZip} 
 		            	type="text" name="zip" id="inputZip"/>
 		          </FormGroup>  
 		        </Col>
