@@ -26,6 +26,7 @@ class ContactInfoForm extends Component {
   handleFormChange = (e) =>{
   	const alphaOnly = /^[a-zA-Z]+$/;
   	const numbersOnly = /^\d+$/;
+  	const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
   	
   	
   	switch(e.target.id){
@@ -48,9 +49,16 @@ class ContactInfoForm extends Component {
   			}
 			break;
 		case "phoneNumber":
+			
 			if(numbersOnly.test(e.target.value) || e.target.value === ""){
+				let newValue = e.target.value
+				
+				if(newValue.length === 10){
+					newValue = e.target.value.replace(phoneRegex, "($1) $2-$3");
+				}
+				
 				this.setState({
-					phoneNumber: e.target.value
+					phoneNumber: newValue
 				}, function() {
 					this.checkFormValues();
 				});
