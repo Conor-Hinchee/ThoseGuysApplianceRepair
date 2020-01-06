@@ -6,7 +6,7 @@ import {Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'react
 class ContactInfoForm extends Component {
   constructor(props) {
         super(props);
-        
+    
     this.handleFormChange = this.handleFormChange.bind(this);
     this.checkFormValues = this.checkFormValues.bind(this);
   }
@@ -49,7 +49,6 @@ class ContactInfoForm extends Component {
   			}
 			break;
 		case "phoneNumber":
-			
 			if(numbersOnly.test(e.target.value) || e.target.value === ""){
 				let newValue = e.target.value
 				
@@ -62,7 +61,12 @@ class ContactInfoForm extends Component {
 				}, function() {
 					this.checkFormValues();
 				});
+			}else if (this.state.phoneNumber.length === 14 && e.target.value.length === 13){
+				this.setState({
+					phoneNumber: ""
+				});
 			}
+			
 			break;
 		case "inputAddress":
 			this.setState({
@@ -89,11 +93,13 @@ class ContactInfoForm extends Component {
 			break;
 		case "inputZip":
 			if(numbersOnly.test(e.target.value) || e.target.value === ""){
-				this.setState({
-					inputZip: e.target.value
-				}, function() {
-					this.checkFormValues();
-				});
+				if(e.target.value.length <  6){
+					this.setState({
+						inputZip: e.target.value
+					}, function() {
+						this.checkFormValues();
+					});
+				}
 			}
 			break;
   		default:	
@@ -102,16 +108,17 @@ class ContactInfoForm extends Component {
   }
   
   checkFormValues = () =>{
-  
-  	
   	if(this.state.fName !== "" && this.state.lName !== "" && this.state.phoneNumber !== ""
   		&& this.state.inputAddress !== ""  && this.state.inputCity !== "" && this.state.inputZip !== ""
   	){
-  		this.setState({shouldBtnMount: true});
+  		if(this.state.phoneNumber.length === 14 ){
+  			
+  		}
   		
+  		
+  		this.setState({shouldBtnMount: true});
   	}else{
   		this.setState({shouldBtnMount: false});
-  		
   	}
   }
   

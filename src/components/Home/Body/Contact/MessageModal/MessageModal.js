@@ -28,7 +28,6 @@ class MessageModal extends Component {
           >
             <Helmet title=" 💬 Message Us 😃" />
             <ModalHeader toggle={this.props.toggle}>{this.props.display}</ModalHeader>
-          
               {this.props.display === "Appliance Picker" &&
                 <AppliancePicker 
                   applianceOptionClick = {this.handleApplianceOptionClick}
@@ -41,9 +40,7 @@ class MessageModal extends Component {
                 />
              }
              {this.props.display === "Contact Information" && 
-                <ContactInfoForm 
-                  
-                />
+                <ContactInfoForm />
              }
           </Modal>
     );
