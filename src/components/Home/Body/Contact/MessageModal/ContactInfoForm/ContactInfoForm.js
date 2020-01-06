@@ -9,6 +9,7 @@ class ContactInfoForm extends Component {
     
     this.handleFormChange = this.handleFormChange.bind(this);
     this.checkFormValues = this.checkFormValues.bind(this);
+    this.submitForm = this.submitForm.bind(this);
   }
   
   state = {
@@ -111,16 +112,19 @@ class ContactInfoForm extends Component {
   	if(this.state.fName !== "" && this.state.lName !== "" && this.state.phoneNumber !== ""
   		&& this.state.inputAddress !== ""  && this.state.inputCity !== "" && this.state.inputZip !== ""
   	){
-  		if(this.state.phoneNumber.length === 14 ){
-  			
+  		if(this.state.phoneNumber.length === 14 && this.state.inputZip.length ===5){
+  			this.setState({shouldBtnMount: true});
+  		}else{
+  			this.setState({shouldBtnMount: false});
   		}
-  		
-  		
-  		this.setState({shouldBtnMount: true});
   	}else{
   		this.setState({shouldBtnMount: false});
   	}
   }
+  
+  submitForm = (e) =>{
+  	e.preventDefault();
+  } 
   
   render(){
     return(
@@ -144,7 +148,8 @@ class ContactInfoForm extends Component {
 		      </Row>
 		      <FormGroup>
 		        <Label for="phoneNumber">Phone Number</Label>
-		        <Input required onChange={this.handleFormChange} value={this.state.phoneNumber}
+		        <Input required pattern="([0-9]{3})[0-9]{3}-[0-9]{4}"
+		        	onChange={this.handleFormChange} value={this.state.phoneNumber}
 		        	type="text" name="phoneNumber" id="phoneNumber" placeholder="(575) 555-5555"/>
 		      </FormGroup>
 		      <FormGroup>
@@ -178,7 +183,7 @@ class ContactInfoForm extends Component {
 		      
 		      <div className={classes.FlexEnd}>
 	    		{this.state.shouldBtnMount ? 
-	      			<Button >Send Message</Button>
+	      			<Button	onClick={this.submitForm}> Send Message </Button>
 	      			:
 	      			<></>
 	    		}

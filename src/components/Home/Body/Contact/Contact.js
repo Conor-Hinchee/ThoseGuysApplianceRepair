@@ -71,7 +71,10 @@ class Contact extends Component {
                     toggle = {this.toggleModal}
                     display = {this.state.display}
                 />
-                <HiddenMdUp />
+                <HiddenMdUp 
+                    toggle = {this.toggleModal}
+                    display = {this.state.display}
+                />
                 
                 <ModalRoute path='/messageus/:display' parentPath='/'>
                     <MessageModal 
