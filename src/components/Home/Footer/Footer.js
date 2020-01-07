@@ -41,7 +41,7 @@ const Footer = () => (
 			</Col>
 			<Col sm="4" className={classes.VerticalAlign}>
 				<h6 className={classes.FooterHeader}>
-					Those Guys Appliance Repair &copy; 2020
+					Those Guys Appliance Repair
 				</h6>
 			</Col>
 			<Col sm="4">
