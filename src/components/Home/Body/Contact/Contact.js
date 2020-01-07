@@ -23,8 +23,8 @@ class Contact extends Component {
     };
     
     componentDidMount = () => {
-        let param = window.location.pathname.split("/")[2];
-        let itemToDisplay = param.replace("%20","_").toLowerCase();
+        // let param = window.location.pathname.split("/")[2];
+        // let itemToDisplay = param.replace("%20","_").toLowerCase();
     }
     
     toggleModal = () =>{

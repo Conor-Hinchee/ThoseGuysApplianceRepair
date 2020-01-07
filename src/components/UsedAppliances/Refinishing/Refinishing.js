@@ -2,6 +2,8 @@ import React from 'react';
 import {Row, Col} from 'reactstrap';
 import classes from './Refinishing.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
+import FridgePainting from '../../../assets/images/fridepainting.jpg';
+import OvenPainting from '../../../assets/images/ovenpainting.jpg';
 
 const Refinishing = () => (
 		<>
@@ -10,7 +12,6 @@ const Refinishing = () => (
 		        		tag={1}
 		    	        text={'Appliance Refinishing'}
 		        />
-		        
 		    </Row>
 	    	<Row>
 	    		<Col class="text-center">
@@ -22,12 +23,12 @@ const Refinishing = () => (
 	    	</Row>
 	    	<Row className="d-flex justify-content-around">
 	    		<Col md="4">
-	    			<img className="img-fluid rounded"
-	    				src="https://github.com/captnstarburst/thoseguyswebsite/blob/master/public/images/kitchen_appliances.jpeg?raw=true" />
+	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
+	    				src={FridgePainting} alt="Refrigerator refinished with paint" />
 	    		</Col>
 	    		<Col md="4">
-	    			<img className="img-fluid rounded"
-	    			src= "https://github.com/captnstarburst/thoseguyswebsite/blob/master/public/images/kitchen_appliances.jpeg?raw=true" />
+	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
+	    			src={OvenPainting} alt="Oven refinished with paint" />
 	    		</Col>
 	    		
 	    	</Row>
