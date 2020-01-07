@@ -22,6 +22,10 @@ class Contact extends Component {
       display : "Appliance Picker",
     };
     
+    componentDidMount = () => {
+        let param = window.location.pathname.split("/")[2];
+        let itemToDisplay = param.replace("%20","_").toLowerCase();
+    }
     
     toggleModal = () =>{
         this.setState(prevState => ({

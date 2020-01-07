@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './IssueDropDown.module.css';
-import { ModalBody,Container, Row, Col, ButtonDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
+import { ModalBody, ButtonDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
 import IssueItem from './IssueItem/IssueItem';
 
 class IssueDropDown extends Component {
