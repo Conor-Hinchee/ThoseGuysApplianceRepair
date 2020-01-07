@@ -12,7 +12,6 @@ const Sales = () => (
 		        		tag={1}
 		    	        text={'Appliance Recycling'}
 		        />
-		        
 		    </Row>
 		    <Row className="justify-content-center">
 		    	<Col md="4" className="d-flex justify-content-around">

@@ -12,11 +12,11 @@ const UsedAppliances = () => (
        <Navigation />
        <Container>
 	    	<main>
-		    	<section className={classes.Space}>
-		    		<Refinishing />
+	    		<section className={classes.Space}>
+		    	    <Sales />
 		    	</section>
 		    	<section className={classes.Space}>
-		    	    <Sales />
+		    		<Refinishing />
 		    	</section>
 		    	<section className={classes.Space}>
 		    	    <Recycle />
