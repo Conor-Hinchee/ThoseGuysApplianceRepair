@@ -10,7 +10,6 @@ import { ReactComponent as IconFridge } from '../../../assets/icons/icon_fridge.
 import { ReactComponent as IconOven } from '../../../assets/icons/icon_oven.svg';
 import { ReactComponent as IconRange } from '../../../assets/icons/icon_range.svg';
 import { ReactComponent as IconWasher } from '../../../assets/icons/icon_washer.svg';
-import { ReactComponent as IconWaterHeater } from '../../../assets/icons/icon_water_heater.svg';
 
 const Sales = () => (
 		<>
@@ -41,7 +40,6 @@ const Sales = () => (
 	    			<IconOven />
 	    			<IconRange />
 	    			<IconWasher />
-	    			<IconWaterHeater />
 	    		</Col>
 	    	</Row>
 	    </>
