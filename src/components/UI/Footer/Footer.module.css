@@ -12,6 +12,7 @@ a:hover{
 	width: 50px;
 	font-size: 22px;
 	color:white;
+	cursor: pointer;
 }
 .Social :hover{
 	color: white;
