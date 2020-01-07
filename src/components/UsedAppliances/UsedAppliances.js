@@ -5,7 +5,7 @@ import Navigation from './Navigation/Navigation';
 import Refinishing from './Refinishing/Refinishing';
 import Sales from './Sales/Sales';
 import Recycle from './Recycle/Recycle';
-import Footer from '../Home/Footer/Footer';
+import Footer from '../UI/Footer/Footer';
 
 const UsedAppliances = () => (
     <>
