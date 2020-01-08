@@ -11,7 +11,7 @@ const Navigation = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
 
-  const navItems = props.navigation.map((item, i) => 
+  const navItems = props.navigationLinks.map((item, i) => 
     <NavItems 
         link = {item.link}
         title = {item.title}
@@ -20,7 +20,7 @@ const Navigation = (props) => {
 
 
   return (
-      <Navbar color="dark" dark expand="md">
+      <Navbar color="dark" dark expand="md" sticky={props.sticky ? "top" : ""}>
         <NavbarBrand href="/">
           <img src={ThoseGuysLogo}  
             alt="Those Guys Appliance Repair Logo" style={{marginRight: "10px"}}

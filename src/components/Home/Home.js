@@ -7,8 +7,9 @@ import Footer from '../UI/Footer/Footer';
 const Home = () => (
     <>
         <Header />
-        <Navigation 
-            navigation ={[
+        <Navigation
+            sticky = {true} 
+            navigationLinks ={[
                 {
                     link : "#who_we_are",
                     title : "Home"

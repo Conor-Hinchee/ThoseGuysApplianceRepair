@@ -9,8 +9,9 @@ import Footer from '../UI/Footer/Footer';
 
 const UsedAppliances = () => (
     <>
-       <Navigation 
-	   	navigation = {[
+	   <Navigation
+	   	sticky = {false} 
+	   	navigationLinks = {[
 			{
 				link : "/",
 				title : "Home"
