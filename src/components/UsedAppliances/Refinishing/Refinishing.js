@@ -30,7 +30,6 @@ const Refinishing = () => (
 	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
 	    			src={OvenPainting} alt="Oven refinished with paint" />
 	    		</Col>
-	    		
 	    	</Row>
 	    </>
 );
