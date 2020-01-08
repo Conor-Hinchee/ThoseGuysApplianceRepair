@@ -11,5 +11,5 @@
 	opacity: 1;
 	transition: opacity box-shadow 1.5s;
 	transition-timing-function: ease;
-	width: 350px;
+	/* width: 350px; */
 }

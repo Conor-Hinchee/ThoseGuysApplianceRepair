@@ -5,7 +5,7 @@ import { faMapMarkedAlt, faPhoneSquare } from '@fortawesome/free-solid-svg-icons
 import classes from './ContactRow.module.css';
 
 const Header = () => (
-    <section style={{height:'25px',width: '100%'}}>
+    <section className={classes.ContactRow}>
         <Col sm="12" className={classes.spaceAround}>
             <h6 className="word-wrap">
                 <div className={classes.contactBarText}>

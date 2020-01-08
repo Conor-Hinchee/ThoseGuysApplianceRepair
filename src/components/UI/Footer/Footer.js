@@ -10,7 +10,7 @@ const Footer = () => (
 	
 	<footer className="container-fluid" style={{marginTop: "5%"}}>
 		<Row className="bg-dark">
-			<Col sm="4" >
+			<Col md="2" sm="12" className="d-flex justify-content-around">
 				<UncontrolledTooltip placement="top" target="UncontrolledTooltipFacebook">
 	        		Facebook
     			</UncontrolledTooltip>
@@ -39,12 +39,14 @@ const Footer = () => (
 				</a>
 				
 			</Col>
-			<Col sm="4" className={classes.VerticalAlign}>
+			<Col md={{ size: 4, offset: 2 }} sm="12" 
+				className={classes.VerticalAlign}
+			>
 				<h6 className={classes.FooterHeader}>
 					Those Guys Appliance Repair
 				</h6>
 			</Col>
-			<Col sm="4">
+			<Col md="4" sm="12">
 				<p className={classes.Author}>
 					Made with&nbsp;
 						<FontAwesomeIcon icon={faHeart} className={classes.Heart} /> 

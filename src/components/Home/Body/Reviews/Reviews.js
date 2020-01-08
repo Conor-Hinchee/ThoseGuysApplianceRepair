@@ -211,7 +211,7 @@ class Reviews extends Component {
               </Col>
             </Row>
             <Row className={classes.JustifyContentCenter}>
-              <Col md="12">
+              <Col md="12" sm="10">
                 <CardDeck>
                   {cardItems}
                 </CardDeck>

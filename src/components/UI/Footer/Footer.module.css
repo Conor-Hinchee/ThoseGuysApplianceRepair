@@ -62,10 +62,12 @@ a:hover{
 	}
 }
 
-@media (max-width: 425px) {
+@media (max-width: 375px) {
 	.Social{
-		font-size: 15px;
-		display: flex;
+		width:auto;
+	}
+	.Author{
+		text-align: center;
 	}
 }
 

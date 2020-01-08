@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import classes from './Navigation.module.css';
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
 import NavItems from "./NavItems/NavItems";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -21,7 +22,7 @@ const Navigation = (props) => {
 
   return (
       <Navbar color="dark" dark expand="md" sticky={props.sticky ? "top" : ""}>
-        <NavbarBrand href="/">
+        <NavbarBrand href="/" className={classes.NavbarBrand}>
           <img src={ThoseGuysLogo}  
             alt="Those Guys Appliance Repair Logo" style={{marginRight: "10px"}}
           />

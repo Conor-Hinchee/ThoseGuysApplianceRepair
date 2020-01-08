@@ -148,9 +148,12 @@ class WeFix extends Component {
 					    	{navItems}   
 					     </Nav>
 			    	</Col>
-				    <Fade in={this.state.shouldFade} tag="p">
-						{this.state.fadeText}
-				    </Fade>
+					<Col md="12" sm="10" >
+						<Fade in={this.state.shouldFade} tag="p">
+							{this.state.fadeText}
+						</Fade>
+					</Col>
+				    
 			    </Row>
 			);
 	}	
