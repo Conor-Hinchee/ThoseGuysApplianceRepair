@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col} from 'reactstrap';
+import {Row, Col, Button} from 'reactstrap';
 import classes from './Refinishing.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
 import FridgePainting from '../../../assets/images/fridepainting.jpg';
@@ -7,7 +7,7 @@ import OvenPainting from '../../../assets/images/ovenpainting.jpg';
 
 const Refinishing = () => (
 		<>
-		    <Row className={classes.JustifyContentCenter}>
+		    <Row className="d-flex justify-content-center">
 		    	<HeaderText 
 		        		tag={1}
 		    	        text={'Appliance Refinishing'}
@@ -31,6 +31,11 @@ const Refinishing = () => (
 	    			src={OvenPainting} alt="Oven refinished with paint" />
 	    		</Col>
 	    	</Row>
+			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
+				<Button size="lg" style={{marginRight: "50px" }}>
+					Refinish My Appliance
+				</Button>
+			</Row>
 	    </>
 );
 

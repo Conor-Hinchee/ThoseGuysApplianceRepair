@@ -10,19 +10,19 @@ import Footer from '../UI/Footer/Footer';
 const UsedAppliances = () => (
     <>
        <Navigation />
-       <Container>
-	    	<main>
-	    		<section className={classes.Space}>
-		    	    <Sales />
-		    	</section>
-		    	<section className={classes.Space}>
-		    		<Refinishing />
-		    	</section>
-		    	<section className={classes.Space}>
-		    	    <Recycle />
-		    	</section>
-	       </main>
-       </Container>
+       <main>
+	   		<Container>
+				<section className={classes.Space}>
+					<Sales />
+				</section>
+				<section className={classes.Space}>
+					<Refinishing />
+				</section>
+				<section className={classes.Space}>
+					<Recycle />
+				</section>
+   	   		</Container>
+	   </main>
        <Footer />
     </>
 );

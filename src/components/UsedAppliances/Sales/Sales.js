@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col} from 'reactstrap';
+import {Row, Col, Button} from 'reactstrap';
 // import classes from './Sales.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
 import { ReactComponent as IconCooktop } from '../../../assets/icons/icon_cooktop.svg';
@@ -42,6 +42,11 @@ const Sales = () => (
 	    			<IconWasher />
 	    		</Col>
 	    	</Row>
+			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
+				<Button size="lg" style={{marginRight: "50px" }}>
+					Purchase An Appliance
+				</Button>
+			</Row>
 	    </>
 );
 

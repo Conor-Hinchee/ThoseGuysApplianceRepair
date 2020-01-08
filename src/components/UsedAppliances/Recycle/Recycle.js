@@ -1,5 +1,5 @@
 import React from 'react';
-import {Row, Col} from 'reactstrap';
+import {Row, Col, Button} from 'reactstrap';
 // import classes from './Sales.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
@@ -14,15 +14,15 @@ const Sales = () => (
 		        />
 		    </Row>
 		    <Row className="justify-content-center">
+		    	<h5 >Get CASH for your old appliances!</h5>
+		    </Row>
+			<Row className="justify-content-center">
 		    	<Col md="4" className="d-flex justify-content-around">
 		    			<FontAwesomeIcon icon={faHandshake} style={{fontSize: "2.5em"}} />
 		    			<FontAwesomeIcon icon={faRecycle}  style={{fontSize: "2.5em"}} />
 			    		<FontAwesomeIcon icon={faHandHoldingUsd} style={{fontSize: "2.5em"}} />
 			    		<FontAwesomeIcon icon={faSmileBeam} style={{fontSize: "2.5em"}} />
 		    	</Col>
-		    </Row>
-		    <Row className="justify-content-center">
-		    	<h5 >Get CASH for your old appliances!</h5>
 		    </Row>
 	    	<Row>
 	    		<Col class="text-center">
@@ -32,6 +32,11 @@ const Sales = () => (
 		        	</p>
 	        	</Col>
 	    	</Row>
+			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
+				<Button size="lg" style={{marginRight: "50px" }}>
+					Recycle My Appliance
+				</Button>
+			</Row>
 	    </>
 );
 
