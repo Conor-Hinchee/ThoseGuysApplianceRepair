@@ -13,14 +13,14 @@ import { ReactComponent as IconWasher } from '../../../assets/icons/icon_washer.
 
 const Sales = () => (
 		<>
-		    <Row className="justify-content-center">
+		    <Row className="d-flex justify-content-center">
 		    	<HeaderText 
 		        		tag={1}
 		    	        text={'Appliance Sales'}
 		        />
 		        
 		    </Row>
-		    <Row className="justify-content-center">
+		    <Row className="d-flex justify-content-center">
 		    	<h5 >Appliances for sale, for less!</h5>
 		    </Row>
 	    	<Row>
@@ -43,7 +43,7 @@ const Sales = () => (
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button size="lg" style={{marginRight: "50px" }}>
+				<Button size="lg" style={{marginRight: "50px"}}>
 					Purchase An Appliance
 				</Button>
 			</Row>
