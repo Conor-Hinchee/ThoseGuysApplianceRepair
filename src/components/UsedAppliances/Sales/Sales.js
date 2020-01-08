@@ -43,7 +43,7 @@ const Sales = () => (
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button size="lg" style={{marginRight: "50px"}}>
+				<Button size="lg">
 					Purchase An Appliance
 				</Button>
 			</Row>

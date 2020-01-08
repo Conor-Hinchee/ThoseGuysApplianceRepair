@@ -17,7 +17,7 @@ const Sales = () => (
 		    	<h5 >Get CASH for your old appliances!</h5>
 		    </Row>
 			<Row className="justify-content-center">
-		    	<Col md="4" className="d-flex justify-content-around">
+		    	<Col md="6" className="d-flex justify-content-around">
 		    			<FontAwesomeIcon icon={faHandshake} style={{fontSize: "2.5em"}} />
 		    			<FontAwesomeIcon icon={faRecycle}  style={{fontSize: "2.5em"}} />
 			    		<FontAwesomeIcon icon={faHandHoldingUsd} style={{fontSize: "2.5em"}} />
@@ -33,7 +33,7 @@ const Sales = () => (
 	        	</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button size="lg" style={{marginRight: "50px" }}>
+				<Button size="lg">
 					Recycle My Appliance
 				</Button>
 			</Row>

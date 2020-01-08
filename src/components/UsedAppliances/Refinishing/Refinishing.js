@@ -21,7 +21,7 @@ const Refinishing = () => (
 		        	</p>
 	        	</Col>
 	    	</Row>
-	    	<Row className="d-flex justify-content-around">
+	    	<Row className="d-flex justify-content-around" style={{margin: "20px"}} >
 	    		<Col md="4">
 	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
 	    				src={FridgePainting} alt="Refrigerator refinished with paint" />
@@ -32,7 +32,7 @@ const Refinishing = () => (
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button size="lg" style={{marginRight: "50px" }}>
+				<Button size="lg">
 					Refinish My Appliance
 				</Button>
 			</Row>

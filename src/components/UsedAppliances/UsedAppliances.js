@@ -15,26 +15,26 @@ const UsedAppliances = () => (
 				link : "/",
 				title : "Home"
 			},{
-				link : "",
+				link : "#refinishing",
 				title : "Refinishing"
 			},{
-				link : "",
+				link : "#sales",
 				title : "Used Appliance Sales" 
 			},{
-				link : "",
+				link : "#recycle",
 				title : "Recycling"
 			}
 		]}
 	   />
        <main>
 	   		<Container>
-				<section className={classes.Space}>
+				<section className={classes.Space} id="sales">
 					<Sales />
 				</section>
-				<section className={classes.Space}>
+				<section className={classes.Space} id="refinishing">
 					<Refinishing />
 				</section>
-				<section className={classes.Space}>
+				<section className={classes.Space} id="recycle">
 					<Recycle />
 				</section>
    	   		</Container>
