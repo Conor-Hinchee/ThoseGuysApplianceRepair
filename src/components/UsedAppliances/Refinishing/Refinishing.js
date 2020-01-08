@@ -1,9 +1,10 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
-// import classes from './Refinishing.module.css';
+import classes from './Refinishing.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
 import FridgePainting from '../../../assets/images/fridepainting.jpg';
 import OvenPainting from '../../../assets/images/ovenpainting.jpg';
+
 
 const Refinishing = () => (
 		<>
@@ -21,12 +22,12 @@ const Refinishing = () => (
 		        	</p>
 	        	</Col>
 	    	</Row>
-	    	<Row className="d-flex justify-content-around" style={{margin: "20px"}} >
-	    		<Col md="4">
+	    	<Row className="d-flex justify-content-around">
+	    		<Col md="4" sm="10" className={classes.ImgRow}>
 	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
 	    				src={FridgePainting} alt="Refrigerator refinished with paint" />
 	    		</Col>
-	    		<Col md="4">
+	    		<Col md="4" sm="10" className={classes.ImgRow}>
 	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
 	    			src={OvenPainting} alt="Oven refinished with paint" />
 	    		</Col>
