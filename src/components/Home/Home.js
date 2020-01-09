@@ -25,7 +25,7 @@ const Home = () => (
                 }
             ]}
         />
-        <main>
+        <main style={{overflowX: "hidden"}}>
             <Body />
         </main>
         <Footer />
