@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {Row, Col, Button} from 'reactstrap';
 import classes from './Refinishing.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
@@ -6,7 +7,13 @@ import FridgePainting from '../../../assets/images/fridepainting.jpg';
 import OvenPainting from '../../../assets/images/ovenpainting.jpg';
 
 
-const Refinishing = () => (
+const Refinishing = (props) => {
+
+	const buttonClickHandler = (e) => {
+		props.showContactModal(e.target.id)
+	}
+
+	return(
 		<>
 		    <Row className="d-flex justify-content-center">
 		    	<HeaderText 
@@ -33,11 +40,14 @@ const Refinishing = () => (
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button size="lg">
-					Refinish My Appliance
-				</Button>
+				<Link to={"/usedappliances/messageus/refinishing"} > 
+					<Button id="Refinish_My_Appliance" size="lg" onClick={buttonClickHandler}>
+						Refinish My Appliance
+					</Button>
+				</Link>
 			</Row>
 	    </>
-);
+	);	
+}
 
 export default Refinishing;

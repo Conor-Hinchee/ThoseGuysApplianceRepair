@@ -51,14 +51,16 @@ const UsedAppliances = () => {
 						<Sales />
 					</section>
 					<section className={classes.Space} id="refinishing">
-						<Refinishing />
+						<Refinishing 
+							showContactModal={onButtonTypeClick}
+						/>
 					</section>
 					<section className={classes.Space} id="recycle">
 						<Recycle 
 							showContactModal={onButtonTypeClick}
 						/>
 					</section>
-					<ModalRoute path='/usedappliances/:type' parentPath='/usedappliances'>
+					<ModalRoute path='/usedappliances/messageus/:type' parentPath='/usedappliances'>
 						<UsedApplianceModal 
 							toggle={toggleModal}
 							display={modalView}

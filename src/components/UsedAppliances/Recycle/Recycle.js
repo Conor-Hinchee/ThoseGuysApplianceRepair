@@ -42,7 +42,7 @@ const Sales = (props) => {
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
 				<Link to={"/usedappliances/messageus/recycle"} > 
-					<Button id="recycle_my_appliance" size="lg" onClick={buttonClickHandler}>
+					<Button id="Recycle_My_Appliance" size="lg" onClick={buttonClickHandler}>
 						Recycle My Appliance
 					</Button>
 				</Link>	
