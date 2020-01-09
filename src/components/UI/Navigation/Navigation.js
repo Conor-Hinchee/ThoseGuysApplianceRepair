@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import classes from './Navigation.module.css';
-import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink} from 'reactstrap';
+import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap';
 import NavItems from "./NavItems/NavItems";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
