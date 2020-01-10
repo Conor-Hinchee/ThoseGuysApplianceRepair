@@ -48,7 +48,9 @@ const UsedAppliances = () => {
 			<main>
 				<Container>
 					<section className={classes.Space} id="sales">
-						<Sales />
+						<Sales 
+							showContactModal={onButtonTypeClick}
+						/>
 					</section>
 					<section className={classes.Space} id="refinishing">
 						<Refinishing 

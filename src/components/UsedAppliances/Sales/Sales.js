@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
+import { Link } from 'react-router-dom';
 // import classes from './Sales.module.css';
 import HeaderText from '../../Typography/HeaderText/HeaderText';
 import { ReactComponent as IconCooktop } from '../../../assets/icons/icon_cooktop.svg';
@@ -11,7 +12,12 @@ import { ReactComponent as IconOven } from '../../../assets/icons/icon_oven.svg'
 import { ReactComponent as IconRange } from '../../../assets/icons/icon_range.svg';
 import { ReactComponent as IconWasher } from '../../../assets/icons/icon_washer.svg';
 
-const Sales = () => (
+const Sales = (props) => {
+	const buttonClickHandler = (e) => {
+		props.showContactModal(e.target.id)
+	}
+
+	return(
 		<>
 		    <Row className="d-flex justify-content-center">
 		    	<HeaderText 
@@ -43,11 +49,14 @@ const Sales = () => (
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button size="lg">
-					Purchase An Appliance
-				</Button>
+				<Link to={"/usedappliances/messageus/purchase"} >
+					<Button id="Purchase_An_Appliance" size="lg" onClick={buttonClickHandler}>
+						Purchase An Appliance
+					</Button>
+				</Link>	
 			</Row>
 	    </>
-);
+	);	
+}
 
 export default Sales;

@@ -2,6 +2,7 @@ import React from 'react';
 import {Modal, ModalHeader} from 'reactstrap';
 import Helmet from 'react-helmet';
 import ContactInfoForm from './ContactInfoForm/ContactInfoForm';
+import AppliancePicker from './AppliancePicker/AppliancePicker';
 
 const UsedApplianceModal = (props) => {
 
@@ -15,6 +16,9 @@ const UsedApplianceModal = (props) => {
                     || props.display === "Refinish_My_Appliance") && (
                         <ContactInfoForm />
                     )
+                }
+                {props.display === "Purchase_An_Appliance" && 
+                    <AppliancePicker />
                 }
           </Modal>
     );
