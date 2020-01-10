@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
 import { Link } from 'react-router-dom';
 // import classes from './Sales.module.css';
-import HeaderText from '../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../UI/Typography/HeaderText/HeaderText';
 import { ReactComponent as IconCooktop } from '../../../assets/icons/icon_cooktop.svg';
 import { ReactComponent as IconDishwasher } from '../../../assets/icons/icon_dishwasher.svg';
 import { ReactComponent as IconDryer } from '../../../assets/icons/icon_dryer.svg';

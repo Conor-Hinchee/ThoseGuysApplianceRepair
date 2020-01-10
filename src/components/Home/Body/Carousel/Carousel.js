@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'reactstrap';
 import classes from './Carousel.module.css';
-import HeaderText from '../../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../../UI/Typography/HeaderText/HeaderText';
 import CarouselPivot from './CarouselPivot/CarouselPivot';
 
 const Carousel = () => (

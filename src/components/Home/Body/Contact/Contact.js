@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { ModalContainer, ModalRoute } from 'react-router-modal';
 import { Redirect } from 'react-router';
 import {Row, Col} from 'reactstrap';
-import HeaderText from '../../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../../UI/Typography/HeaderText/HeaderText';
 import HiddenMdDown from './HiddenMdDown/HiddenMdDown';
 import HiddenMdUp from './HiddenMdUp/HiddenMdUp';
 import MessageModal from './MessageModal/MessageModal';

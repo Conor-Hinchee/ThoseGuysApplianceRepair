@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'reactstrap';
 import classes from './Located.module.css';
-import HeaderText from '../../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../../UI/Typography/HeaderText/HeaderText';
 import Map from './Map/Map';
 
 const Located = () => (

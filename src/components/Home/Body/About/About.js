@@ -1,7 +1,7 @@
 import React from 'react';
 import {Row, Col} from 'reactstrap';
 import classes from './About.module.css';
-import HeaderText from '../../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../../UI/Typography/HeaderText/HeaderText';
 
 const About = () => (
 	    <Row className={classes.JustifyContentCenter}>

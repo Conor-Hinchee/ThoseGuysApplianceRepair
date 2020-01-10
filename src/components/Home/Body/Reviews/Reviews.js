@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Row , Col, CardDeck} from 'reactstrap';
-import HeaderText from '../../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../../UI/Typography/HeaderText/HeaderText';
 import classes from './Reviews.module.css';
 import CardInfo from './CardInfo/CardInfo';
 

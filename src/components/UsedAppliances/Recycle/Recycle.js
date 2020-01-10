@@ -2,7 +2,7 @@ import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
 import { Link } from 'react-router-dom';
 // import classes from './Sales.module.css';
-import HeaderText from '../../Typography/HeaderText/HeaderText';
+import HeaderText from '../../UI/Typography/HeaderText/HeaderText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHandshake, faRecycle, faHandHoldingUsd, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
 
