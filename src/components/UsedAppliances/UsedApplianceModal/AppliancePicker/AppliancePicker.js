@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import classes from './AppliancePicker.module.css';
 import { ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import { ReactComponent as IconCooktop } from '../../../../assets/icons/icon_cooktop.svg'
@@ -12,110 +12,144 @@ import { ReactComponent as IconWasher } from '../../../../assets/icons/icon_wash
 import { ReactComponent as IconWaterHeater } from '../../../../assets/icons/icon_water_heater.svg';
 
 
-const AppliancePicker = (props) => (
-    <ModalBody>
-      <Container>
-        <Row className={classes.Space}>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}
-        			color="light" block className={classes.FlexCol} id="fridge"
-        		>
-        			Fridge
-        			<IconFridge />
-        		</Button>
-        	</Col>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}
-        			color="light" block className={classes.FlexCol} id="washer"
-        		>
-        			Washer
-        			<IconWasher />
-        		</Button>
-        	</Col>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}
-        			color="light" block className={classes.FlexCol} id="dryer"
-        		>
-        			Dryer
-        			<IconDryer />
-        		</Button>
-        	</Col>
-        </Row>
-        <Row className={classes.Space}>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick} 
-        			color="light" block className={classes.FlexCol} id="dishwasher"
-        		>
-        			Dishwasher
-        			<IconDishwasher />
-        		</Button>
-        	</Col>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}  
-        			color="light" block className={classes.FlexCol} id="range"
-        		>
-        			Range
-        			<IconRange />
-        		</Button>
-        	</Col>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick} 
-        			color="light" block className={classes.FlexCol} id="oven"
-        		>
-        			Oven
-        			<IconOven  />
-        		</Button>
-        	</Col>
-        </Row>
-        <Row className={classes.Space}>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}  
-        			color="light" block className={classes.FlexCol} id="water_heater"
-        		>
-        			Water Heater
-        			<IconWaterHeater />
-        		</Button>
-        	</Col>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick} 
-        			color="light" block className={classes.FlexCol} id="freezer"
-        		>
-        			Freezer
-        			<IconFreezer />
-        		</Button>
-        	</Col>
-        	<Col md="4" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}  
-        			color="light" block className={classes.FlexCol} id="cooktop"
-        		>
-        			Cooktop
-        			<IconCooktop  />
-        		</Button>
-        	</Col>
-        </Row>
-        <Row className="justify-content-between">
-        	
-        		<Col md="4" className={classes.Space}>
-	        		<Button onClick={props.applianceOptionClick}   
-	        			color="light" block className={classes.FlexCol} id="disposal"
-	        		>
-	        			Disposal
-						<img src="https://raw.githubusercontent.com/captnstarburst/thoseguyswebsite/master/public/images/sink-garbage-disposal-kitchen.png" 
-							className={classes.ApplianceIcon} alt="disposal" 
-						/>
-	        		</Button>
-	        	</Col>
-	        	<Col md="4" className={classes.Space}>
-	        		<Button onClick={props.applianceOptionClick}   
-	        			color="light" block className={classes.FlexCol} id="not_listed"
-	        		>
-	        			Some Other Appliance 
-	        		</Button>
-	        	</Col>
-        	
-        </Row>
-      </Container>
-    </ModalBody>
-);
+const AppliancePicker = (props) => {
+
+	const [isApplianceSelected, setIsApplianceSelected] = useState(
+		{
+			fridge : false,
+			washer : false,
+			dryer : false,
+			dishwasher : false,
+			range : false,
+			oven : false,
+			water_heater : false,
+			freezer : false,
+			cooktop : false,
+			disposal : false,
+			not_listed : false
+		}
+	);
+
+	const [isButtonMounted, setIsButtonMounted] = useState(false);	
+
+
+	const shouldButtonMount = () =>{
+		// check isApplianceSelected object
+	}
+	
+	const handleApplianceButtonClick = (e) =>{
+		alert(e.target.id)
+		setIsApplianceSelected(isApplianceSelected, !isApplianceSelected[e.target.id] );
+	}
+
+
+
+	return(
+		<ModalBody>
+			<Container>
+				<Row className={classes.Space}>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}
+							color="light" block className={classes.FlexCol} id="fridge"
+						>
+							Fridge
+							<IconFridge />
+						</Button>
+					</Col>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}
+							color="light" block className={classes.FlexCol} id="washer"
+						>
+							Washer
+							<IconWasher />
+						</Button>
+					</Col>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}
+							color="light" block className={classes.FlexCol} id="dryer"
+						>
+							Dryer
+							<IconDryer />
+						</Button>
+					</Col>
+				</Row>
+				<Row className={classes.Space}>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick} 
+							color="light" block className={classes.FlexCol} id="dishwasher"
+						>
+							Dishwasher
+							<IconDishwasher />
+						</Button>
+					</Col>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}  
+							color="light" block className={classes.FlexCol} id="range"
+						>
+							Range
+							<IconRange />
+						</Button>
+					</Col>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick} 
+							color="light" block className={classes.FlexCol} id="oven"
+						>
+							Oven
+							<IconOven  />
+						</Button>
+					</Col>
+				</Row>
+				<Row className={classes.Space}>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}  
+							color="light" block className={classes.FlexCol} id="water_heater"
+						>
+							Water Heater
+							<IconWaterHeater />
+						</Button>
+					</Col>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick} 
+							color="light" block className={classes.FlexCol} id="freezer"
+						>
+							Freezer
+							<IconFreezer />
+						</Button>
+					</Col>
+					<Col md="4" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}  
+							color="light" block className={classes.FlexCol} id="cooktop"
+						>
+							Cooktop
+							<IconCooktop  />
+						</Button>
+					</Col>
+				</Row>
+				<Row className="justify-content-between">
+					
+						<Col md="4" className={classes.Space}>
+							<Button onClick={handleApplianceButtonClick}   
+								color="light" block className={classes.FlexCol} id="disposal"
+							>
+								Disposal
+								<img src="https://raw.githubusercontent.com/captnstarburst/thoseguyswebsite/master/public/images/sink-garbage-disposal-kitchen.png" 
+									className={classes.ApplianceIcon} alt="disposal" 
+								/>
+							</Button>
+						</Col>
+						<Col md="4" className={classes.Space}>
+							<Button onClick={props.applianceOptionClick}
+								active = {isApplianceSelected.not_listed ? "active": ""}  
+								color="light" block className={classes.FlexCol} id="not_listed"
+							>
+								Some Other Appliance 
+							</Button>
+						</Col>
+					
+				</Row>
+			</Container>
+		</ModalBody>
+	);
+}
 
 export default AppliancePicker;
