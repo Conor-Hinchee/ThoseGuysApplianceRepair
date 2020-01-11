@@ -149,6 +149,7 @@ class ContactInfoForm extends Component {
 		      <FormGroup>
 		        <Label for="phoneNumber">Phone Number</Label>
 		        <Input required pattern="([0-9]{3})[0-9]{3}-[0-9]{4}"
+		        	inputmode="numeric"
 		        	onChange={this.handleFormChange} value={this.state.phoneNumber}
 		        	type="text" name="phoneNumber" id="phoneNumber" placeholder="(575) 555-5555"/>
 		      </FormGroup>
@@ -175,6 +176,7 @@ class ContactInfoForm extends Component {
 		          <FormGroup>
 		            <Label for="inputZip">Zip</Label>
 		            <Input required onChange={this.handleFormChange} value={this.state.inputZip} 
+		            	inputmode="numeric"
 		            	type="text" name="zip" id="inputZip"/>
 		          </FormGroup>  
 		        </Col>
