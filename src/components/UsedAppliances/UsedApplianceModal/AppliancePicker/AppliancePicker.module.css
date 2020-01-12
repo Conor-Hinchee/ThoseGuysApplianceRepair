@@ -19,8 +19,7 @@
     align-items: center;
 	color: #212529;
     background-color: #dae0e5;
-    /*background-color: black;*/
-    border-color: #d3d9df;
+    border: 2px blue solid;
 }
 @media screen and (min-width: 2560px) {
 	.Space{

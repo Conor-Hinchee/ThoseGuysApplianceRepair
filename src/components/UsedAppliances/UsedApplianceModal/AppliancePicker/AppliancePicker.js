@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import classes from './AppliancePicker.module.css';
 import { ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import { ReactComponent as IconCooktop } from '../../../../assets/icons/icon_cooktop.svg'
@@ -32,15 +32,23 @@ const AppliancePicker = (props) => {
 
 	const [isButtonMounted, setIsButtonMounted] = useState(false);	
 
+	useEffect(() => {
+	    let hasApplianceBeenSelected = false;
+		
+		for (const item in isApplianceSelected) {
+			 if(isApplianceSelected[item]){
+			 	hasApplianceBeenSelected = true;
+			 	break;
+			 }
+		}
+		
+		setIsButtonMounted(hasApplianceBeenSelected);
+	  }, [isApplianceSelected]);
 
-	const shouldButtonMount = () =>{
-		// check isApplianceSelected object
-	};
 	
 	const handleApplianceButtonClick = (e) =>{
 		setIsApplianceSelected({...isApplianceSelected, 
 			[e.currentTarget.id] : !isApplianceSelected[e.currentTarget.id] });
-		console.log(isApplianceSelected);
 	};
 
 
@@ -155,6 +163,11 @@ const AppliancePicker = (props) => {
 						</Button>
 					</Col>
 				</Row>
+				{isButtonMounted &&
+					<Row className="d-flex justify-content-end">
+						<Button color="primary"> Continue</Button>
+					</Row>
+				}
 			</Container>
 		</ModalBody>
 	);
