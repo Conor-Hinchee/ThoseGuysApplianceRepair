@@ -164,8 +164,12 @@ const AppliancePicker = (props) => {
 					</Col>
 				</Row>
 				{isButtonMounted &&
-					<Row className="d-flex justify-content-end">
-						<Button color="primary"> Continue</Button>
+					<Row className="d-flex justify-content-end" >
+						<Button color="primary" id="Contact_Info" 
+							onClick={props.onContinueClick}
+						> 
+							Continue
+						</Button>
 					</Row>
 				}
 			</Container>

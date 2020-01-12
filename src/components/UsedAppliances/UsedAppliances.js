@@ -15,11 +15,18 @@ const UsedAppliances = () => {
 	const [modalIsOpen, setIsModalOpen] = useState(false);
 	const [modalView, setModalView] = useState("");
 
+
 	const toggleModal = () => setIsModalOpen(!modalIsOpen);
+	
 	const onButtonTypeClick = (id) => {
 		setModalView(id);
 		setIsModalOpen(!modalIsOpen);
 	}
+	
+	const continueButtonHandler = () =>{
+        setModalView("Contact_Info");
+    };
+	
 	
 	return (
 		<>
@@ -66,6 +73,7 @@ const UsedAppliances = () => {
 						<UsedApplianceModal 
 							toggle={toggleModal}
 							display={modalView}
+							progateContinueButtonClick={continueButtonHandler}
 						/>
 					</ModalRoute>
 					<ModalContainer />
