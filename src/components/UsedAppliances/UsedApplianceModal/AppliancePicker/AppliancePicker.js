@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import classes from './AppliancePicker.module.css';
 import { ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import { ReactComponent as IconCooktop } from '../../../../assets/icons/icon_cooktop.svg'
@@ -165,11 +166,13 @@ const AppliancePicker = (props) => {
 				</Row>
 				{isButtonMounted &&
 					<Row className="d-flex justify-content-end" >
+					<Link to={"/usedappliances/messageus/contact info"} >
 						<Button color="primary" id="Contact_Info" 
 							onClick={props.onContinueClick}
 						> 
 							Continue
 						</Button>
+					</Link>						
 					</Row>
 				}
 			</Container>

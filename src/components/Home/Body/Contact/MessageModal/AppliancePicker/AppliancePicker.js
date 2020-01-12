@@ -16,7 +16,7 @@ const AppliancePicker = (props) => (
     <ModalBody>
       <Container>
         <Row className={classes.Space}>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick}
         			color="dark" block className={classes.FlexCol} id="fridge"
         		>
@@ -24,7 +24,7 @@ const AppliancePicker = (props) => (
         			<IconFridge />
         		</Button>
         	</Col>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick}
         			color="dark" block className={classes.FlexCol} id="washer"
         		>
@@ -32,7 +32,7 @@ const AppliancePicker = (props) => (
         			<IconWasher />
         		</Button>
         	</Col>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick}
         			color="dark" block className={classes.FlexCol} id="dryer"
         		>
@@ -42,7 +42,7 @@ const AppliancePicker = (props) => (
         	</Col>
         </Row>
         <Row className={classes.Space}>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick} 
         			color="dark" block className={classes.FlexCol} id="dishwasher"
         		>
@@ -50,7 +50,7 @@ const AppliancePicker = (props) => (
         			<IconDishwasher />
         		</Button>
         	</Col>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick}  
         			color="dark" block className={classes.FlexCol} id="range"
         		>
@@ -58,7 +58,7 @@ const AppliancePicker = (props) => (
         			<IconRange />
         		</Button>
         	</Col>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick} 
         			color="dark" block className={classes.FlexCol} id="oven"
         		>
@@ -68,7 +68,7 @@ const AppliancePicker = (props) => (
         	</Col>
         </Row>
         <Row className={classes.Space}>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick}  
         			color="dark" block className={classes.FlexCol} id="water_heater"
         		>
@@ -76,7 +76,7 @@ const AppliancePicker = (props) => (
         			<IconWaterHeater />
         		</Button>
         	</Col>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick} 
         			color="dark" block className={classes.FlexCol} id="freezer"
         		>
@@ -84,7 +84,7 @@ const AppliancePicker = (props) => (
         			<IconFreezer />
         		</Button>
         	</Col>
-        	<Col md="4" className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
         		<Button onClick={props.applianceOptionClick}  
         			color="dark" block className={classes.FlexCol} id="cooktop"
         		>
@@ -95,7 +95,7 @@ const AppliancePicker = (props) => (
         </Row>
         <Row className="justify-content-between">
         	
-        		<Col md="4" className={classes.Space}>
+        		<Col md="4" sm="6" xs="6" className={classes.Space}>
 	        		<Button onClick={props.applianceOptionClick}   
 	        			color="dark" block className={classes.FlexCol} id="disposal"
 	        		>
@@ -105,7 +105,7 @@ const AppliancePicker = (props) => (
 						/>
 	        		</Button>
 	        	</Col>
-	        	<Col md="4" className={classes.Space}>
+	        	<Col md="4" sm="6" xs="6" className={classes.Space}>
 	        		<Button onClick={props.applianceOptionClick}   
 	        			color="dark" block className={classes.FlexCol} id="not_listed"
 	        		>

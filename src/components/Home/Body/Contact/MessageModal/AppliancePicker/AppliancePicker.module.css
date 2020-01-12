@@ -29,3 +29,8 @@
 		padding-top: 14%;
 	}
 }
+@media (max-width: 320px) {
+	.Space{
+		padding-top: 0%;
+	}
+}
