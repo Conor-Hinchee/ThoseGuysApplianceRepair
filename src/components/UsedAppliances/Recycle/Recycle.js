@@ -33,7 +33,7 @@ const Sales = (props) => {
 		    	</Col>
 		    </Row>
 	    	<Row>
-	    		<Col class="text-center">
+	    		<Col className="text-center">
 		        	<p>Used or old appliance recycling! Those Guys Appliance Repair will pay better 
 		        		than scrap prices most of the time! Recycle your used appliances by bringing
 		        		them to us and turn your old/used/non-working appliance into cash!

@@ -30,7 +30,7 @@ const Sales = (props) => {
 		    	<h5 >Appliances for sale, for less!</h5>
 		    </Row>
 	    	<Row>
-	    		<Col class="text-center">
+	    		<Col className="text-center">
 		        	<p> Those Guys Appliance has used Appliance sets for sale,
 		        		Stoves, Dishwashers for sale and serviced by us! Give us a call or message us today!
 		        	</p>

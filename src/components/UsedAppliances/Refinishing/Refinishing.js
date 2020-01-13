@@ -22,7 +22,7 @@ const Refinishing = (props) => {
 		        />
 		    </Row>
 	    	<Row>
-	    		<Col class="text-center">
+	    		<Col className="text-center">
 		        	<p> Paint is an easy way to update any room! Paint can go a long way in the kitchen! Those Guys 
 		        		Appliance Repair offers a way to maximize the look of your kitchen or bathroom by offering appliacen 
 		        		painting! Painting appliances can cover up their scratches, update the finishes, and even extend their lifespans!
