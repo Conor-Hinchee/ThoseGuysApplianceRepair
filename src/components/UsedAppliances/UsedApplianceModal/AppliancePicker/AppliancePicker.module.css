@@ -4,6 +4,8 @@
 }
 .Space{
 	margin-top: 5%;
+	display: flex;
+	justify-content: center;
 }
 .FlexCol{
 	display: flex;

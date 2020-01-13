@@ -57,7 +57,7 @@ const AppliancePicker = (props) => {
 		<ModalBody>
 			<Container>
 				<Row className={classes.Space}>
-					<Col md="4" className="justify-content-center">
+					<Col md="4" sm="6" xs="6" className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.fridge ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="fridge"
@@ -66,7 +66,7 @@ const AppliancePicker = (props) => {
 							<IconFridge />
 						</Button>
 					</Col>
-					<Col md="4" className="justify-content-center">
+					<Col md="4" sm="6" xs="6" className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.washer ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="washer"
@@ -75,7 +75,9 @@ const AppliancePicker = (props) => {
 							<IconWasher />
 						</Button>
 					</Col>
-					<Col md="4" className="justify-content-center">
+				</Row>
+				<Row className={classes.Space}>
+					<Col md="4" sm="6" xs="6" className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.dryer ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="dryer"
@@ -84,9 +86,7 @@ const AppliancePicker = (props) => {
 							<IconDryer />
 						</Button>
 					</Col>
-				</Row>
-				<Row className={classes.Space}>
-					<Col md="4" className="justify-content-center">
+					<Col md="4" sm="6" xs="6" className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick} 
 							className={isApplianceSelected.dishwasher ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="dishwasher"
@@ -95,7 +95,9 @@ const AppliancePicker = (props) => {
 							<IconDishwasher />
 						</Button>
 					</Col>
-					<Col md="4" className="justify-content-center">
+				</Row>
+				<Row className={classes.Space}>
+					<Col md="4" sm="6" xs="6" className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.range ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="range"
@@ -104,7 +106,7 @@ const AppliancePicker = (props) => {
 							<IconRange />
 						</Button>
 					</Col>
-					<Col md="4" className="justify-content-center">
+					<Col md="4" sm="6" xs="6"  className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.oven ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="oven"
@@ -115,25 +117,8 @@ const AppliancePicker = (props) => {
 					</Col>
 				</Row>
 				<Row className={classes.Space}>
-					<Col md="4" className="justify-content-center">
-						<Button onClick={handleApplianceButtonClick}  
-							className={isApplianceSelected.water_heater ? classes.FlexColActive : classes.FlexCol}
-							color="light" block id="water_heater"
-						>
-							Water Heater
-							<IconWaterHeater />
-						</Button>
-					</Col>
-					<Col md="4" className="justify-content-center">
-						<Button onClick={handleApplianceButtonClick}
-							className={isApplianceSelected.freezer ? classes.FlexColActive : classes.FlexCol}
-							color="light" block id="freezer"
-						>
-							Freezer
-							<IconFreezer />
-						</Button>
-					</Col>
-					<Col md="4" className="justify-content-center">
+					
+					<Col md="4" sm="6" xs="6"  className="justify-content-center">
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.cooktop ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="cooktop"
@@ -142,9 +127,27 @@ const AppliancePicker = (props) => {
 							<IconCooktop  />
 						</Button>
 					</Col>
+					<Col md="4" sm="6" xs="6"  className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}
+							className={isApplianceSelected.freezer ? classes.FlexColActive : classes.FlexCol}
+							color="light" block id="freezer"
+						>
+							Freezer
+							<IconFreezer />
+						</Button>
+					</Col>
 				</Row>
-				<Row className="justify-content-between">
-					<Col md="4" className={classes.Space}>
+				<Row className={classes.Space}>
+					<Col md="4" sm="6" xs="6" className="justify-content-center">
+						<Button onClick={handleApplianceButtonClick}  
+							className={isApplianceSelected.water_heater ? classes.FlexColActive : classes.FlexCol}
+							color="light" block id="water_heater"
+						>
+							Water Heater
+							<IconWaterHeater />
+						</Button>
+					</Col>
+					<Col md="4" sm="6" xs="6" >
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.disposal ? classes.FlexColActive : classes.FlexCol}
 							color="light" block id="disposal"
@@ -155,7 +158,9 @@ const AppliancePicker = (props) => {
 							/>
 						</Button>
 					</Col>
-					<Col md="4" className={classes.Space}>
+				</Row>
+				<Row className="justify-content-center">
+					<Col md="4" sm="6" xs="6"  className={classes.Space}>
 						<Button onClick={handleApplianceButtonClick}
 							className={isApplianceSelected.not_listed ? classes.FlexColActive : classes.FlexCol} 
 							color="light" block id="not_listed"
