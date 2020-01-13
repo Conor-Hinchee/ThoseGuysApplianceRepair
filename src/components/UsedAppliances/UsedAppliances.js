@@ -72,6 +72,7 @@ const UsedAppliances = () => {
 					<ModalRoute path='/usedappliances/messageus/:type' parentPath='/usedappliances'>
 						<UsedApplianceModal 
 							toggle={toggleModal}
+							modalIsOpen ={modalIsOpen}
 							display={modalView}
 							progateContinueButtonClick={continueButtonHandler}
 						/>

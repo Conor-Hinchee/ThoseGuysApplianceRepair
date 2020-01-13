@@ -7,7 +7,7 @@ import AppliancePicker from './AppliancePicker/AppliancePicker';
 const UsedApplianceModal = (props) => {
 
     return(
-          <Modal isOpen={props.toggle} 
+          <Modal isOpen={props.modalIsOpen} 
               toggle={props.toggle} 
           >
             <Helmet title=" 💬 Message Us 😃" />
