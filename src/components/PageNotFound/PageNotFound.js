@@ -1,8 +1,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Button} from 'reactstrap';
+import {Link} from 'react-router-dom';
 import classes from './PageNotFound.module.css';
-import { Link } from 'react-router-dom';
 
 const PageNotFound = () => (
     <main className={classes.PageNotFound}>
