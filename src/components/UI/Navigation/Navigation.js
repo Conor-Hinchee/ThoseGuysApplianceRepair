@@ -14,7 +14,7 @@ const Navigation = (props) => {
 
   const navItems = props.navigationLinks.map((item, i) => 
     <NavItems 
-        key ={item.title}
+        key = {item.title}
         link = {item.link}
         title = {item.title}
     />
