@@ -11,7 +11,7 @@ import { ReactComponent as IconOven } from '../../../../assets/icons/icon_oven.s
 import { ReactComponent as IconRange } from '../../../../assets/icons/icon_range.svg';
 import { ReactComponent as IconWasher } from '../../../../assets/icons/icon_washer.svg';
 import { ReactComponent as IconWaterHeater } from '../../../../assets/icons/icon_water_heater.svg';
-
+import IconDisposal from '../../../../assets/icons/sink-garbage-disposal-kitchen-black.png'
 
 const AppliancePicker = (props) => {
 
@@ -153,7 +153,7 @@ const AppliancePicker = (props) => {
 							color="light" block id="disposal"
 						>
 							Disposal
-							<img src="https://raw.githubusercontent.com/captnstarburst/thoseguyswebsite/master/public/images/sink-garbage-disposal-kitchen.png" 
+							<img src={IconDisposal} 
 								className={classes.ApplianceIcon} alt="disposal" 
 							/>
 						</Button>
