@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classes from './AppliancePicker.module.css';
 import { ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import { ReactComponent as IconCooktop } from '../../../../../../assets/icons/icon_cooktop.svg';
@@ -18,107 +19,127 @@ const AppliancePicker = (props) => (
       <Container>
         <Row className={classes.Space}>
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}
-        			color="dark" block className={classes.FlexCol} id="fridge"
-        		>
-        			Fridge
-        			<IconFridge />
-        		</Button>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}
+          			color="dark" block className={classes.FlexCol} id="fridge"
+          		>
+          			Fridge
+          			<IconFridge />
+          		</Button>
+        		</Link>
         	</Col>
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}
-        			color="dark" block className={classes.FlexCol} id="washer"
-        		>
-        			Washer
-        			<IconWasher />
-        		</Button>
-        	</Col>
-        </Row>
-        <Row className={classes.Space}>
-        	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}
-        			color="dark" block className={classes.FlexCol} id="dryer"
-        		>
-        			Dryer
-        			<IconDryer />
-        		</Button>
-        	</Col>
-        	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick} 
-        			color="dark" block className={classes.FlexCol} id="dishwasher"
-        		>
-        			Dishwasher
-        			<IconDishwasher />
-        		</Button>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}
+          			color="dark" block className={classes.FlexCol} id="washer"
+          		>
+          			Washer
+          			<IconWasher />
+          		</Button>
+          	</Link>	
         	</Col>
         </Row>
         <Row className={classes.Space}>
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}  
-        			color="dark" block className={classes.FlexCol} id="range"
-        		>
-        			Range
-        			<IconRange />
-        		</Button>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}
+          			color="dark" block className={classes.FlexCol} id="dryer"
+          		>
+          			Dryer
+          			<IconDryer />
+          		</Button>
+          	</Link>	
         	</Col>
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick} 
-        			color="dark" block className={classes.FlexCol} id="oven"
-        		>
-        			Oven
-        			<IconOven  />
-        		</Button>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick} 
+          			color="dark" block className={classes.FlexCol} id="dishwasher"
+          		>
+          			Dishwasher
+          			<IconDishwasher />
+          		</Button>
+        		</Link>
         	</Col>
         </Row>
         <Row className={classes.Space}>
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}  
-        			color="dark" block className={classes.FlexCol} id="cooktop"
-        		>
-        			Cooktop
-        			<IconCooktop  />
-        		</Button>
+    	      <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}  
+          			color="dark" block className={classes.FlexCol} id="range"
+          		>
+          			Range
+          			<IconRange />
+          		</Button>
+          	</Link>	
+        	</Col>
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick} 
+          			color="dark" block className={classes.FlexCol} id="oven"
+          		>
+          			Oven
+          			<IconOven  />
+          		</Button>
+          	</Link>	
+        	</Col>
+        </Row>
+        <Row className={classes.Space}>
+        	<Col md="4" sm="6" xs="6" className="justify-content-center">
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}  
+          			color="dark" block className={classes.FlexCol} id="cooktop"
+          		>
+          			Cooktop
+          			<IconCooktop  />
+          		</Button>
+          	</Link>	
         	</Col>
         	
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick} 
-        			color="dark" block className={classes.FlexCol} id="freezer"
-        		>
-        			Freezer
-        			<IconFreezer />
-        		</Button>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick} 
+          			color="dark" block className={classes.FlexCol} id="freezer"
+          		>
+          			Freezer
+          			<IconFreezer />
+          		</Button>
+          	</Link>	
         	</Col>
         </Row>
         <Row className={classes.Space}>
         	<Col md="4" sm="6" xs="6" className="justify-content-center">
-        		<Button onClick={props.applianceOptionClick}  
-        			color="dark" block className={classes.FlexCol} id="water_heater"
-        		>
-        			Water Heater
-        			<IconWaterHeater />
-        		</Button>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}  
+          			color="dark" block className={classes.FlexCol} id="water_heater"
+          		>
+          			Water Heater
+          			<IconWaterHeater />
+          		</Button>
+          	</Link>	
         	</Col>
-        	
     		<Col md="4" sm="6" xs="6">
-        		<Button onClick={props.applianceOptionClick}   
-        			color="dark" block className={classes.FlexCol} id="disposal"
-        		>
-        			Disposal
-					<img src={IconDisposal} 
-						className={classes.ApplianceIcon} alt="disposal" 
-					/>
-        		</Button>
+    		  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}   
+          			color="dark" block className={classes.FlexCol} id="disposal"
+          		>
+          			Disposal
+      					<img src={IconDisposal} 
+      						className={classes.ApplianceIcon} alt="disposal" 
+      					/>
+          		</Button>
+        	  </Link>  	
         	</Col>
-		</Row>
-	        <Row className="justify-content-center">
-	        	<Col md="4" sm="6" xs="6" className={classes.Space}>
-	        		<Button onClick={props.applianceOptionClick}   
-	        			color="dark" block className={classes.FlexCol} id="not_listed"
-	        		>
-	        			Some Other Appliance 
-	        		</Button>
-	        	</Col>
-        	
+		  </Row>
+      <Row className="justify-content-center">
+        	<Col md="4" sm="6" xs="6" className={classes.Space}>
+        	  <Link to={"/messageus/Select Issue"} >
+          		<Button onClick={props.applianceOptionClick}   
+          			color="dark" block className={classes.FlexCol} id="not_listed"
+          		>
+          			Some Other Appliance 
+          		</Button>
+        		</Link>
+        	</Col>
         </Row>
       </Container>
     </ModalBody>

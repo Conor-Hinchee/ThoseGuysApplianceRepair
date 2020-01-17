@@ -25,7 +25,8 @@ class Contact extends Component {
 
     toggleModal = () =>{
         this.setState(prevState => ({
-            modalOpen: !prevState.modalOpen
+            modalOpen: !prevState.modalOpen,
+            display : "Appliance Picker"
         }));
     }
     

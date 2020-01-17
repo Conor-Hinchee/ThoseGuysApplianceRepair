@@ -15,7 +15,7 @@ const HiddenMdDown = (props) => (
                 </Button>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
-                <Link to={"/messageus/" + props.display} > 
+                <Link to={"/messageus/Appliance Picker"} > 
                     <Button outline color="success" size="lg"
                         onClick={props.toggle}
                      >
@@ -23,7 +23,6 @@ const HiddenMdDown = (props) => (
                         Message Us
                     </Button>
                 </Link>
-                
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
                 <Button href="https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240"

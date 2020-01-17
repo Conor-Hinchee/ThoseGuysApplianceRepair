@@ -15,7 +15,7 @@ const HiddenMdUp = (props, {match}) => (
                 </Button>
             </Col>
             <Col xs="8" className={classes.SmSpace}>
-                <Link to={"/messageus/" + props.display} > 
+                <Link to={"/messageus/Appliance Picker"} > 
                     <Button color="success" size="lg" block
                         onClick={props.toggle}
                      >
