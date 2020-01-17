@@ -58,7 +58,8 @@ class IssueDropDown extends Component {
       titleCase = "Water Heater ";
       for(let i = 0; i < this.state.waterHeaterIssues.length; i++){
         issueList.push(
-          <IssueItem 
+          <IssueItem
+            key = {i} 
             issue = {this.state.waterHeaterIssues[i]}
             itemOnClick = {this.issueItemClick}
           />

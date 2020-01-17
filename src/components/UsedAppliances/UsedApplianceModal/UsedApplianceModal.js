@@ -22,7 +22,7 @@ const UsedApplianceModal = (props) => {
                 {props.display === "Purchase_An_Appliance" &&
                     (   
                         <AppliancePicker 
-                            onContinueClick = {props.progateContinueButtonClick}
+                            onContinueClick = {props.propagateContinueButtonClick}
                         />
                     )
                     

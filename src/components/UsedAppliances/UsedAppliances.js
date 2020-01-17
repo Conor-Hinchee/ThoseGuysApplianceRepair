@@ -74,7 +74,7 @@ const UsedAppliances = () => {
 							toggle={toggleModal}
 							modalIsOpen ={modalIsOpen}
 							display={modalView}
-							progateContinueButtonClick={continueButtonHandler}
+							propagateContinueButtonClick={continueButtonHandler}
 						/>
 					</ModalRoute>
 					<ModalContainer />

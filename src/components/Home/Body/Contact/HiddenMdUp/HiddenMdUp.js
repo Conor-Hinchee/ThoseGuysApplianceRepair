@@ -6,7 +6,7 @@ import { faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
 import { faPhoneSquare, faSms  } from '@fortawesome/free-solid-svg-icons';
 import classes from './HiddenMdUp.module.css';
 
-const HiddenMdUp = (props) => (
+const HiddenMdUp = (props, {match}) => (
         <Row className={classes.HiddenMdUp}>
             <Col xs="8" className={classes.SmSpace}>
                 <Button href="tel:+15757428441" color="secondary" size="lg" block>

@@ -22,11 +22,7 @@ class Contact extends Component {
       display : "Appliance Picker",
     };
     
-    componentDidMount = () => {
-        // let param = window.location.pathname.split("/")[2];
-        // let itemToDisplay = param.replace("%20","_").toLowerCase();
-    }
-    
+
     toggleModal = () =>{
         this.setState(prevState => ({
             modalOpen: !prevState.modalOpen
@@ -80,10 +76,28 @@ class Contact extends Component {
                     display = {this.state.display}
                 />
                 
-                <ModalRoute path='/messageus/:display' parentPath='/'>
+                <ModalRoute path='/messageus/Appliance Picker' parentPath='/'>
                     <MessageModal 
                         toggle = {this.toggleModal}
-                        display = {this.state.display}
+                        display = {"Appliance Picker"}
+                        propagateApplianceClick = {this.onApplianceSelected}
+                        appliance = {this.state.applianceType}
+                        propagateIssueClick = {this.onIssueSelected}
+                    />
+                </ModalRoute>
+                <ModalRoute path='/messageus/Select Issue' parentPath='/'>
+                    <MessageModal 
+                        toggle = {this.toggleModal}
+                        display = {"Select Issue"}
+                        propagateApplianceClick = {this.onApplianceSelected}
+                        appliance = {this.state.applianceType}
+                        propagateIssueClick = {this.onIssueSelected}
+                    />
+                </ModalRoute>
+                <ModalRoute path='/messageus/Contact Information' parentPath='/'>
+                    <MessageModal 
+                        toggle = {this.toggleModal}
+                        display = {"Contact Information"}
                         propagateApplianceClick = {this.onApplianceSelected}
                         appliance = {this.state.applianceType}
                         propagateIssueClick = {this.onIssueSelected}
