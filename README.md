@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 Those Guys Appliance Repair is a business based in Clovis, NM and this is the code that runs their website. 
 
 ## Screenshots
-Include logo/demo screenshot etc.
+<img src="https://raw.githubusercontent.com/captnstarburst/ThoseGuysApplianceRepair/master/public/ScreenshotThosGuysAppliance%20Repair.png" alt="Those Guys Appliance Repair Home Page" height="500px">
 
 ## Motivation
 Those Guys had a need to generate more business. After reworking their web presence and building out this website, Those Guys Appliance Repair is now in the top spot for appliance repairmen in their community! This has generated countless more leads and provided the business with more opportunity. 
