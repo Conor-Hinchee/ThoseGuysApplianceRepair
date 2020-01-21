@@ -40,7 +40,10 @@ class MessageModal extends Component {
                 />
              }
              {this.props.display === "Contact Information" && 
-                <ContactInfoForm />
+                <ContactInfoForm 
+                  applianceSelected = {this.props.appliance}
+                  issueSelected = {this.props.issue}
+                />
              }
           </Modal>
     );

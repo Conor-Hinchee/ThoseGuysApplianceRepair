@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './ContactInfoForm.module.css';
 import {Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 
 class ContactInfoForm extends Component {
@@ -124,6 +125,12 @@ class ContactInfoForm extends Component {
   
   submitForm = (e) =>{
   	e.preventDefault();
+  	
+  	console.log(this.state);
+  	console.log(this.props.applianceSelected);
+  	console.log(this.props.issueSelected);
+  	
+  	
   } 
   
   render(){
@@ -182,16 +189,19 @@ class ContactInfoForm extends Component {
 		        </Col>
 		      </Row>
 		      
-		      
 		      <div className={classes.FlexEnd}>
-	    		{this.state.shouldBtnMount ? 
-	      			<Button	onClick={this.submitForm}> Send Message </Button>
+	    		{this.state.shouldBtnMount ?
+	    			<Link to={`/send-message?type=repair&name=${this.state.fName} ${this.state.lName}& 
+	    				appliance=${this.props.applianceSelected}&phone=${this.state.phoneNumber}&
+	    				address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity},
+	    				${this.state.inputZip}`} 
+	    			>
+	      				<Button	onClick={this.submitForm}> Send Message </Button>
+	      			</Link>	
 	      			:
 	      			<></>
 	    		}
 		      </div>
-		      
-		      
 		    </Form>
     	</Container>
     );

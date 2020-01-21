@@ -101,6 +101,7 @@ class Contact extends Component {
                         display = {"Contact Information"}
                         propagateApplianceClick = {this.onApplianceSelected}
                         appliance = {this.state.applianceType}
+                        issue = {this.state.issue}
                         propagateIssueClick = {this.onIssueSelected}
                     />
                 </ModalRoute>
