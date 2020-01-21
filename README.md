@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Those Guys Appliance Repair
-Those Guys Appliance Repair is a business based in Clovis, NM and this is is web code. 
+Those Guys Appliance Repair is a business based in Clovis, NM and this is the code that runs their website. 
 
 ## Screenshots
 Include logo/demo screenshot etc.
