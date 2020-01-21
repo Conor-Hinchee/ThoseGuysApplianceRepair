@@ -5,8 +5,7 @@ const mailer = require('nodemailer');
 const dotenv = require('dotenv');
 
 
-// const port = process.env.PORT || 8081;
-const port =  8081;
+const port = process.env.PORT || 8081;
 const app = express();
 
 
@@ -93,4 +92,4 @@ app.get('/*', function (req, res) {
 });
 
 
-app.listen(port);
+app.listen(port, 'localhost');

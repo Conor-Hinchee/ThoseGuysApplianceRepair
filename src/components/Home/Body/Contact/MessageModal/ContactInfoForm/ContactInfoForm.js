@@ -155,7 +155,7 @@ class ContactInfoForm extends Component {
 		      </Row>
 		      <FormGroup>
 		        <Label for="phoneNumber">Phone Number</Label>
-		        <Input required pattern="([0-9]{3})[0-9]{3}-[0-9]{4}"
+		        <Input required 
 		        	inputmode="numeric"
 		        	onChange={this.handleFormChange} value={this.state.phoneNumber}
 		        	type="text" name="phoneNumber" id="phoneNumber" placeholder="(575) 555-5555"/>
@@ -191,13 +191,18 @@ class ContactInfoForm extends Component {
 		      
 		      <div className={classes.FlexEnd}>
 	    		{this.state.shouldBtnMount ?
-	    			<Link to={`/send-message?type=repair&name=${this.state.fName} ${this.state.lName}& 
-	    				appliance=${this.props.applianceSelected}&phone=${this.state.phoneNumber}&
-	    				address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity},
-	    				${this.state.inputZip}`} 
-	    			>
-	      				<Button	onClick={this.submitForm}> Send Message </Button>
-	      			</Link>	
+	    			
+	      				<Button>
+	      					<a	
+			    				href={`/send-message?type=repair&name=${this.state.fName} ${this.state.lName}& `+ 
+			    				`appliance=${this.props.applianceSelected}&phone=${this.state.phoneNumber}& `+
+			    				`address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity}, `+
+			    				`${this.state.inputZip}`} 
+	    					>
+	      					Send Message 
+	      					</a>	
+	      				</Button>
+	      				
 	      			:
 	      			<></>
 	    		}
