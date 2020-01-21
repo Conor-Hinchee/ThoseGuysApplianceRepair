@@ -1,28 +1,38 @@
 const express = require('express');
 const favicon = require('express-favicon');
 const path = require('path');
+const mailer = require('nodemailer'); 
+const dotenv = require('dotenv');
+
+
 const port = process.env.PORT || 8080;
 const app = express();
 
 
 app.use(favicon(__dirname + '/build/favicon.ico'));
-// the __dirname is the current directory from where the script is running
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/send-message', function(req, res){
-    const receivedQuery = req.query; 
-	
-	
-	console.log(receivedQuery);
+	const receivedQuery = req.query;
+	const transporter = mailer.createTransport({
+        host: "smtp.gmail.com",
+        port: 465,
+        secure: true,
+        auth: {
+            type: "OAuth2",
+            user: 'thoseguys.sms.sender@gmail.com',
+            clientId: '878599298291-2reekvf6k03kh2sitciss46nmtpgq1re.apps.googleusercontent.com',
+            clientSecret: process.env.GMAIL_SECRET,
+            refreshToken: '1/ZQA-LPr8G90xDP1EO4ym2WvVXf8sJhwiqND69CGV5uNJfUf30yGb_IK42TT8C87y'
+        }
+    });
 	
 	let message = "Bryan, My name is "; 
 	
 	if(!receivedQuery.type){
-		res.statusCode = 303;
 		res.send("No type assigned");
 	}
-	
 	
 	if(receivedQuery.type === "sales"){
 		message += receivedQuery.name + " I am looking to buy " + 
@@ -55,8 +65,25 @@ app.get('/send-message', function(req, res){
 			
 		res.send(message);
 	}
+ 
+    const mailOptions = {
+        from: '"Web Page Contact" thoseguys.sms.sender@gmail.com',
+        to: '17405860028.15757428441.gPLxrlk-cz@txt.voice.google.com',
+        subject: 'Contact Request',
+        html: message
+	};
 	
-
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            console.log("error sending mail :" + error);
+            res.statusCode = 303;
+            res.redirect('/error');
+        } else {
+            console.log('Email sent: ' + info.response);
+            res.statusCode = 303;
+            res.redirect('/thankyou');
+        }
+    });
 });
 
 app.get('/*', function (req, res) {
