@@ -182,8 +182,9 @@ class ContactInfoForm extends Component {
 	      				<Button>
 	      					<a	
 			    				href={`/send-message?type=repair&name=${this.state.fName} ${this.state.lName}&`+ 
-			    				`appliance=${this.props.applianceSelected}&phone=${this.state.phoneNumber}&`+
-			    				`address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity},`+
+								`appliance=${this.props.applianceSelected}&issue=${this.props.issueSelected}&`+
+								`phone=${this.state.phoneNumber}&address=${this.state.inputAddress}`+ 
+								`${this.state.inputAddress2} ${this.state.inputCity},`+
 			    				`${this.state.inputZip}`} 
 	    					>
 	      					Send Message 
