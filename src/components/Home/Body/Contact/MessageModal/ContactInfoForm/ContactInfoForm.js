@@ -4,11 +4,10 @@ import {Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'react
 
 class ContactInfoForm extends Component {
   constructor(props) {
-        super(props);
+    super(props);
     
     this.handleFormChange = this.handleFormChange.bind(this);
     this.checkFormValues = this.checkFormValues.bind(this);
-    this.submitForm = this.submitForm.bind(this);
   }
   
   state = {
@@ -120,16 +119,6 @@ class ContactInfoForm extends Component {
   		this.setState({shouldBtnMount: false});
   	}
   }
-  
-  submitForm = (e) =>{
-  	e.preventDefault();
-  	
-  	console.log(this.state);
-  	console.log(this.props.applianceSelected);
-  	console.log(this.props.issueSelected);
-  	
-  	
-  } 
   
   render(){
     return(
