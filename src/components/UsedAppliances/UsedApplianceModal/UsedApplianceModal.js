@@ -16,7 +16,10 @@ const UsedApplianceModal = (props) => {
                     || props.display === "Refinish_My_Appliance"
                     || props.display === "Contact_Info")
                     && (
-                        <ContactInfoForm />
+                        <ContactInfoForm 
+                            type = {props.display}
+                            interestedAppliances = {props.interestedAppliances}
+                        />
                     )
                 }
                 {props.display === "Purchase_An_Appliance" &&

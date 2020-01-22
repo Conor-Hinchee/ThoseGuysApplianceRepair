@@ -29,13 +29,13 @@ app.get('/send-message', function(req, res){
  //   });
 	
 	let message = "Bryan, My name is "; 
-	console.log(message);
+	
 	if(!receivedQuery.type){
 		res.send("No type assigned");
 	}
 	
-	if(receivedQuery.type === "sales"){
-		message += receivedQuery.name + " I am looking to buy " + 
+	if(receivedQuery.type === "Contact_Info"){
+		message += receivedQuery.name + " I am looking to buy a " + 
 			receivedQuery.appliance + " contact me at " +
 			receivedQuery.phone + " I live at " + receivedQuery.address;
 			
@@ -44,22 +44,23 @@ app.get('/send-message', function(req, res){
 	
 	if(receivedQuery.type === "repair"){
 		message += receivedQuery.name + " I am having issues with my " + 
-			receivedQuery.appliance + " contact me at " +
-			receivedQuery.phone + " I live at " + receivedQuery.address;
+			receivedQuery.appliance + " it is " + receivedQuery.issue +
+			". Contact me at " + receivedQuery.phone + " I live at " + 
+			receivedQuery.address;
 			
 		res.send(message);
 	}
 	
-	if(receivedQuery.type === "painting"){
-		message += receivedQuery.name + "I am interested in you refinishing my an appliance" + 
+	if(receivedQuery.type === "Refinish_My_Appliance"){
+		message += receivedQuery.name + " I am interested in you refinishing my an appliance" + 
 			" contact me at " + receivedQuery.phone + " I live at " + 
 			receivedQuery.address;
 			
 		res.send(message);
 	}
 	
-	if(receivedQuery.type === "recycle"){
-		message += receivedQuery.name + "I am interested in you recycle my an appliance('s)" + 
+	if(receivedQuery.type === "Recycle_My_Appliance"){
+		message += receivedQuery.name + " I am interested in you recycle my an appliance('s)" + 
 			" contact me at " + receivedQuery.phone + " I live at " + 
 			receivedQuery.address;
 			

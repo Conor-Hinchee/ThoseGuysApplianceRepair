@@ -52,6 +52,18 @@ const AppliancePicker = (props) => {
 			[e.currentTarget.id] : !isApplianceSelected[e.currentTarget.id] });
 	};
 
+	const propagateApplianceSelection = () =>{
+		let applianceList  = "";
+
+		for (const appliance in isApplianceSelected) {
+			if(isApplianceSelected[appliance]){
+				applianceList += appliance + " ";
+			}
+		}
+		
+		props.onContinueClick(applianceList)
+	};
+
 
 	return(
 		<ModalBody>
@@ -171,13 +183,13 @@ const AppliancePicker = (props) => {
 				</Row>
 				{isButtonMounted &&
 					<Row className="d-flex justify-content-end" >
-					<Link to={"/usedappliances/messageus/contact info"} >
-						<Button color="primary" id="Contact_Info" 
-							onClick={props.onContinueClick}
-						> 
-							Continue
-						</Button>
-					</Link>						
+						<Link to={"/usedappliances/messageus/contact info"} >
+							<Button color="primary" id="Contact_Info" 
+								onClick={propagateApplianceSelection}
+							> 
+								Continue
+							</Button>
+						</Link>						
 					</Row>
 				}
 			</Container>

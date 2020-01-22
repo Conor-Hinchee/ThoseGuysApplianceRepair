@@ -6,7 +6,7 @@ import HeaderText from '../../UI/Typography/HeaderText/HeaderText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHandshake, faRecycle, faHandHoldingUsd, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
 
-const Sales = (props) => {
+const Recycle = (props) => {
 	
 	const buttonClickHandler = (e) => {
 		props.showContactModal(e.target.id)
@@ -51,4 +51,4 @@ const Sales = (props) => {
 	);	
 }
 
-export default Sales;
+export default Recycle;

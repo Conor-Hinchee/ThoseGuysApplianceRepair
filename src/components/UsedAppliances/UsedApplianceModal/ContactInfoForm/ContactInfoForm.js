@@ -5,11 +5,10 @@ import {Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'react
 
 class ContactInfoForm extends Component {
   constructor(props) {
-        super(props);
+    super(props);
     
     this.handleFormChange = this.handleFormChange.bind(this);
     this.checkFormValues = this.checkFormValues.bind(this);
-    this.submitForm = this.submitForm.bind(this);
   }
   
   state = {
@@ -122,10 +121,6 @@ class ContactInfoForm extends Component {
   	}
   }
   
-  submitForm = (e) =>{
-  	e.preventDefault();
-  } 
-  
   render(){
     return(
     	<Container>
@@ -148,7 +143,7 @@ class ContactInfoForm extends Component {
 		      </Row>
 		      <FormGroup>
 		        <Label for="phoneNumber">Phone Number</Label>
-		        <Input required pattern="([0-9]{3})[0-9]{3}-[0-9]{4}"
+		        <Input required 
 		        	inputMode="numeric"
 		        	onChange={this.handleFormChange} value={this.state.phoneNumber}
 		        	type="text" name="phoneNumber" id="phoneNumber" placeholder="(575) 555-5555"/>
@@ -185,7 +180,16 @@ class ContactInfoForm extends Component {
 		      
 		      <div className={classes.FlexEnd}>
 	    		{this.state.shouldBtnMount ? 
-	      			<Button	onClick={this.submitForm}> Send Message </Button>
+	      			<Button>
+						<a	
+							href={`/send-message?type=${this.props.type}&name=${this.state.fName} ${this.state.lName}&`+ 
+							`appliance=${this.props.interestedAppliances}&phone=${this.state.phoneNumber}&`+
+							`address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity},`+
+							`${this.state.inputZip}`} 
+						>
+							Send Message
+						</a>	 
+					</Button>
 	      			:
 	      			<></>
 	    		}

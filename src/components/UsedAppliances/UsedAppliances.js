@@ -14,6 +14,7 @@ const UsedAppliances = () => {
    
 	const [modalIsOpen, setIsModalOpen] = useState(false);
 	const [modalView, setModalView] = useState("");
+	const [interestedInPurchasing, setInterests] = useState("");
 
 
 	const toggleModal = () => setIsModalOpen(!modalIsOpen);
@@ -23,7 +24,8 @@ const UsedAppliances = () => {
 		setIsModalOpen(!modalIsOpen);
 	}
 	
-	const continueButtonHandler = () =>{
+	const continueButtonHandler = (appliances) =>{
+		setInterests(appliances);
         setModalView("Contact_Info");
     };
 	
@@ -74,6 +76,7 @@ const UsedAppliances = () => {
 							toggle={toggleModal}
 							modalIsOpen ={modalIsOpen}
 							display={modalView}
+							interestedAppliances ={interestedInPurchasing}
 							propagateContinueButtonClick={continueButtonHandler}
 						/>
 					</ModalRoute>
