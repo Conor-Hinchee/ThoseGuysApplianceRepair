@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import classes from './ContactInfoForm.module.css';
 import {Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
-import { Link } from 'react-router-dom';
-
 
 class ContactInfoForm extends Component {
   constructor(props) {
@@ -194,9 +192,9 @@ class ContactInfoForm extends Component {
 	    			
 	      				<Button>
 	      					<a	
-			    				href={`/send-message?type=repair&name=${this.state.fName} ${this.state.lName}& `+ 
-			    				`appliance=${this.props.applianceSelected}&phone=${this.state.phoneNumber}& `+
-			    				`address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity}, `+
+			    				href={`/send-message?type=repair&name=${this.state.fName} ${this.state.lName}&`+ 
+			    				`appliance=${this.props.applianceSelected}&phone=${this.state.phoneNumber}&`+
+			    				`address=${this.state.inputAddress} ${this.state.inputAddress2} ${this.state.inputCity},`+
 			    				`${this.state.inputZip}`} 
 	    					>
 	      					Send Message 

@@ -43,7 +43,7 @@ app.get('/send-message', function(req, res){
 	}
 	
 	if(receivedQuery.type === "repair"){
-		message += receivedQuery.name + "I am having issues with my " + 
+		message += receivedQuery.name + " I am having issues with my " + 
 			receivedQuery.appliance + " contact me at " +
 			receivedQuery.phone + " I live at " + receivedQuery.address;
 			
