@@ -1,0 +1,14 @@
+.Header {
+    margin-right: 0;
+    margin-left: 0;
+    background: #1b1b1b;
+    box-shadow: 1px 5px 5px #1a1110, 0 5px 10px 0 #469496 inset;
+    color: #fefefe;
+    /*width: 100%;*/
+}
+
+.no-gutters > .col,
+.no-gutters > [class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}

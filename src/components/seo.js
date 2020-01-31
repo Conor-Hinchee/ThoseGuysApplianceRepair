@@ -25,7 +25,7 @@ function SEO({ description, lang, meta, title }) {
     `
   );
 
-  const metaDescription = description;
+  const metaDescription = description || site.siteMetadata.description;
 
   return (
     <Helmet
@@ -201,6 +201,8 @@ function SEO({ description, lang, meta, title }) {
           "sameAs": "https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240/"
         }
       `}</script>
+      <link href="https://fonts.googleapis.com/css?family=Do+Hyeon|Righteous|Roboto" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css?family=Lobster|Orbitron" rel="stylesheet" />
     </Helmet>
   );
 }
