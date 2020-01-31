@@ -4,7 +4,7 @@ import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap';
 import NavItems from "./NavItems/NavItems";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
-import ThoseGuysLogo from '../../../images/gatsby-icon.png';
+import ThoseGuysLogo from '../../../images/ThoseGuysLogo.jpg';
 
 const Navigation = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +24,7 @@ const Navigation = (props) => {
   return (
       <Navbar color="dark" dark expand="md" sticky={props.sticky ? "top" : ""}>
         <NavbarBrand href="/" className={classes.NavbarBrand}>
-          <img  src={ThoseGuysLogo} 
+          <img src={ThoseGuysLogo} 
             alt="Those Guys Appliance Repair Logo" style={{marginRight: "10px"}}
           />
             Those Guys Appliance Repair 

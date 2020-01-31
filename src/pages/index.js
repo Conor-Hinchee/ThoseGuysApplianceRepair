@@ -9,8 +9,8 @@ const IndexPage = () => (
       description = "Clovis, New Mexico's #1 Appliance Repairmen! We service and repair all makes and models!"
     />
     <Navigation
-            sticky = {true} 
-            navigationLinks ={[
+        sticky = {true} 
+        navigationLinks ={[
                 {
                     link : "#who_we_are",
                     title : "Home"
@@ -25,7 +25,7 @@ const IndexPage = () => (
                     title : "Used Appliances"
                 }
             ]}
-        />
+    />
   </>
 );
 
