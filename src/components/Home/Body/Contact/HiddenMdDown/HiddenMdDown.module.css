@@ -1,0 +1,14 @@
+.HiddenMdDown{
+	display: flex;
+	justify-content: center;
+	margin-top: 5%;
+}
+.JustifyContentCenter{
+	display: flex;
+	justify-content: center;
+}
+@media (max-width: 767px){
+	.HiddenMdDown{
+		display: none;
+	}
+}

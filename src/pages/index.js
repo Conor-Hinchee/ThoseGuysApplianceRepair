@@ -2,6 +2,7 @@ import React from "react";
 import SEO from "../components/seo";
 import Header from "../components/Home/Header/Header"
 import Navigation from "../components/UI/Navigation/Navigation";
+import Body from "../components/Home/Body/Body";
 import 'bootstrap/dist/css/bootstrap.css';
 
 const IndexPage = () => (
@@ -28,6 +29,7 @@ const IndexPage = () => (
                 }
             ]}
     />
+    <Body />
   </>
 );
 
