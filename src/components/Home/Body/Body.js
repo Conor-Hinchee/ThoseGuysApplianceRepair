@@ -3,7 +3,7 @@ import { Container} from 'reactstrap';
 import classes from './Body.module.css';
 import Contact from './Contact/Contact';
 import About from './About/About';
-// import Carousel from './Carousel/Carousel';
+import Carousel from './Carousel/Carousel';
 // import WeFix from './WeFix/WeFix';
 // import Located from './Located/Located';
 // import Reviews from './Reviews/Reviews';
@@ -15,6 +15,9 @@ const Body = () => (
     	</section>
     	<section className={classes.Space} id="who_we_are">
     	    <About />
+    	</section>
+    	<section className={classes.Space} id="carousel">
+    	    <Carousel />
     	</section>
     </Container>
 );

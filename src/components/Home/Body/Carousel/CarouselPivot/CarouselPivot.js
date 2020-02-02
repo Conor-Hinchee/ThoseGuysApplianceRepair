@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import classes from './CarouselPivot.module.css';
 import CarouselItem from './CarouselItem/CarouselItem';
-import WhirlpoolBrand from '../../../../../assets/images/brands/whirlpool.svg';
-import FrigidaireBrand from '../../../../../assets/images/brands/Current_frigidaire_logo.png';
-import MaytagBrand from '../../../../../assets/images/brands/Maytag_logo_2015.png';
-import GE_Brand from '../../../../../assets/images/brands/GE.svg';
-import AmanaBrand from '../../../../../assets/images/brands/Amana_2016.png';
-import SamsungBrand from '../../../../../assets/images/brands/samsung.svg';
-import InsigniaBrand from '../../../../../assets/images/brands/insignia.gif';
-import LG_Brand from '../../../../../assets/images/brands/LG.svg';
-import ElectroluxBrand from '../../../../../assets/images/brands/Electrolux.svg';
-import BoschBrand from '../../../../../assets/images/brands/Bosch_brand.png';
-import KitchenAidBrand from '../../../../../assets/images/brands/Kitchenaid-Logo.png';
+import WhirlpoolBrand from '../../../../../images/brands/whirlpool.svg';
+import FrigidaireBrand from '../../../../../images/brands/Current_frigidaire_logo.png';
+import MaytagBrand from '../../../../../images/brands/Maytag_logo_2015.png';
+import GE_Brand from '../../../../../images/brands/GE.svg';
+import AmanaBrand from '../../../../../images/brands/Amana_2016.png';
+import SamsungBrand from '../../../../../images/brands/samsung.svg';
+import InsigniaBrand from '../../../../../images/brands/insignia.gif';
+import LG_Brand from '../../../../../images/brands/LG.svg';
+import ElectroluxBrand from '../../../../../images/brands/Electrolux.svg';
+import BoschBrand from '../../../../../images/brands/Bosch_brand.png';
+import KitchenAidBrand from '../../../../../images/brands/Kitchenaid-Logo.png';
 
 
 class CarouselPivot extends Component {
