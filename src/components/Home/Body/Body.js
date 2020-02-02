@@ -4,9 +4,9 @@ import classes from './Body.module.css';
 import Contact from './Contact/Contact';
 import About from './About/About';
 import Carousel from './Carousel/Carousel';
-// import WeFix from './WeFix/WeFix';
-// import Located from './Located/Located';
-// import Reviews from './Reviews/Reviews';
+import WeFix from './WeFix/WeFix';
+import Located from './Located/Located';
+import Reviews from './Reviews/Reviews';
 
 const Body = () => (
     <Container>
@@ -18,6 +18,15 @@ const Body = () => (
     	</section>
     	<section className={classes.Space} id="carousel">
     	    <Carousel />
+    	</section>
+    	<section className={classes.Space} id="we_fix">
+    	    <WeFix />
+    	</section>
+    	<section className={classes.Space} id="located">
+    	    <Located />
+    	</section>
+    	<section className={classes.Space} id="reviews">
+    	    <Reviews />
     	</section>
     </Container>
 );

@@ -3,6 +3,7 @@ import SEO from "../components/seo";
 import Header from "../components/Home/Header/Header"
 import Navigation from "../components/UI/Navigation/Navigation";
 import Body from "../components/Home/Body/Body";
+import Footer from "../components/UI/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.css';
 
 const IndexPage = () => (
@@ -29,7 +30,10 @@ const IndexPage = () => (
                 }
             ]}
     />
-    <Body />
+    <main>
+        <Body />
+    </main>
+    <Footer />
   </>
 );
 
