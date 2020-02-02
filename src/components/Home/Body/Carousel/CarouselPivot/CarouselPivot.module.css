@@ -1,0 +1,19 @@
+.Pivot{
+	margin-top: 15%;
+	list-style: none;
+	transform-style: preserve-3d;
+	animation: three-dimensions-circle 30s linear infinite;
+}
+@media (max-width: 768px) {
+	.Pivot{
+		margin-top: 20%;
+	}	
+}
+@keyframes three-dimensions-circle {
+	0% {
+		transform: rotateX(-100deg) rotate(0);
+	}
+	100% {
+		transform: rotateX(-100deg) rotate(-360deg);
+	}
+}
