@@ -1,0 +1,19 @@
+.Space{
+	margin-top: 5%;
+}
+
+@media screen and (min-width: 2560px) {
+	.Space{
+		padding-top: 3%;
+	}		
+}
+@media (max-width: 1050px) {
+	.Space{
+		padding-top: 7%;
+	}
+}	
+@media (max-width: 425px) {
+	.Space{
+		padding-top: 14%;
+	}
+}

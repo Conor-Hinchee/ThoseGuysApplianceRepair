@@ -1,6 +1,7 @@
-import React from "react"
-import SEO from "../components/seo"
+import React from "react";
+import SEO from "../components/seo";
 import Navigation from "../components/UI/Navigation/Navigation";
+import UsedAppliances from "../components/UsedAppliances/UsedAppliances";
 import Footer from "../components/UI/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -28,7 +29,7 @@ const UsedApplances = () => (
 			]}
 		/>
 		<main>
-		
+		  <UsedAppliances />
 		</main>
 		<Footer />
   </>
