@@ -1,0 +1,30 @@
+.JustifyContentCenter{
+	display: flex;
+	justify-content: center;
+}
+.BodyText{
+	font-family: "Roboto", sans-serif;
+	font-weight: bold;
+	text-align: center;
+}
+
+@media (max-width: 425px) {
+	.ImgRow{
+		display: flex;
+		justify-content: center;
+		margin-top: 25px;
+	}
+}
+
+	
+@media screen and (min-width: 2560px) {
+	.BodyText{
+		font-size: 2.5em;
+	}
+}
+
+@media (max-width: 714px) {
+	.BodyText{
+		font-size: 1em;
+	}
+}
