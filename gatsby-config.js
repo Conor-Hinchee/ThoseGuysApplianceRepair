@@ -27,7 +27,10 @@ module.exports = {
         icon: `src/images/ThoseGuysLogo.jpg`,
       },
     },
-    
+    {
+      resolve: `gatsby-plugin-modal-routing`,
+      
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,

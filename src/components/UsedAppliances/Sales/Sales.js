@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
+import { Link} from "gatsby"
 import HeaderText from '../../UI/HeaderText/HeaderText';
 import IconCooktop from "../../../images/icons/icon_cooktop.svg";
 import IconDishwasher from '../../../images/icons/icon_dishwasher.svg';
@@ -43,11 +44,17 @@ const Sales = () => {
 	    		</Col>
 	    	</Row>
 	    	<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
+	    		<Link
+	    			to="/modal-example/"
+					  state={{
+					    modal: true
+					  }}
+				>
 				
 					<Button id="Purchase_An_Appliance" size="lg" >
 						Purchase An Appliance
 					</Button>
-				
+				</Link>
 			</Row>
 	    </>
 	);	
