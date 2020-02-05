@@ -45,7 +45,7 @@ const Sales = () => {
 	    	</Row>
 	    	<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
 	    		<Link
-	    			to="/modal-example/"
+	    			to="/message-us/"
 					  state={{
 					    modal: true
 					  }}
