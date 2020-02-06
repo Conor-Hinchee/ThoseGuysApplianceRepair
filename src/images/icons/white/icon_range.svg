@@ -1,0 +1,71 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width="48"
+	height="48"
+	viewbox="0 0 48 48"
+>
+	<path
+		stroke-miterlimit="10"
+		stroke-width="2"
+		stroke="currentColor"
+		fill="#FFF"
+		d="M45.5 43.3c0 .6-.4 1-1 1h-41c-.5 0-1-.4-1-1V4.9c0-.5.5-1 1-1h40.9c.6 0 1 .5 1 1v38.4z"
+	/>
+	<path
+		stroke-miterlimit="10"
+		stroke-width="2"
+		stroke="currentColor"
+		fill="#FFF"
+		d="M37.7 35.5c0 .6-.4 1-1 1H11.3c-.5 0-1-.4-1-1V25c0-.5.5-1 1-1h25.5c.6 0 1 .5 1 1v10.5z"
+	/>
+	<path
+		stroke-miterlimit="10"
+		stroke-width="1.5"
+		stroke="currentColor"
+		fill="#FFF"
+		d="M18 2.9c0 .6-.4 1-1 1h-6.9c-.5 0-1-.4-1-1v-1c0-.5.5-1 1-1H17c.6 0 1 .5 1 1v1zM38.9 2.9c0 .6-.4 1-1 1H31c-.5 0-1-.4-1-1v-1c0-.5.5-1 1-1h6.9c.6 0 1 .5 1 1v1z"
+	/>
+	<path
+		stroke-miterlimit="10"
+		stroke-width="2"
+		stroke="currentColor"
+		fill="none"
+		d="M2.5 15.4h43"
+	/>
+	<path
+		stroke-miterlimit="10"
+		stroke-linejoin="round"
+		stroke-linecap="round"
+		stroke-width="2"
+		stroke="currentColor"
+		fill="none"
+		d="M7.5 44.3v2.5M40.5 44.3v2.5"
+	/>
+	<circle
+		stroke-miterlimit="10"
+		stroke-width="1.5"
+		stroke="currentColor"
+		fill="none"
+		r="2.2"
+		cy="9.8"
+		cx="9.3"
+	/>
+	<circle
+		stroke-miterlimit="10"
+		stroke-width="1.5"
+		stroke="currentColor"
+		fill="none"
+		r="2.2"
+		cy="9.8"
+		cx="24"
+	/>
+	<circle
+		stroke-miterlimit="10"
+		stroke-width="1.5"
+		stroke="currentColor"
+		fill="none"
+		r="2.2"
+		cy="9.8"
+		cx="38.7"
+	/>
+</svg>

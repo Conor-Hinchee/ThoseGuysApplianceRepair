@@ -2,14 +2,14 @@ import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
 import { Link} from "gatsby"
 import HeaderText from '../../UI/HeaderText/HeaderText';
-import IconCooktop from "../../../images/icons/icon_cooktop.svg";
-import IconDishwasher from '../../../images/icons/icon_dishwasher.svg';
-import IconDryer from '../../../images/icons/icon_dryer.svg';
-import IconFreezer from '../../../images/icons/icon_freezer.svg';
-import IconFridge from '../../../images/icons/icon_fridge.svg';
-import IconOven from '../../../images/icons/icon_oven.svg';
-import IconRange from '../../../images/icons/icon_range.svg';
-import IconWasher from '../../../images/icons/icon_washer.svg';
+import IconCooktop from "../../../images/icons/black/icon_cooktop.svg";
+import IconDishwasher from '../../../images/icons/black/icon_dishwasher.svg';
+import IconDryer from '../../../images/icons/black/icon_dryer.svg';
+import IconFreezer from '../../../images/icons/black/icon_freezer.svg';
+import IconFridge from '../../../images/icons/black/icon_fridge.svg';
+import IconOven from '../../../images/icons/black/icon_oven.svg';
+import IconRange from '../../../images/icons/black/icon_range.svg';
+import IconWasher from '../../../images/icons/black/icon_washer.svg';
 
 const Sales = () => {
 

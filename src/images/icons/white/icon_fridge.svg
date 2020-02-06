@@ -1,0 +1,23 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	width="48"
+	height="48"
+	viewbox="0 0 48 48"
+>
+	<path
+		d="M39.8 42.6c0 .6-.4 1-1 1H9.2c-.5 0-1-.4-1-1V2c0-.5.5-1 1-1h29.6c.6 0 1 .5 1 1v40.6zM17 46c0 .6-.4 1-1 1h-2.1c-.5 0-1-.4-1-1v-1.4c0-.5.5-1 1-1H16c.6 0 1 .5 1 1V46zM35.1 46c0 .6-.4 1-1 1H32c-.5 0-1-.4-1-1v-1.4c0-.5.5-1 1-1h2.1c.6 0 1 .5 1 1V46zM8.2 19.6h31.6"
+		stroke-miterlimit="10"
+		stroke-width="2"
+		stroke="currentColor"
+		fill="#FFF"
+	/>
+	<path
+		stroke-miterlimit="10"
+		stroke-linejoin="round"
+		stroke-linecap="round"
+		stroke-width="2"
+		stroke="currentColor"
+		fill="none"
+		d="M13.1 7.4v7.3M13.1 25.4v7.3"
+	/>
+</svg>

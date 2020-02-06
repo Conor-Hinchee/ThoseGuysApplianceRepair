@@ -1,16 +1,16 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, Container, Row, Col } from 'reactstrap';
 import { Link } from 'gatsby-plugin-modal-routing';
-import IconCooktop from "../../images/icons/icon_cooktop.svg";
-import IconDishwasher from '../../images/icons/icon_dishwasher.svg';
-import IconDryer from '../../images/icons/icon_dryer.svg';
-import IconFreezer from '../../images/icons/icon_freezer.svg';
-import IconFridge from '../../images/icons/icon_fridge.svg';
-import IconOven from '../../images/icons/icon_oven.svg';
-import IconRange from '../../images/icons/icon_range.svg';
-import IconWasher from '../../images/icons/icon_washer.svg';
-import IconWaterHeater from '../../images/icons/icon_water_heater.svg';
-import IconDisposal  from '../../images/icons/sink-garbage-disposal-kitchen.png';
+import IconCooktop from "../../images/icons/white/icon_cooktop.svg";
+import IconDishwasher from '../../images/icons/white/icon_dishwasher.svg';
+import IconDryer from '../../images/icons/white/icon_dryer.svg';
+import IconFreezer from '../../images/icons/white/icon_freezer.svg';
+import IconFridge from '../../images/icons/white/icon_fridge.svg';
+import IconOven from '../../images/icons/white/icon_oven.svg';
+import IconRange from '../../images/icons/white/icon_range.svg';
+import IconWasher from '../../images/icons/white/icon_washer.png';
+import IconWaterHeater from '../../images/icons/white/icon_water_heater.svg';
+import IconDisposal  from '../../images/icons/white/sink-garbage-disposal-kitchen.png';
 import classes from "./ApplianceSelector.module.css";
 
 const ModalExample = () => {
