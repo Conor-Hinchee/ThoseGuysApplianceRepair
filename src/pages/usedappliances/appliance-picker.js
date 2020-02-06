@@ -1,10 +1,10 @@
 import React  from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import { Link} from "gatsby"
-import SEO from "../components/seo"
+import SEO from "../../components/seo";
 // import MessageModal from "../components/MessageModal/MessageModal";
 
-const MessageUs = (props) => {
+const AppliancePicker = () => {
    
     return(
         <>
@@ -16,11 +16,19 @@ const MessageUs = (props) => {
             </ModalBody>
             <ModalFooter>
             <Link
-	    	    to="/usedappliances/"
-		    >   
+              to="/usedappliances/"
+              state={{
+                modal: true
+              }}
+		        >   
               <Button color="primary" >Do Something</Button>{' '}
-            </Link>  
+            </Link>
+            <Link
+              to="/usedappliances/"
+              
+		          >   
               <Button color="secondary" >Cancel</Button>
+             </Link> 
             </ModalFooter>
           </Modal>
         </>    
@@ -28,4 +36,4 @@ const MessageUs = (props) => {
    
 }
 
-export default MessageUs;
+export default AppliancePicker;

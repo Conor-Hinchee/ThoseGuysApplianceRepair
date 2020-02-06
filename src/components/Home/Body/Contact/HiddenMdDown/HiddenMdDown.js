@@ -1,12 +1,12 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import Link from  "gatsby-link";
 import {Row, Col, Button} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare} from '@fortawesome/free-brands-svg-icons'
 import { faPhoneSquare, faSms  } from '@fortawesome/free-solid-svg-icons';
 import classes from './HiddenMdDown.module.css';
 
-const HiddenMdDown = (props) => (
+const HiddenMdDown = () => (
         <Row className={classes.HiddenMdDown}>
             <Col md="4" className={classes.JustifyContentCenter}>
                 <Button  href="tel:+15757428441" outline color="secondary" size="lg">
@@ -15,14 +15,18 @@ const HiddenMdDown = (props) => (
                 </Button>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
-                {/*<Link to={"/messageus/Appliance Picker"} >*/} 
-                    <Button outline color="success" size="lg"
-                        onClick={props.toggle}
-                     >
+                <Link
+                    to="/repair/appliance-selector/"
+                    state={{
+                        modal: true,
+                        noScroll: true
+                    }}
+                >
+                    <Button outline color="success" size="lg">
                         <FontAwesomeIcon icon={faSms} style={{paddingRight: "3px"}}/>
                         Message Us
                     </Button>
-                {/*</Link>*/}
+                </Link>
             </Col>
             <Col md="4" className={classes.JustifyContentCenter}>
                 <Button href="https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240"

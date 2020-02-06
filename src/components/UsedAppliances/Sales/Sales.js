@@ -45,9 +45,9 @@ const Sales = () => {
 	    	</Row>
 	    	<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
 	    		<Link
-	    			to="/message-us/"
+	    			to="/usedappliances/appliance-picker/"
 					  state={{
-					    modal: true
+						modal: true
 					  }}
 				>
 				
