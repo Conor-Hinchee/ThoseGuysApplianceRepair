@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, Container, Row, Col } from 'reactstrap';
 import { Link } from 'gatsby-plugin-modal-routing';
+import GatsbyLink from  "gatsby-link";
 import IconCooktop from "../../images/icons/white/icon_cooktop.svg";
 import IconDishwasher from '../../images/icons/white/icon_dishwasher.svg';
 import IconDryer from '../../images/icons/white/icon_dryer.svg';
@@ -24,7 +25,7 @@ const ModalExample = () => {
                 <Container>
                     <Row className={classes.Space}>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -33,10 +34,10 @@ const ModalExample = () => {
                                     Fridge
                                     <img src={IconFridge} alt="fridge_icon" />
                                 </Button>
-                            </Link>
+                            </GatsbyLink>
                         </Col>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -45,12 +46,12 @@ const ModalExample = () => {
                                     Washer
                                     <img src={IconWasher} alt="washer_icon"/>
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                     </Row>
                     <Row className={classes.Space}>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -59,10 +60,10 @@ const ModalExample = () => {
                                     Dryer
                                     <img src={IconDryer} alt="dryer_icon" />
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -71,12 +72,12 @@ const ModalExample = () => {
                                     Dishwasher
                                     <img src={IconDishwasher} alt="dishwasher_icon" />
                                 </Button>
-                            </Link>
+                            </GatsbyLink>
                         </Col>
                     </Row>
                     <Row className={classes.Space}>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -85,10 +86,10 @@ const ModalExample = () => {
                                     Range
                                     <img src={IconRange} alt="oven_icon" />
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -97,12 +98,12 @@ const ModalExample = () => {
                                     Oven
                                     <img src={IconOven} alt="oven_icon" />
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                     </Row>
                     <Row className={classes.Space}>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -111,10 +112,10 @@ const ModalExample = () => {
                                     Cooktop
                                     <img src={IconCooktop} alt="cooktop_icon" />
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -123,12 +124,12 @@ const ModalExample = () => {
                                     Freezer
                                     <img src={IconFreezer} alt="freezer_icon"/>
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                     </Row>
                     <Row className={classes.Space}>
                         <Col md="4" sm="6" xs="6" className="justify-content-center">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -137,10 +138,10 @@ const ModalExample = () => {
                                     Water Heater
                                     <img src={IconWaterHeater} alt="waterheater_icon"/>
                                 </Button>
-                            </Link>	
+                            </GatsbyLink>	
                         </Col>
                         <Col md="4" sm="6" xs="6">
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -151,12 +152,12 @@ const ModalExample = () => {
                                         className={classes.ApplianceIcon} alt="disposal" 
                                     />
                                 </Button>
-                            </Link>  	
+                            </GatsbyLink>  	
                         </Col>
                     </Row>
                     <Row className="justify-content-center">
                         <Col md="4" sm="6" xs="6" className={classes.Space}>
-                            <Link to={"/repair/appliance-issue"} 
+                            <GatsbyLink to={"/repair/appliance-issue"} 
                                 state={{
                                     modal: true
                                 }}
@@ -164,7 +165,7 @@ const ModalExample = () => {
                                 <Button color="dark" block className={classes.FlexCol} id="not_listed">
                                     Some Other Appliance 
                                 </Button>
-                            </Link>
+                            </GatsbyLink>
                         </Col>
                     </Row>
                 </Container>
