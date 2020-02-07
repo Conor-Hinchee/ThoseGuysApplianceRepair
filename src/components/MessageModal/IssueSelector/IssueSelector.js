@@ -98,7 +98,7 @@ class IssueDropDown extends Component {
   
     return(
         <Modal isOpen={true} >
-            <ModalHeader close={closeBtn}>Appliance Selector</ModalHeader>  
+            <ModalHeader close={closeBtn}>Appliance Issue List</ModalHeader>  
             <ModalBody>
                 <div className={classes.FlexCenter}>
                     <ButtonDropdown isOpen={this.state.dropdownOpen} 

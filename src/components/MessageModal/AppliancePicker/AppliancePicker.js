@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import classes from './AppliancePicker.module.css';
 import { Link } from 'gatsby-plugin-modal-routing';
+import GatsbyLink from  "gatsby-link";
 import {Modal, ModalHeader, ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import IconCooktop from "../../../images/icons/black/icon_cooktop.svg";
 import IconDishwasher from '../../../images/icons/black/icon_dishwasher.svg';
@@ -54,7 +55,7 @@ const AppliancePicker = (props) => {
 
 
 
-    const closeBtn = <Link to="/"><button className="close">&times;</button></Link>;
+    const closeBtn = <Link to="/usedappliances"><button className="close">&times;</button></Link>;
     
 	return(
 	    <Modal isOpen={true} >
@@ -175,9 +176,15 @@ const AppliancePicker = (props) => {
     				    </Row>
     				    {isButtonMounted &&
     					    <Row className="d-flex justify-content-end" >
+    					        <GatsbyLink to={"/usedappliances/customer-info"} 
+                                    state={{
+                                        modal: true
+                                    }}
+                                >
     							<Button color="primary" id="Contact_Info" > 
     								Continue
     							</Button>
+    							</GatsbyLink>
     					    </Row>
     				    }
     			    </Container>
