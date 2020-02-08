@@ -17,13 +17,13 @@ const UsedApplances = () => (
 					link : "/",
 					title : "Home"
 				},{
-					link : "#refinishing",
+					link : "/usedappliances/#refinishing",
 					title : "Refinishing"
 				},{
-					link : "#sales",
+					link : "/usedappliances/#sales",
 					title : "Used Appliance Sales" 
 				},{
-					link : "#recycle",
+					link : "/usedappliances/#recycle",
 					title : "Recycling"
 				}
 			]}

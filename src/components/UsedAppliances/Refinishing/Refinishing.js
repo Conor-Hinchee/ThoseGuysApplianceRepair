@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
+import { Link} from "gatsby"
 import classes from './Refinishing.module.css';
 import HeaderText from '../../UI/HeaderText/HeaderText';
 import FridgePainting from '../../../images/fridepainting.jpg';
@@ -35,9 +36,16 @@ const Refinishing = () => {
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button id="Refinish_My_Appliance" size="lg">
-					Refinish My Appliance
-				</Button>
+				<Link
+	    			to="/usedappliances/customer-info/"
+					  state={{
+						modal: true
+					  }}
+				>
+					<Button id="Refinish_My_Appliance" size="lg">
+						Refinish My Appliance
+					</Button>
+				</Link>	
 			</Row>
 	    </>
 	);	

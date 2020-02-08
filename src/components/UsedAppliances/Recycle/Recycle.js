@@ -1,5 +1,6 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
+import { Link} from "gatsby"
 import HeaderText from '../../UI/HeaderText/HeaderText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHandshake, faRecycle, faHandHoldingUsd, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
@@ -34,9 +35,16 @@ const Recycle = () => {
 	        	</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button id="Recycle_My_Appliance" size="lg">
-					Recycle My Appliance
-				</Button>
+				<Link
+	    			to="/usedappliances/customer-info/"
+					  state={{
+						modal: true
+					  }}
+				>
+					<Button id="Recycle_My_Appliance" size="lg">
+						Recycle My Appliance
+					</Button>
+				</Link>
 			</Row>
 	    </>
 	);	

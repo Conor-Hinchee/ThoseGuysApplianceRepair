@@ -122,7 +122,7 @@ class ContactInfoForm extends Component {
   }
   
   render(){
-    const closeBtn = <Link to="/"><button className="close">&times;</button></Link>;
+    const closeBtn = <Link to={this.props.linkBack}><button className="close">&times;</button></Link>;
     return(
         <Modal isOpen={true} >
         <ModalHeader close={closeBtn}>Appliance Selector</ModalHeader>  

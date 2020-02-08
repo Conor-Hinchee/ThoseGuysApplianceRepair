@@ -50,7 +50,6 @@ const Sales = () => {
 						modal: true
 					  }}
 				>
-				
 					<Button id="Purchase_An_Appliance" size="lg" >
 						Purchase An Appliance
 					</Button>

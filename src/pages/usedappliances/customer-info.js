@@ -7,7 +7,9 @@ const CustomerInfo = () => {
     return(
         <>
           <SEO title="💬 Message Us 😃" />
-          <ContactForm />
+          <ContactForm 
+            linkBack="/usedappliances/"
+          />
         </>    
     );
    
