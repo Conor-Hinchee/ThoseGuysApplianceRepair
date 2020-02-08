@@ -9,7 +9,7 @@ const Header = () => (
         <Col sm="12" className={classes.spaceAround}>
             <h6 className="word-wrap">
                 <div className={classes.contactBarText}>
-                     <FontAwesomeIcon icon={faMapMarkedAlt} style={{paddingRight: "3px"}} />
+                     <FontAwesomeIcon icon={faMapMarkedAlt} style={{paddingRight: "3px", font: "1em"}} />
                         <a className={classes.linkWhite} 
                             target="_blank"
                             rel="noopener noreferrer"
@@ -20,7 +20,7 @@ const Header = () => (
             </h6>
             <h6 className="text-nowrap">
                 <div className={classes.contactBarText}>
-                    <FontAwesomeIcon icon={faPhoneSquare} style={{paddingRight: "3px"}} />
+                    <FontAwesomeIcon icon={faPhoneSquare} style={{paddingRight: "3px", font: "1em"}} />
                     <a className={classes.linkWhite} href="tel:+15757428441">(575) 742-8441</a>
                 </div>
             </h6>
