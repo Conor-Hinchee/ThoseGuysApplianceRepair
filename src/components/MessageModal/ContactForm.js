@@ -125,7 +125,7 @@ class ContactInfoForm extends Component {
     const closeBtn = <Link to={this.props.linkBack}><button className="close">&times;</button></Link>;
     return(
         <Modal isOpen={true} >
-        <ModalHeader close={closeBtn}>Appliance Selector</ModalHeader>  
+        <ModalHeader close={closeBtn}>Contact Information</ModalHeader>  
         <ModalBody>
         <Container>
     		<Form autocomplete="on">

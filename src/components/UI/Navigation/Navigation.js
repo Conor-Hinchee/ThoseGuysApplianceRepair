@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import classes from './Navigation.module.css';
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav} from 'reactstrap';
 import NavItems from "./NavItems/NavItems";
+import NavbarIcon from "./NavbarIcon/NavbarIcon";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWrench } from '@fortawesome/free-solid-svg-icons';
-import ThoseGuysLogo from '../../../images/ThoseGuysLogo.jpg';
 
-const Navigation = (props) => {
+
+const Navigation = ( props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
@@ -24,9 +25,7 @@ const Navigation = (props) => {
   return (
       <Navbar color="dark" dark expand="md" sticky={props.sticky ? "top" : ""}>
         <NavbarBrand href="/" className={classes.NavbarBrand}>
-          <img src={ThoseGuysLogo} 
-            alt="Those Guys Appliance Repair Logo" style={{marginRight: "10px"}}
-          />
+            <NavbarIcon />
             Those Guys Appliance Repair 
           <FontAwesomeIcon icon={faWrench} />
         </NavbarBrand>

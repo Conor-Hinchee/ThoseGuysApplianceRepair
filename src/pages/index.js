@@ -30,7 +30,7 @@ const IndexPage = () => (
                 }
             ]}
     />
-    <main>
+    <main style={{overflowX: "hidden"}}>
         <Body />
     </main>
     <Footer />
