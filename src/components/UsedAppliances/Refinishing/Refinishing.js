@@ -3,8 +3,8 @@ import {Row, Col, Button} from 'reactstrap';
 import { Link} from "gatsby"
 import classes from './Refinishing.module.css';
 import HeaderText from '../../UI/HeaderText/HeaderText';
-import FridgePainting from '../../../images/fridepainting.jpg';
-import OvenPainting from '../../../images/ovenpainting.jpg';
+import FridgePaintingImg from "./FridgePaintingImg/FridgePaintingImg"
+import OvenPaintingImg from './OvenPaintingImg/OvenPaintingImg';
 
 
 const Refinishing = () => {
@@ -27,12 +27,10 @@ const Refinishing = () => {
 	    	</Row>
 	    	<Row className="d-flex justify-content-around">
 	    		<Col md="4" sm="10" className={classes.ImgRow}>
-	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
-	    				src={FridgePainting} alt="Refrigerator refinished with paint" />
+	    			<FridgePaintingImg />
 	    		</Col>
 	    		<Col md="4" sm="10" className={classes.ImgRow}>
-	    			<img className="img-fluid rounded" style={{border: "3px solid black"}}
-	    			src={OvenPainting} alt="Oven refinished with paint" />
+	    			<OvenPaintingImg />
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>

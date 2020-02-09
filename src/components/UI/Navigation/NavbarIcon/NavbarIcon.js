@@ -16,7 +16,9 @@ const NavbarIcon = () => {
     }
   `);
 
-  return <Img fixed={data.navbarIcon.childImageSharp.fixed} style={{marginRight: "15px"}} />;
+  return <Img fixed={data.navbarIcon.childImageSharp.fixed} 
+        style={{marginRight: "15px"}}   alt="Those Guys Appliance Repair Logo" 
+    />;
 };
 
 export default NavbarIcon;
