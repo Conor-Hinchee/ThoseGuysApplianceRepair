@@ -17,7 +17,7 @@ const FridgePaintingImg = () => {
   `);
 
   return <Img fixed={data.fridgePainting.childImageSharp.fixed} 
-        className=" rounded" style={{border: "3px solid black"}}
+        className="rounded" style={{border: "3px solid black"}}
         alt="Refrigerator refinished with paint"
     />;
 };
