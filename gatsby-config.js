@@ -27,6 +27,19 @@ module.exports = {
         icon: `src/images/ThoseGuysLogo.jpg`,
       },
     },
+     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `Do Hyeon`,
+          `Righteous`,
+          `Roboto`,
+          `Lobster`,
+          `Orbitron`,
+        ],
+        display: 'swap'
+      }
+    },
     {
       resolve: `gatsby-plugin-modal-routing`,
       options: {
