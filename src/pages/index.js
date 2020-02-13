@@ -5,6 +5,7 @@ import Navigation from "../components/UI/Navigation/Navigation";
 import Body from "../components/Home/Body/Body";
 import Footer from "../components/UI/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.css';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 
 const IndexPage = () => (
   <>
