@@ -3,21 +3,22 @@ module.exports = {
     title: `🧰 Those Guys Appliance Repair 🧺`,
     description: `Clovis, New Mexico's #1 Appliance Repairmen! We service and repair all makes and models!`,
     author: `Conor Hinchee`,
+    siteUrl: `https://thoseguysappliancerepair.com`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-127091657-1"
+      },
+    },
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src`, `images`),
       },
     },
     `gatsby-transformer-sharp`,
