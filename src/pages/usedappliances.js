@@ -6,7 +6,7 @@ import Footer from "../components/UI/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
-const UsedAppliances = () => (
+const UsedApplances = () => (
   <>
     <SEO title="🧰 Those Guys Appliance Repair 🧺" 
       description = "Buy, Sell, or Recycle used appliances with Those Guys Appliance Repair"
@@ -36,4 +36,4 @@ const UsedAppliances = () => (
   </>
 )
 
-export default UsedAppliances;
+export default UsedApplances;
