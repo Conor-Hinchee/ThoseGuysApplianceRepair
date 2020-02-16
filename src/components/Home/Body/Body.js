@@ -12,24 +12,24 @@ import Reviews from './Reviews/Reviews';
 
 const Body = () => {
 
-	const Counter = ({ issue, updateIssue }) => (
+	const Counter = ({ appliance, addAppliance }) => (
 		<div>
-		  <p>Count: {issue}</p>
-		  <button onClick={updateIssue}>Increment</button>
+		  <p>Count: {appliance}</p>
+		  <button onClick={addAppliance} id="this">Increment</button>
 		</div>
 	  );
 	  
 	  Counter.propTypes = {
-		issue: PropTypes.string.isRequired,
-		updateIssue: PropTypes.func.isRequired,
+		appliance: PropTypes.string.isRequired,
+		addAppliance: PropTypes.func.isRequired,
 	  };
 	  
-	  const mapStateToProps = ({ issue }) => {
-		return { issue };
+	  const mapStateToProps = ({ appliance }) => {
+		return { appliance };
 	  };
 	  
 	  const mapDispatchToProps = dispatch => {
-		return { updateIssue: () => dispatch({ type: `UPDATE_ISSUE`, payload: "wowowowow" }) };
+		return { addAppliance: (e) => dispatch({ type: `ADD_APPLIANCE`, payload: e.target.id }) };
 	  };
 	  
 	  const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
