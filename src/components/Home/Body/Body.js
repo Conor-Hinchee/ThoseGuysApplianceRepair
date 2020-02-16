@@ -20,7 +20,7 @@ const Body = () => {
 	  );
 	  
 	  Counter.propTypes = {
-		appliance: PropTypes.string.isRequired,
+		appliance: PropTypes.array.isRequired,
 		addAppliance: PropTypes.func.isRequired,
 	  };
 	  

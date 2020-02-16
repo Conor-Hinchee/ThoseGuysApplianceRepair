@@ -71,7 +71,19 @@ const reducer = (state = {
                     address: action.payload
                   }
                 };
-            break;    
+            break;
+          case "CLEAR_STATE":
+                state = {
+                  appliance : [],
+                  issue : "",
+                  contactInfo : {
+                    first_name: "",
+                    last_name: "",
+                    phone_number: "",
+                    address: ""
+                  }  
+                };
+            break;   
           default:
             break;
     }
