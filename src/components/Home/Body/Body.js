@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container} from 'reactstrap';
 import PropTypes from "prop-types";
-import { connect } from "react-redux"
+import { connect } from "react-redux";
 import classes from './Body.module.css';
 import Contact from './Contact/Contact';
 import About from './About/About';
@@ -12,27 +12,27 @@ import Reviews from './Reviews/Reviews';
 
 const Body = () => {
 
-	const Counter = ({ count, increment }) => (
+	const Counter = ({ issue, updateIssue }) => (
 		<div>
-		  <p>Count: {count}</p>
-		  <button onClick={increment}>Increment</button>
+		  <p>Count: {issue}</p>
+		  <button onClick={updateIssue}>Increment</button>
 		</div>
-	  )
+	  );
 	  
 	  Counter.propTypes = {
-		count: PropTypes.number.isRequired,
-		increment: PropTypes.func.isRequired,
-	  }
+		issue: PropTypes.string.isRequired,
+		updateIssue: PropTypes.func.isRequired,
+	  };
 	  
-	  const mapStateToProps = ({ count }) => {
-		return { count }
-	  }
+	  const mapStateToProps = ({ issue }) => {
+		return { issue };
+	  };
 	  
 	  const mapDispatchToProps = dispatch => {
-		return { increment: () => dispatch({ type: `INCREMENT` }) }
-	  }
+		return { updateIssue: () => dispatch({ type: `UPDATE_ISSUE`, payload: "wowowowow" }) };
+	  };
 	  
-	  const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter)
+	  const ConnectedCounter = connect(mapStateToProps, mapDispatchToProps)(Counter);
 
 	return(
 		<Container>
@@ -57,6 +57,6 @@ const Body = () => {
 			</section>
     	</Container>
 	);
-}
+};
 
 export default Body;
