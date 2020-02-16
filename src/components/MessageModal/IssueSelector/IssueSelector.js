@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import classes from './IssueSelector.module.css';
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
 import { Link } from 'gatsby-plugin-modal-routing';
 import {Modal, ModalHeader, ModalBody, ButtonDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
 import IssueItem from './IssueItem/IssueItem';
@@ -53,11 +55,15 @@ class IssueDropDown extends Component {
   
   
   render(){
+    
     let issueList = [];
     let titleCase = "";
-    const closeBtn = <Link to="/"><button className="close">&times;</button></Link>;
-
-    if(this.props.applianceSelected === "water_heater"){
+    const closeBtn = <Link to="/"><button className="close" onClick ={this.props.clearState}>&times;</button></Link>;
+    
+    if(this.props.appliance[0] === undefined){
+      //Do Nothing
+      
+    }else if(this.props.appliance[0] === "water_heater"){
       titleCase = "Water Heater ";
       for(let i = 0; i < this.state.waterHeaterIssues.length; i++){
         issueList.push(
@@ -68,7 +74,7 @@ class IssueDropDown extends Component {
           />
         );
       }
-    }else if(this.props.applianceSelected === "not_listed"){
+    }else if(this.props.appliance[0] === "not_listed"){
       
       titleCase = "Appliance ";
       for(let i =0; i < this.state.notlistedIssues.length; i++){
@@ -80,10 +86,10 @@ class IssueDropDown extends Component {
         );  
       }
     }else{
-      let type = this.props.applianceSelected + "Issues";
+      let type = this.props.appliance[0] + "Issues";
       
-      titleCase = ((this.props.applianceSelected).charAt(0)).toUpperCase() + 
-        this.props.applianceSelected.slice(1) + " ";
+      titleCase = ((this.props.appliance[0]).charAt(0)).toUpperCase() + 
+        this.props.appliance[0].slice(1) + " ";
       
       for(let i =0; i < this.state[type].length; i++){
         issueList.push(
@@ -119,5 +125,19 @@ class IssueDropDown extends Component {
   }
   
 }
+IssueDropDown.propTypes = {
+    appliance: PropTypes.array.isRequired,
+    clearState: PropTypes.func.isRequired,
+  };
+  
+  const mapStateToProps = ({ appliance }) => {
+    return { appliance };
+  };
+  
+  const mapDispatchToProps = dispatch => {
+    return { clearState: () => dispatch({type: `CLEAR_STATE`})
+    };
+  };
+  
 
-export default IssueDropDown;
+export default connect(mapStateToProps, mapDispatchToProps)(IssueDropDown);
