@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import {navigate} from 'gatsby';
 import classes from './AppliancePicker.module.css';
 import { Link } from 'gatsby-plugin-modal-routing';
-import GatsbyLink from  "gatsby-link";
 import {Modal, ModalHeader, ModalBody, Container, Row, Button, Col} from 'reactstrap';
 import IconCooktop from "../../../images/icons/black/icon_cooktop.svg";
 import IconDishwasher from '../../../images/icons/black/icon_dishwasher.svg';
@@ -53,9 +55,28 @@ const AppliancePicker = (props) => {
 			[e.currentTarget.id] : !isApplianceSelected[e.currentTarget.id] });
 	};
 
+	const handleContinueClick = () =>{
+		let arr = [];
+		
+		for (const property in isApplianceSelected) {
+			if(isApplianceSelected[property]){
+				arr.push(property);
+			}
+		}
+		
+		props.addApplianceList(arr);
+		
+		navigate(
+        "/usedappliances/customer-info",
+            {
+                state: { modal: true },
+            }
+        );
+		
+	};
 
 
-    const closeBtn = <Link to="/usedappliances"><button className="close">&times;</button></Link>;
+    const closeBtn = <Link to="/usedappliances"><button className="close" onClick ={props.clearState}>&times;</button></Link>;
     
 	return(
 	    <Modal isOpen={true} >
@@ -176,15 +197,9 @@ const AppliancePicker = (props) => {
     				    </Row>
     				    {isButtonMounted &&
     					    <Row className="d-flex justify-content-end" >
-    					        <GatsbyLink to={"/usedappliances/customer-info"} 
-                                    state={{
-                                        modal: true
-                                    }}
-                                >
-    							<Button color="primary" id="Contact_Info" > 
+    							<Button color="primary" id="Contact_Info" onClick={handleContinueClick}> 
     								Continue
     							</Button>
-    							</GatsbyLink>
     					    </Row>
     				    }
     			    </Container>
@@ -193,4 +208,18 @@ const AppliancePicker = (props) => {
 	);
 };
 
-export default AppliancePicker;
+AppliancePicker.propTypes = {
+    clearState: PropTypes.func.isRequired,
+    addApplianceList: PropTypes.func.isRequired
+  };
+  
+
+  
+  const mapDispatchToProps = dispatch => {
+    return { clearState: () => dispatch({type: `CLEAR_STATE`}),
+    	addApplianceList: (arr) => dispatch({ type: `ADD_APPLIANCE_LIST`, payload: arr })
+    };
+  };
+  
+
+export default connect(null, mapDispatchToProps)(AppliancePicker);

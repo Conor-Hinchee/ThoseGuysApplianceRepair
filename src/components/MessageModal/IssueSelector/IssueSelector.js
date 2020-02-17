@@ -119,7 +119,7 @@ class IssueDropDown extends Component {
     );
   }
   
-};
+}
 
 IssueDropDown.propTypes = {
     appliance: PropTypes.array.isRequired,

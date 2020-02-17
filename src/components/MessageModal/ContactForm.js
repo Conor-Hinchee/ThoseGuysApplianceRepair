@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import classes from './ContactForm.module.css';
 import { Link } from 'gatsby-plugin-modal-routing';
 import {Modal, ModalHeader, ModalBody, Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+
 
 class ContactInfoForm extends Component {
   constructor(props) {
@@ -122,10 +125,10 @@ class ContactInfoForm extends Component {
   }
   
   render(){
-    const closeBtn = <Link to={this.props.linkBack}><button className="close">&times;</button></Link>;
+    const closeBtn = <Link to={this.props.linkBack}><button className="close" onClick ={this.props.clearState}>&times;</button></Link>;
     return(
         <Modal isOpen={true} >
-        <ModalHeader close={closeBtn}>Contact Information</ModalHeader>  
+        	<ModalHeader close={closeBtn}>Contact Information</ModalHeader>  
         <ModalBody>
         <Container>
     		<Form autocomplete="on">
@@ -201,4 +204,20 @@ class ContactInfoForm extends Component {
   
 }
 
-export default ContactInfoForm;
+ContactInfoForm.propTypes = {
+	clearState: PropTypes.func.isRequired,
+	appliance: PropTypes.array.isRequired,
+	issue: PropTypes.string.isRequired,
+  };
+	  
+const mapStateToProps = ({ appliance, issue }) => {
+return { appliance,  issue };
+};
+	  
+const mapDispatchToProps = dispatch => {
+return { clearState: () => dispatch({type: `CLEAR_STATE`})
+	
+};
+};
+	  
+export default connect(mapStateToProps, mapDispatchToProps)(ContactInfoForm);
