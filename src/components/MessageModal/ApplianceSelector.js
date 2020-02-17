@@ -169,10 +169,6 @@ ApplianceSelector.propTypes = {
     clearState: PropTypes.func.isRequired,
   };
   
-  const mapStateToProps = ({ appliance }) => {
-    return { appliance };
-  };
-  
   const mapDispatchToProps = dispatch => {
     return { addAppliance: (id) => dispatch({ type: `ADD_APPLIANCE`, payload: id }),
             clearState: () => dispatch({type: `CLEAR_STATE`})
@@ -180,5 +176,5 @@ ApplianceSelector.propTypes = {
   };
   
 
-export default connect(mapStateToProps, mapDispatchToProps)(ApplianceSelector);
+export default connect(null, mapDispatchToProps)(ApplianceSelector);
 

@@ -11,7 +11,6 @@ class IssueDropDown extends Component {
         super(props);
         
         this.toggleDropDown = this.toggleDropDown.bind(this);
-        this.issueItemClick = this.issueItemClick.bind(this);
   }
   
   
@@ -47,10 +46,6 @@ class IssueDropDown extends Component {
     this.setState(prevState => ({
             dropdownOpen: !prevState.dropdownOpen
     }));
-  }
-  
-  issueItemClick = (e) =>{
-    // this.props.handleIssueOptionClick(e.currentTarget.id);
   }
   
   
@@ -124,7 +119,8 @@ class IssueDropDown extends Component {
     );
   }
   
-}
+};
+
 IssueDropDown.propTypes = {
     appliance: PropTypes.array.isRequired,
     clearState: PropTypes.func.isRequired,

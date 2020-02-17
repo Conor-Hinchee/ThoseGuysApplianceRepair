@@ -1,21 +1,39 @@
 import React from 'react';
 import {DropdownItem} from 'reactstrap';
-import GatsbyLink from  "gatsby-link";
+import { connect } from "react-redux";
+import PropTypes from "prop-types";
+import {navigate} from 'gatsby';
+
 
 const IssueItem = (props) => {
+
+	const handleClick = (e) =>{
+        props.updateIssue(e.currentTarget.id);
+        navigate(
+        "/repair/customer-info",
+            {
+                state: { modal: true },
+            }
+        );
+    };
 	
 	return(
-		<GatsbyLink to={"/repair/customer-info"} 
-			state={{
-				modal: true
-			}}
-    	>
-			<DropdownItem id={props.issue} onClick={props.itemOnClick}>
-				{props.issue}
-			</DropdownItem>
-		</GatsbyLink>
+		<DropdownItem id={props.issue} onClick={handleClick}>
+			{props.issue}
+		</DropdownItem>
 	);
 	
 };
 
-export default IssueItem;
+IssueItem.propTypes = {
+    updateIssue: PropTypes.func.isRequired,
+  };
+  
+  
+  const mapDispatchToProps = dispatch => {
+    return { updateIssue: (id) => dispatch({type: `UPDATE_ISSUE`, payload: id})
+    };
+  };
+  
+
+export default connect(null, mapDispatchToProps)(IssueItem);

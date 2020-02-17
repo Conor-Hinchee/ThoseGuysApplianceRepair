@@ -12,20 +12,20 @@ import Reviews from './Reviews/Reviews';
 
 const Body = () => {
 
-	const Counter = ({ appliance, addAppliance }) => (
+	const Counter = ({ issue, addAppliance }) => (
 		<div>
-		  <p>Count: {appliance}</p>
+		  <p>Count: {issue}</p>
 		  <button onClick={addAppliance} id="this">Increment</button>
 		</div>
 	  );
 	  
 	  Counter.propTypes = {
-		appliance: PropTypes.array.isRequired,
+		issue: PropTypes.string.isRequired,
 		addAppliance: PropTypes.func.isRequired,
 	  };
 	  
-	  const mapStateToProps = ({ appliance }) => {
-		return { appliance };
+	  const mapStateToProps = ({ issue }) => {
+		return { issue };
 	  };
 	  
 	  const mapDispatchToProps = dispatch => {
