@@ -6,6 +6,8 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
 
+// https://those-guys-form-handler-3lbwowavx.now.sh/send-message
+
 class ContactInfoForm extends Component {
   constructor(props) {
     super(props);
