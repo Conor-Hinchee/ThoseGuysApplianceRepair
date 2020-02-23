@@ -5,9 +5,6 @@ import {Modal, ModalHeader, ModalBody, Container, Col, Row, Button, Form, FormGr
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 
-
-// https://those-guys-form-handler-3lbwowavx.now.sh/send-message
-
 class ContactInfoForm extends Component {
   constructor(props) {
     super(props);
@@ -126,6 +123,35 @@ class ContactInfoForm extends Component {
   	}
   }
   
+
+  handleSend = (e) =>{
+	e.preventDefault();
+
+	// const url = "https://those-guys-form-handler-k9ct4vv58.now.sh/";
+	// const url = "http://localhost:5000/";
+	let payload = { 
+		type: "repair", 
+		name: this.state.fName + " " + this.state.lName,
+		appliance: this.props.appliance[0],
+		issue: this.props.issue,
+		phone: this.state.phoneNumber,
+		address: this.state.inputAddress +  " " + this.state.inputAddress2 + " " + this.state.inputCity
+			+ " " + this.state.inputZip
+	};
+	
+	fetch('http://localhost:5000/', {
+	  method: 'POST',
+	  headers: {
+		'Content-Type': 'application/json'
+		// 'Content-Type': 'application/x-www-form-urlencoded',
+	  },
+	  body: JSON.stringify(payload)
+	}).then(function(response) {
+	  console.log(response)
+	})
+  }
+
+
   render(){
     const closeBtn = <Link to={this.props.linkBack}><button className="close" onClick ={this.props.clearState}>&times;</button></Link>;
     return(
@@ -188,8 +214,8 @@ class ContactInfoForm extends Component {
 		      
 		      <div className={classes.FlexEnd}>
 	    		{this.state.shouldBtnMount ?
-	    			
-	      				<Button>
+
+	      				<Button onClick={this.handleSend}>
 	      					Send Message 	
 	      				</Button>
 	      				
