@@ -178,17 +178,17 @@ class ContactInfoForm extends Component {
 			break;	
 	}
 
-	
-	fetch('http://localhost:5000/', {
-	  method: 'POST',
-	  headers: {
-		'Content-Type': 'application/json'
-		// 'Content-Type': 'application/x-www-form-urlencoded',
-	  },
-	  body: JSON.stringify(payload)
-	}).then(function(response) {
-	  console.log(response)
-	})
+	console.log(payload);
+	// fetch('http://localhost:5000/', {
+	//   method: 'POST',
+	//   headers: {
+	// 	'Content-Type': 'application/json'
+	// 	// 'Content-Type': 'application/x-www-form-urlencoded',
+	//   },
+	//   body: JSON.stringify(payload)
+	// }).then(function(response) {
+	//   console.log(response)
+	// })
   }
 
 
@@ -205,7 +205,7 @@ class ContactInfoForm extends Component {
 		          <FormGroup>
 		            <Label for="fName">First Name</Label>
 		            <Input required onChange={this.handleFormChange} value={this.state.fName}
-		            	type="text" name="firstName" id="fName" placeholder="John" />
+		            	type="text" name="firstName" id="fName" placeholder="John" tabindex="0"/>
 		          </FormGroup>
 		        </Col>
 		        <Col md={6}>

@@ -55,7 +55,7 @@ HiddenMdDown.propTypes = {
 };
 	  
 const mapDispatchToProps = dispatch => {
-    return { addMessageType: () => dispatch({type: `ADD_MESSAGE_TYPE`})
+    return { addMessageType: (messageType) => dispatch({type: `ADD_MESSAGE_TYPE`, payload: messageType })
     };
 };
 	  

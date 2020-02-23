@@ -1,8 +1,7 @@
 import { createStore as reduxCreateStore} from "redux";
 
 const reducer = (state = {
-    test: "repair",
-    messageType: "repair",
+    messageType: "",
     appliance : [],
     issue : ""
 }, action) =>{
@@ -38,7 +37,7 @@ const reducer = (state = {
                 };
             break;   
           default:
-            break;
+            return state;
     }
     return state;
 };
