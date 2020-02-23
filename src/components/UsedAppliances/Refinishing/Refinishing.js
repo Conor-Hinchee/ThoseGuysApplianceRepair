@@ -1,13 +1,28 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
-import { Link} from "gatsby"
 import classes from './Refinishing.module.css';
 import HeaderText from '../../UI/HeaderText/HeaderText';
 import FridgePaintingImg from "./FridgePaintingImg/FridgePaintingImg"
 import OvenPaintingImg from './OvenPaintingImg/OvenPaintingImg';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import {navigate} from 'gatsby';
 
 
-const Refinishing = () => {
+
+const Refinishing = (props) => {
+	
+	const propagateModalType = () =>{
+        props.addType("refinishing");
+        
+        navigate(
+        "/usedappliances/customer-info/",
+            {
+                state: { modal: true,
+                        noScroll: true}
+            }
+        );
+    };
 
 	return(
 		<>
@@ -34,19 +49,21 @@ const Refinishing = () => {
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Link
-	    			to="/usedappliances/customer-info/"
-					  state={{
-						modal: true
-					  }}
-				>
-					<Button id="Refinish_My_Appliance" size="lg">
-						Refinish My Appliance
-					</Button>
-				</Link>	
+				<Button id="Refinish_My_Appliance" size="lg" onClick={propagateModalType}>
+					Refinish My Appliance
+				</Button>
 			</Row>
 	    </>
 	);	
 }
 
-export default Refinishing;
+Refinishing.propTypes = {
+    addType: PropTypes.func.isRequired,
+};
+	  
+const mapDispatchToProps = dispatch => {
+    return { addType: () => dispatch({type: `ADD_TYPE`})
+    };
+};
+	  
+export default connect(null, mapDispatchToProps)(Refinishing);

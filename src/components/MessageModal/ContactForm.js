@@ -129,6 +129,9 @@ class ContactInfoForm extends Component {
 
 	// const url = "https://those-guys-form-handler-k9ct4vv58.now.sh/";
 	// const url = "http://localhost:5000/";
+	
+	
+	
 	let payload = { 
 		type: "repair", 
 		name: this.state.fName + " " + this.state.lName,
@@ -234,12 +237,13 @@ class ContactInfoForm extends Component {
 
 ContactInfoForm.propTypes = {
 	clearState: PropTypes.func.isRequired,
+	type: PropTypes.string.isRequired,
 	appliance: PropTypes.array.isRequired,
 	issue: PropTypes.string.isRequired,
   };
 	  
-const mapStateToProps = ({ appliance, issue }) => {
-return { appliance,  issue };
+const mapStateToProps = ({ type, appliance, issue }) => {
+return { type, appliance,  issue };
 };
 	  
 const mapDispatchToProps = dispatch => {

@@ -1,13 +1,29 @@
 import React from 'react';
-import Link from  "gatsby-link";
 import {Row, Col, Button} from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare} from '@fortawesome/free-brands-svg-icons';
 import { faPhoneSquare, faSms  } from '@fortawesome/free-solid-svg-icons';
 import classes from './HiddenMdUp.module.css';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import {navigate} from 'gatsby';
 
-const HiddenMdUp = () => (
-        <Row className={classes.HiddenMdUp}>
+const HiddenMdUp = (props) => {
+    
+    const propagateModalType = () =>{
+        props.addType("repair");
+        
+        navigate(
+        "/repair/appliance-selector/",
+            {
+                state: { modal: true,
+                        noScroll: true}
+            }
+        );
+    };
+    
+    return(
+         <Row className={classes.HiddenMdUp}>
             <Col xs="8" className="d-md-none" style={{marginTop:"3%"}}>
                 <Button href="tel:+15757428441" color="secondary" size="lg" block>
                     <FontAwesomeIcon icon={faPhoneSquare} style={{paddingRight: "3px"}}/>
@@ -15,17 +31,12 @@ const HiddenMdUp = () => (
                 </Button>
             </Col>
             <Col xs="8" className="d-md-none" style={{marginTop:"3%"}}>
-                <Link to="/repair/appliance-selector/"
-                    state={{
-                        modal: true,
-                        noScroll: true
-                    }} 
-                > 
-                    <Button color="success" size="lg" block>
-                        <FontAwesomeIcon icon={faSms} style={{paddingRight: "3px"}}/>
-                        Message Us
-                    </Button>
-                </Link>
+                
+                <Button color="success" size="lg" block onClick={propagateModalType}>
+                    <FontAwesomeIcon icon={faSms} style={{paddingRight: "3px"}}/>
+                    Message Us
+                </Button>
+                
             </Col>
             <Col xs="8" className="d-md-none" style={{marginTop:"3%"}}>
                 <Button href="https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240"
@@ -36,6 +47,16 @@ const HiddenMdUp = () => (
                 </Button>
             </Col>
         </Row>
-);
+    );
+};
 
-export default HiddenMdUp;
+HiddenMdUp.propTypes = {
+    addType: PropTypes.func.isRequired,
+};
+	  
+const mapDispatchToProps = dispatch => {
+    return { addType: () => dispatch({type: `ADD_TYPE`})
+    };
+};
+	  
+export default connect(null, mapDispatchToProps)(HiddenMdUp);

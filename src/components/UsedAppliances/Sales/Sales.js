@@ -1,6 +1,5 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
-import { Link} from "gatsby"
 import HeaderText from '../../UI/HeaderText/HeaderText';
 import IconCooktop from "../../../images/icons/black/icon_cooktop.svg";
 import IconDishwasher from '../../../images/icons/black/icon_dishwasher.svg';
@@ -10,8 +9,24 @@ import IconFridge from '../../../images/icons/black/icon_fridge.svg';
 import IconOven from '../../../images/icons/black/icon_oven.svg';
 import IconRange from '../../../images/icons/black/icon_range.svg';
 import IconWasher from '../../../images/icons/black/icon_washer.svg';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import {navigate} from 'gatsby';
 
-const Sales = () => {
+
+const Sales = (props) => {
+
+	const propagateModalType = () =>{
+        props.addType("sales");
+        
+        navigate(
+        "/usedappliances/appliance-picker/",
+            {
+                state: { modal: true,
+                        noScroll: true}
+            }
+        );
+    };
 
 	return(
 		<>
@@ -44,19 +59,21 @@ const Sales = () => {
 	    		</Col>
 	    	</Row>
 	    	<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-	    		<Link
-	    			to="/usedappliances/appliance-picker/"
-					  state={{
-						modal: true
-					  }}
-				>
-					<Button id="Purchase_An_Appliance" size="lg" >
-						Purchase An Appliance
-					</Button>
-				</Link>
+				<Button id="Purchase_An_Appliance" size="lg" onClick={propagateModalType} >
+					Purchase An Appliance
+				</Button>
 			</Row>
 	    </>
 	);	
 };
 
-export default Sales;
+Sales.propTypes = {
+    addType: PropTypes.func.isRequired,
+};
+	  
+const mapDispatchToProps = dispatch => {
+    return { addType: () => dispatch({type: `ADD_TYPE`})
+    };
+};
+	  
+export default connect(null, mapDispatchToProps)(Sales);

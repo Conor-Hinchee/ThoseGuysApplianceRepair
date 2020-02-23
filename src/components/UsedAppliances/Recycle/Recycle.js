@@ -1,11 +1,26 @@
 import React from 'react';
 import {Row, Col, Button} from 'reactstrap';
-import { Link} from "gatsby"
 import HeaderText from '../../UI/HeaderText/HeaderText';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faHandshake, faRecycle, faHandHoldingUsd, faSmileBeam } from '@fortawesome/free-solid-svg-icons';
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import {navigate} from 'gatsby';
 
-const Recycle = () => {
+
+const Recycle = (props) => {
+	
+	const propagateModalType = () =>{
+        props.addType("recycle");
+        
+        navigate(
+        "/usedappliances/customer-info/",
+            {
+                state: { modal: true,
+                        noScroll: true}
+            }
+        );
+    };
 	
 	return(
 		<>
@@ -35,19 +50,23 @@ const Recycle = () => {
 	        	</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Link
-	    			to="/usedappliances/customer-info/"
-					  state={{
-						modal: true
-					  }}
-				>
-					<Button id="Recycle_My_Appliance" size="lg">
+				
+					<Button id="Recycle_My_Appliance" size="lg" onClick={propagateModalType}>
 						Recycle My Appliance
 					</Button>
-				</Link>
+				
 			</Row>
 	    </>
 	);	
 }
 
-export default Recycle;
+Recycle.propTypes = {
+    addType: PropTypes.func.isRequired,
+};
+	  
+const mapDispatchToProps = dispatch => {
+    return { addType: () => dispatch({type: `ADD_TYPE`})
+    };
+};
+	  
+export default connect(null, mapDispatchToProps)(Recycle);
