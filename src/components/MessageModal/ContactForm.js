@@ -130,17 +130,54 @@ class ContactInfoForm extends Component {
 	// const url = "https://those-guys-form-handler-k9ct4vv58.now.sh/";
 	// const url = "http://localhost:5000/";
 	
-	
-	
-	let payload = { 
-		type: "repair", 
-		name: this.state.fName + " " + this.state.lName,
-		appliance: this.props.appliance[0],
-		issue: this.props.issue,
-		phone: this.state.phoneNumber,
-		address: this.state.inputAddress +  " " + this.state.inputAddress2 + " " + this.state.inputCity
-			+ " " + this.state.inputZip
-	};
+	let payload;
+
+	alert(this.props.messageType)
+
+	switch(this.props.messageType){
+		case "repair":
+			payload = {
+				type: "repair", 
+				name: this.state.fName + " " + this.state.lName,
+				appliance: this.props.appliance[0],
+				issue: this.props.issue,
+				phone: this.state.phoneNumber,
+				address: this.state.inputAddress +  " " + this.state.inputAddress2 + 
+					" " + this.state.inputCity + " " + this.state.inputZip
+			};
+			break;
+		case "recycle":
+			payload = {
+				type:"recycle",
+				name: this.state.fName + " " + this.state.lName,
+				phone: this.state.phoneNumber,
+				address: this.state.inputAddress +  " " + this.state.inputAddress2 + 
+					" " + this.state.inputCity + " " + this.state.inputZip
+			};
+			break;
+		case "refinishing":
+			payload = {
+				type:"refinishing",
+				name: this.state.fName + " " + this.state.lName,
+				phone: this.state.phoneNumber,
+				address: this.state.inputAddress +  " " + this.state.inputAddress2 + 
+					" " + this.state.inputCity + " " + this.state.inputZip
+			};
+			break;
+		case "sales":
+			payload = {
+				type:"sales",
+				name: this.state.fName + " " + this.state.lName,
+				appliance: this.props.appliance, 
+				phone: this.state.phoneNumber,
+				address: this.state.inputAddress +  " " + this.state.inputAddress2 + 
+					" " + this.state.inputCity + " " + this.state.inputZip
+			};
+			break;
+		default:
+			break;	
+	}
+
 	
 	fetch('http://localhost:5000/', {
 	  method: 'POST',
@@ -233,23 +270,21 @@ class ContactInfoForm extends Component {
     );
   }
   
-}
+};
 
 ContactInfoForm.propTypes = {
 	clearState: PropTypes.func.isRequired,
-	type: PropTypes.string.isRequired,
+	messageType: PropTypes.string.isRequired,
 	appliance: PropTypes.array.isRequired,
 	issue: PropTypes.string.isRequired,
   };
 	  
-const mapStateToProps = ({ type, appliance, issue }) => {
-return { type, appliance,  issue };
+const mapStateToProps = ({ messageType, appliance, issue }) => {
+	return {messageType, appliance, issue};
 };
 	  
 const mapDispatchToProps = dispatch => {
-return { clearState: () => dispatch({type: `CLEAR_STATE`})
-	
-};
+	return { clearState: () => dispatch({type: `CLEAR_STATE`})};
 };
 	  
 export default connect(mapStateToProps, mapDispatchToProps)(ContactInfoForm);

@@ -17,7 +17,7 @@ import {navigate} from 'gatsby';
 const Sales = (props) => {
 
 	const propagateModalType = () =>{
-        props.addType("sales");
+        props.addMessageType("sales");
         
         navigate(
         "/usedappliances/appliance-picker/",
@@ -72,7 +72,7 @@ Sales.propTypes = {
 };
 	  
 const mapDispatchToProps = dispatch => {
-    return { addType: () => dispatch({type: `ADD_TYPE`})
+    return { addMessageType: () => dispatch({type: `ADD_MESSAGE_TYPE`})
     };
 };
 	  

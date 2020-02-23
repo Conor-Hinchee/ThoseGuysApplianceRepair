@@ -11,7 +11,7 @@ import {navigate} from 'gatsby';
 const Recycle = (props) => {
 	
 	const propagateModalType = () =>{
-        props.addType("recycle");
+        props.addMessageType("recycle");
         
         navigate(
         "/usedappliances/customer-info/",
@@ -61,11 +61,11 @@ const Recycle = (props) => {
 }
 
 Recycle.propTypes = {
-    addType: PropTypes.func.isRequired,
+    addMessageType: PropTypes.func.isRequired,
 };
 	  
 const mapDispatchToProps = dispatch => {
-    return { addType: () => dispatch({type: `ADD_TYPE`})
+    return { addMessageType: () => dispatch({type: `ADD_MESSAGE_TYPE`})
     };
 };
 	  

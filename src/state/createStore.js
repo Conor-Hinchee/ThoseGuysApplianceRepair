@@ -1,15 +1,16 @@
 import { createStore as reduxCreateStore} from "redux";
 
 const reducer = (state = {
-    type: "",
+    test: "repair",
+    messageType: "repair",
     appliance : [],
     issue : ""
 }, action) =>{
     switch(action.type){
-        case "ADD_TYPE":
+        case "ADD_MESSAGE_TYPE":
             state ={
                 ...state,
-                type: action.payload
+                messageType: action.payload
             };
             break;
         case "ADD_APPLIANCE":

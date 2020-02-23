@@ -11,7 +11,7 @@ import {navigate} from 'gatsby';
 const HiddenMdUp = (props) => {
     
     const propagateModalType = () =>{
-        props.addType("repair");
+        props.addMessageType("repair");
         
         navigate(
         "/repair/appliance-selector/",
@@ -51,11 +51,11 @@ const HiddenMdUp = (props) => {
 };
 
 HiddenMdUp.propTypes = {
-    addType: PropTypes.func.isRequired,
+    addMessageType: PropTypes.func.isRequired,
 };
 	  
 const mapDispatchToProps = dispatch => {
-    return { addType: () => dispatch({type: `ADD_TYPE`})
+    return { addMessageType: () => dispatch({type: `ADD_MESSAGE_TYPE`})
     };
 };
 	  
