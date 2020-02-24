@@ -128,7 +128,7 @@ class ContactInfoForm extends Component {
   handleSend = (e) =>{
 	e.preventDefault();
 
-	// const url = "https://those-guys-form-handler-k9ct4vv58.now.sh/";
+	const url = "https://those-guys-form-handler-k9ct4vv58.now.sh/";
 	// const url = "http://localhost:5000/";
 	
 	let payload;
@@ -177,7 +177,7 @@ class ContactInfoForm extends Component {
 			break;	
 	}
 
-	fetch('http://localhost:5000/', {
+	fetch(url, {
 	  method: 'POST',
 	  headers: {
 		'Content-Type': 'application/json'
