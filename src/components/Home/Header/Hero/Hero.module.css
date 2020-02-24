@@ -16,14 +16,14 @@
 @keyframes shrink {
 	from {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-			url("https://thoseguysappliancerepair.herokuapp.com/images/coverPhoto.png");
+			url("../../../../images/coverPhoto.png");
 		-o-background-size: fill;
 		-moz-background-size: fill;
 		-webkit-background-size: fill;
 	}
 	to {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-			url("https://thoseguysappliancerepair.herokuapp.com/images/coverPhoto.png");
+			url("../../../../images/coverPhoto.png");
 		transform: scale(1);
 		-o-background-size: fill;
 		-moz-background-size: fill;
