@@ -4,6 +4,7 @@ import { Link } from 'gatsby-plugin-modal-routing';
 import {Modal, ModalHeader, ModalBody, Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
+import {navigate} from 'gatsby';
 
 class ContactInfoForm extends Component {
   constructor(props) {
@@ -132,8 +133,6 @@ class ContactInfoForm extends Component {
 	
 	let payload;
 
-	alert(this.props.messageType)
-
 	switch(this.props.messageType){
 		case "repair":
 			payload = {
@@ -178,17 +177,30 @@ class ContactInfoForm extends Component {
 			break;	
 	}
 
-	console.log(payload);
-	// fetch('http://localhost:5000/', {
-	//   method: 'POST',
-	//   headers: {
-	// 	'Content-Type': 'application/json'
-	// 	// 'Content-Type': 'application/x-www-form-urlencoded',
-	//   },
-	//   body: JSON.stringify(payload)
-	// }).then(function(response) {
-	//   console.log(response)
-	// })
+	fetch('http://localhost:5000/', {
+	  method: 'POST',
+	  headers: {
+		'Content-Type': 'application/json'
+		// 'Content-Type': 'application/x-www-form-urlencoded',
+	  },
+	  body: JSON.stringify(payload)
+	}).then(function(response) {
+	  if(response.status === 201){
+		navigate(
+			"/message_sent/",
+				{
+					state: { modal: true },
+				}
+			);
+	  }else{
+		navigate(
+			"/message_error/",
+				{
+					state: { modal: true },
+				}
+			);
+	  }
+	})
   }
 
 
