@@ -200,6 +200,13 @@ class ContactInfoForm extends Component {
 				}
 			);
 	  }
+	}).catch((err) => {
+		navigate(
+			"/message_error/",
+				{
+					state: { modal: true },
+				}
+			);
 	})
   }
 
