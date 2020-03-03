@@ -14,7 +14,7 @@ const About = () => (
 	        	<p className={classes.BodyText} style={{marginTop: '5%'}}>
 	        		David Pearson has been in the appliance repair business for over 15 years, and in the spring of 2018, 
 	        		David and his sons started Those Guys Appliance Repair!
-	        		We proudly service Clovis, New Mexico and the surrounding areas!
+	        		We proudly service Clovis, New Mexico and the surrounding areas.
 	        	</p>
 	        	<p className={classes.BodyText}>
 	        		Those Guys Appliance Repair services and repairs all major appliance brands. 
@@ -28,16 +28,19 @@ const About = () => (
 	        		<a href="tel:+15757428441"> (575) 742-8441</a>. 
 	        	</p>
 	        	<p className={classes.BodyText}>
-	        		Here at, Those Guys Appliance Repair we do more than just appliance repairs!
+	        		Here at Those Guys Appliance Repair we do more than just appliance repairs.
 	        		<br/>
-	        		We also provide an Appliance Recycling service; 
-	        		<Link to={'/usedappliances/#recycle'}>turn your old appliance into cash by selling it to us</Link>,
+	        		We also provide an 
+					<Link to={'/usedappliances/#recycle'}> appliance recycling service </Link>! 
+	        		Turn your old appliance into cash by selling it to us.
 	        		<br/>
-	        		We sell Used Appliances; 
-	        		<Link to={'/usedappliances/#sales'}>Purchase a used appliance serviced by the professionals</Link>, and
+	        		We sell 
+					<Link to={'/usedappliances/#sales'}> Used Appliances </Link>! 
+	        		Purchase a used appliance serviced by the professionals.
 	        		<br/>
-	        		We do appliance refinishing;
-	        		<Link to={'/usedappliances/#recycle'}>Turn your old appliance into something that looks brand new!</Link>
+	        		We do 
+					<Link to={'/usedappliances/#recycle'}> appliance refinishing </Link>!
+	        		Turn your old appliance into something that looks brand new.
 	        	</p>
 	        </Col>
 	    </Row>
