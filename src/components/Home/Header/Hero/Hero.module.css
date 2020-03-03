@@ -16,14 +16,14 @@
 @keyframes shrink {
 	from {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-			url("../../../../images/coverPhoto.png");
+			url("../../../../images/coverPhoto.webp");
 		-o-background-size: fill;
 		-moz-background-size: fill;
 		-webkit-background-size: fill;
 	}
 	to {
 		background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),
-			url("../../../../images/coverPhoto.png");
+			url("../../../../images/coverPhoto.webp");
 		transform: scale(1);
 		-o-background-size: fill;
 		-moz-background-size: fill;
