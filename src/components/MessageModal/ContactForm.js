@@ -179,6 +179,7 @@ class ContactInfoForm extends Component {
 
 	fetch(url, {
 	  method: 'POST',
+	  mode: 'no-cors',
 	  headers: {
 		'Content-Type': 'application/json'
 		// 'Content-Type': 'application/x-www-form-urlencoded',
