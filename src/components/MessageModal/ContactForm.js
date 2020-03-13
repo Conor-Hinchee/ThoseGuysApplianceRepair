@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import classes from './ContactForm.module.css';
 import { Link } from 'gatsby-plugin-modal-routing';
-import {Modal, ModalHeader, ModalBody, Container, Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import {Modal, ModalHeader, ModalBody, Container, Col, Row, 
+	Button, Form, FormGroup, Label, Input, UncontrolledTooltip} from 'reactstrap';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import {navigate} from 'gatsby';
@@ -222,41 +223,66 @@ class ContactInfoForm extends Component {
     		<Form autocomplete="on">
 		      <Row form>
 		        <Col md={6}>
+		          <UncontrolledTooltip placement="top" target="requiredFirst">
+	        		Required Info
+    			  </UncontrolledTooltip>
 		          <FormGroup>
-		            <Label for="fName">First Name</Label>
+		            <Label for="fName">First Name
+		            	<span syle={{color:"red"}} id="requiredFirst">*</span>
+		            </Label>
 		            <Input required onChange={this.handleFormChange} value={this.state.fName}
-		            	type="text" name="firstName" id="fName" placeholder="John" tabindex="0"/>
+		            	type="text" name="firstName" id="fName" placeholder="John"/>
 		          </FormGroup>
 		        </Col>
 		        <Col md={6}>
+		        	<UncontrolledTooltip placement="top" target="requiredLast">
+	        			Required Info
+    				</UncontrolledTooltip>
 		          <FormGroup>
-		            <Label for="lName">Last Name</Label>
+		            <Label for="lName">Last Name
+		            	<span syle={{color: "red"}} id="requiredLast">*</span>
+		            </Label>
 		            <Input required onChange={this.handleFormChange} value={this.state.lName}
 		            	type="text" name="LastName" id="lName" placeholder="Smith" />
 		          </FormGroup>
 		        </Col>
 		      </Row>
 		      <FormGroup>
-		        <Label for="phoneNumber">Phone Number</Label>
+		    	<UncontrolledTooltip placement="top" target="requiredPhone">
+	        			Required Info
+    			</UncontrolledTooltip>
+		        <Label for="phoneNumber">Phone Number
+		        	<span syle={{color: "red"}} id="requiredPhone">*</span>
+		        </Label>
 		        <Input required 
 		        	inputmode="numeric"
 		        	onChange={this.handleFormChange} value={this.state.phoneNumber}
 		        	type="text" name="phoneNumber" id="phoneNumber" placeholder="(575) 555-5555"/>
 		      </FormGroup>
 		      <FormGroup>
-		        <Label for="inputAddress">Address</Label>
+		    	<UncontrolledTooltip placement="top" target="requiredAddress">
+	        			Required Info
+    			</UncontrolledTooltip>
+		        <Label for="inputAddress">Address
+		        	<span syle={{color: "red"}} id="requiredAddress">*</span>
+		        </Label>
 		        <Input required onChange={this.handleFormChange} value={this.state.inputAddress}
 		        	type="text" name="address" id="inputAddress" placeholder="1234 Main St"/>
 		      </FormGroup>
 		      <FormGroup>
 		        <Label for="inputAddress2">Address 2</Label>
 		        <Input onChange={this.handleFormChange} value={this.state.inputAddress2}
-		        	type="text" name="address2" id="inputAddress2" placeholder="1234 Main St"/>
+		        	type="text" name="address2" id="inputAddress2" placeholder="Apt 1"/>
 		      </FormGroup>
 		      <Row form>
 		        <Col md={6}>
+		        	<UncontrolledTooltip placement="top" target="requiredCity">
+	        			Required Info
+    				</UncontrolledTooltip>
 		          <FormGroup>
-		            <Label for="inputCity">City</Label>
+		            <Label for="inputCity">City
+		            	<span syle={{color: "red"}} id="requiredCity">*</span>
+		            </Label>
 		            <Input required onChange={this.handleFormChange} value={this.state.inputCity} 
 		            	type="text" name="city" id="inputCity" placeholder="Clovis" />
 		          </FormGroup>
@@ -264,7 +290,12 @@ class ContactInfoForm extends Component {
 		        
 		        <Col md={{ size: '2', offset: 4 }}>
 		          <FormGroup>
-		            <Label for="inputZip">Zip</Label>
+		        	<UncontrolledTooltip placement="top" target="requiredZip">
+	        			Required Info
+    				</UncontrolledTooltip>
+		            <Label for="inputZip">Zip
+		            	<span syle={{color: "red"}} id="requiredZip">*</span>
+		            </Label>
 		            <Input required onChange={this.handleFormChange} value={this.state.inputZip} 
 		            	inputmode="numeric"
 		            	type="text" name="zip" id="inputZip"/>
