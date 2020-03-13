@@ -35,7 +35,7 @@ const About = () => (
 	        		Turn your old appliance into cash by selling it to us.
 	        		<br/>
 	        		We sell 
-					<Link to={'/usedappliances/#sales'}> Used Appliances </Link>! 
+					<Link to={'/usedappliances/#sales'}> used appliances </Link>! 
 	        		Purchase a used appliance serviced by the professionals.
 	        		<br/>
 	        		We do 
