@@ -200,6 +200,10 @@ function SEO({ description, lang, meta, title }) {
           "sameAs": "https://www.facebook.com/Those-Guys-Appliance-Repair-2000600620203240/"
         }
       `}</script>
+      <link rel="preconnect" href="https://maps.gstatic.com"></link>
+      <link rel="preconnect" href="https://stats.g.doubleclick.net"></link>
+      <link rel="preconnect" href="https://maps.googleapis.com"></link>
+      <link rel="preconnect" href="https://www.google.com"></link>
     </Helmet>
   );
 }

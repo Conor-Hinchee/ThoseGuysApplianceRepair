@@ -1,6 +1,6 @@
 import React from "react";
 import classes from './CarouselPivot.module.css';
-import WhirlpoolIcon from '../../../../../images/brands/whirlpool.svg';
+import WhirlpoolIcon from './CarouselItem/WhirlpoolIcon';
 import FrigidaireIcon from "./CarouselItem/FrigidaireIcon";
 import MaytagIcon from "./CarouselItem/MaytagIcon";
 import GE_Icon from '../../../../../images/brands/GE.svg';
@@ -17,10 +17,7 @@ const CarouselPivot = () => {
   return (
       <ul className={classes.Pivot} >
 				<li className={classes.Item}>
-		    	<img className={classes.RotatingImg}
-		        	src={WhirlpoolIcon}
-		        	alt="Whirlpool Company Logo"
-	        	/>
+		    		<WhirlpoolIcon />
 				</li>
 				<li className={classes.Item}>
 					<div className={classes.RotatingImg}>
