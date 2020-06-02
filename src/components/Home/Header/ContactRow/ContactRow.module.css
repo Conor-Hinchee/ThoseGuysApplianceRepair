@@ -2,7 +2,7 @@
 	height: 25px;
 	width: 100%;
 }
-@media (max-width: 320px) {
+@media (max-width: 425px) {
 	.ContactRow {
 		height: 50px;
 	}	

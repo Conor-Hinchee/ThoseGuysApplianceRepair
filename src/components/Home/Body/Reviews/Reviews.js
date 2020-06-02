@@ -15,7 +15,7 @@ class Reviews extends Component {
 	          title: "Mary Ann on Google says:",
 	          text: "Awesome staff. Family Oriented. They are hard workers who care about their customers. They also want to do things for the youth and the community.",
 	          active: false,
-	          date: "1 Month Ago"
+	          date: "5 Months Ago"
 	        },{
 	          id : "second_card",
 	          starz : 5,
