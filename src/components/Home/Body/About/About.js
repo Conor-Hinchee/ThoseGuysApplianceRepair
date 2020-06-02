@@ -25,7 +25,7 @@ const About = () => (
 	        		we service!   
 	        		If you have a broken appliance in Clovis, New Mexico or Portales, New Mexico
 	        		Those Guys Appliance Repair should be your first call to get the job done right! 
-	        		<a href="tel:+15757428441"> (575) 742-8441</a>. 
+	        		{/* <a href="tel:+15757428441"> (575) 742-8441</a>.  */}
 	        	</p>
 	        	<p className={classes.BodyText}>
 	        		Here at Those Guys Appliance Repair we do more than just appliance repairs.
