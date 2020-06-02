@@ -1,7 +1,7 @@
 import React from 'react';
 import {Container} from 'reactstrap';
 import classes from './Body.module.css';
-import Contact from './Contact/Contact';
+// import Contact from './Contact/Contact';
 import About from './About/About';
 import Carousel from './Carousel/Carousel';
 import WeFix from './WeFix/WeFix';
@@ -12,9 +12,9 @@ const Body = () => {
 
 	return(
 		<Container>
-			<section className={classes.Space} id="contact">
+			{/* <section className={classes.Space} id="contact">
 				<Contact  />
-			</section>
+			</section> */}
 			<section className={classes.Space} id="who_we_are">
 				<About />
 			</section>
