@@ -58,11 +58,11 @@ const Sales = (props) => {
 	    			<img src={IconWasher} alt="washer_icon"/>
 	    		</Col>
 	    	</Row>
-	    	<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
+	    	{/* <Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
 				<Button id="Purchase_An_Appliance" size="lg" onClick={propagateModalType} >
 					Purchase An Appliance
 				</Button>
-			</Row>
+			</Row> */}
 	    </>
 	);	
 };

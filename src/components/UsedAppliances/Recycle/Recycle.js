@@ -49,13 +49,13 @@ const Recycle = (props) => {
 		        	</p>
 	        	</Col>
 	    	</Row>
-			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
+			{/* <Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
 				
 					<Button id="Recycle_My_Appliance" size="lg" onClick={propagateModalType}>
 						Recycle My Appliance
 					</Button>
 				
-			</Row>
+			</Row> */}
 	    </>
 	);	
 }

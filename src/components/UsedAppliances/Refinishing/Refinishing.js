@@ -49,9 +49,9 @@ const Refinishing = (props) => {
 	    		</Col>
 	    	</Row>
 			<Row className="d-flex justify-content-center" style={{marginTop: "50px"}}>
-				<Button id="Refinish_My_Appliance" size="lg" onClick={propagateModalType}>
+				{/* <Button id="Refinish_My_Appliance" size="lg" onClick={propagateModalType}>
 					Refinish My Appliance
-				</Button>
+				</Button> */}
 			</Row>
 	    </>
 	);	
