@@ -20,9 +20,6 @@ const IndexPage = () => (
                     link : "#who_we_are",
                     title : "Home"
                 },{
-                    link : "#contact",
-                    title : "Contact Us"
-                },{
                     link : "#located",
                     title : "Visit Us"
                 },{
