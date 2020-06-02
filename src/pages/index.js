@@ -2,8 +2,8 @@ import React from "react";
 import SEO from "../components/seo";
 import Header from "../components/Home/Header/Header"
 import Navigation from "../components/UI/Navigation/Navigation";
-import Body from "../components/Home/Body/Body";
-import Footer from "../components/UI/Footer/Footer";
+// import Body from "../components/Home/Body/Body";
+// import Footer from "../components/UI/Footer/Footer";
 import 'bootstrap/dist/css/bootstrap.css';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -15,23 +15,12 @@ const IndexPage = () => (
     <Header />
     <Navigation
         sticky = {true} 
-        navigationLinks ={[
-                {
-                    link : "#who_we_are",
-                    title : "Home"
-                },{
-                    link : "#located",
-                    title : "Visit Us"
-                },{
-                    link : "/usedappliances",
-                    title : "Used Appliances"
-                }
-            ]}
+        navigationLinks ={[]}
     />
     <main style={{overflowX: "hidden"}}>
-        <Body />
+        {/* <Body /> */}
     </main>
-    <Footer />
+    {/* <Footer /> */}
   </>
 );
 

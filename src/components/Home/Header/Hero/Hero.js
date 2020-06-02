@@ -13,7 +13,8 @@ const Hero = () => (
 	    			<FontAwesomeIcon icon={faWrench} />
 	        	</h1>
 	        	<h4 className={classes.HeroTextSmall}>
-	        		Call or message us today to get Those Guys on their way!
+	        		Thank you for all your support of over the years! Those Guys Appliance repair 
+					will be closing permanently.
 	        	</h4>	
 	    	</div>
 	    </div>
