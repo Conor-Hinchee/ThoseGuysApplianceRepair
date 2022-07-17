@@ -1,7 +1,9 @@
+# I am keeping this repo around because it was one of the first websites I built proffessionally but this business no longer exists RIP
+
 This project was bootstrapped with [Gatbsy](https://www.gatsbyjs.org/).
 
 ## Those Guys Appliance Repair
-Those Guys Appliance Repair is a business based in Clovis, NM and this is the code that runs their website. 
+Those Guys Appliance Repair was a business based in Clovis, NM and this is the code that runs their website. 
 
 ## Motivation
 Those Guys had a need to generate more business. After reworking their web presence and building out this website, Those Guys Appliance Repair is now in the top spot for appliance repairmen in their community! This has generated more leads and provided the business with more opportunity. 
